@@ -1,0 +1,75 @@
+<a class="skip" href="#index">Skip to the Folly Index</a>
+
+<header class="nav" [class.nav--solid]="scrolled()">
+  <button class="brand" (click)="jump('top')">
+    <span class="brand__mark">SPQR&nbsp;·&nbsp;MAGA</span>
+    <span class="brand__name">The Caligula Index</span>
+  </button>
+  <nav class="nav__links" [class.open]="menuOpen()">
+    @for (n of nav; track n.id) {
+      <button (click)="jump(n.id)">{{ n.label }}</button>
+    }
+  </nav>
+  <button class="nav__burger" (click)="menuOpen.set(!menuOpen())" aria-label="Toggle menu">
+    {{ menuOpen() ? '✕' : '☰' }}
+  </button>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__grain" aria-hidden="true"></div>
+    <div class="hero__inner">
+      <p class="hero__kicker">An interactive reading of The Economist · 5 May 2026</p>
+      <h1>
+        America must hope Donald Trump<br />
+        is not a new <span class="goldword">Caligula</span>
+      </h1>
+      <p class="hero__sub">
+        The peace of the world, the column warns, is being broken by <em>dunderheads</em>. This site
+        turns that warning into an instrument: a measurable <strong>March of Folly Index</strong>
+        that scores each modern failure for self-harm, for Tuchman's three tests of folly, and for
+        how far it rhymes with Rome's most notorious emperor — then asks whether the trouble is
+        personal, or systemic.
+      </p>
+      <div class="hero__cta">
+        <button class="btn btn--gold" (click)="jump('index')">Open the Folly Index ↓</button>
+        <button class="btn btn--ghost" (click)="jump('thesis')">Read the argument</button>
+      </div>
+      <dl class="hero__stats">
+        <div><dt>r. AD 37–41</dt><dd>Caligula's reign — under four years</dd></div>
+        <div><dt>1984</dt><dd>Tuchman's <em>March of Folly</em>, the column's frame</dd></div>
+        <div><dt>5 axes</dt><dd>Each failure scored, fully re-weightable</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section id="index" class="band band--paper"><div class="wrap"><app-folly-index /></div></section>
+  <section id="thesis" class="band band--wash"><div class="wrap"><app-thesis /></div></section>
+  <section id="annotated" class="band band--paper"><div class="wrap"><app-annotated /></div></section>
+  <section id="tuchman" class="band band--wash"><div class="wrap"><app-tuchman /></div></section>
+  <section id="parallels" class="band band--paper"><div class="wrap"><app-comparison /></div></section>
+  <section id="caligula" class="band band--wash"><div class="wrap"><app-caligula /></div></section>
+  <section id="rome" class="band band--paper"><div class="wrap"><app-rome /></div></section>
+  <section id="timeline" class="band band--wash"><div class="wrap"><app-timeline /></div></section>
+  <section id="counter" class="band band--paper"><div class="wrap"><app-counterargument /></div></section>
+  <section id="sandbox" class="band band--wash"><div class="wrap"><app-sandbox /></div></section>
+  <section id="quiz" class="band band--paper"><div class="wrap"><app-quiz /></div></section>
+  <section id="glossary" class="band band--wash"><div class="wrap"><app-glossary /></div></section>
+  <section id="sources" class="band band--paper"><div class="wrap"><app-sources /></div></section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p class="foot__big">“Enabling decadence would be a far harder error to fix.”</p>
+    <p class="foot__disc">
+      An independent, educational interactive built around The Economist's column
+      <em>“America must hope Donald Trump is not a new Caligula”</em> (5 May 2026). Not affiliated
+      with The Economist. Historical claims are sourced to ancient and modern authorities and graded
+      for reliability; modern-political claims are graded
+      <strong>documented / reported / speculative</strong> so the record is never blurred with the
+      contested or the satirical. Scores are an editorial reading you can change.
+    </p>
+    <p class="foot__meta">Built with Angular 21 · deployed on Firebase Hosting · 2026</p>
+  </div>
+</footer>

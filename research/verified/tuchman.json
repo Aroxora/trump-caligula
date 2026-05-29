@@ -1,0 +1,79 @@
+{
+  "definition": "Tuchman's subject is what she calls 'folly' in government, which she opens by naming: 'A phenomenon noticeable throughout history regardless of place or period is the pursuit by governments of policies contrary to their own interests.' Folly, for her, is not mere error, bad luck, or wickedness but the active pursuit of policy demonstrably against the self-interest of the constituency or state involved, undertaken when a wiser course was both knowable and available. She distinguishes it from tyranny, ambition, or miscalculation: folly is self-defeating governance that proceeds despite contrary evidence, driven less by malice than by self-deception. To keep the category rigorous she restricts it with three qualifying tests (below), so that it covers structural governmental misjudgment rather than every blunder by every ruler.",
+  "tests": [
+    {
+      "name": "Perceived counter-productive in its own time",
+      "detail": "The policy 'must have been perceived as counter-productive in its own time, not merely by hindsight.' Tuchman insists that contemporaries -- advisers, critics, or rival voices -- recognized the course as mistaken while it was being pursued. This rules out judging the past by standards or knowledge unavailable then; the warnings had to be live and audible at the time (e.g. the Trojans who urged burning the horse, the churchmen who warned the popes of schism)."
+    },
+    {
+      "name": "A feasible alternative course of action was available",
+      "detail": "There had to be a realistic, achievable alternative open to the decision-makers at the moment of choice -- not a utopian or anachronistic option, but a genuinely practicable one. Folly is the rejection of that available better path. This excludes cases where leaders were truly trapped with no real choice, isolating the failures that were avoidable."
+    },
+    {
+      "name": "Pursued by a group and persisting beyond one political lifetime",
+      "detail": "'The policy in question should be that of a group, not an individual ruler, and should persist beyond any one political lifetime.' This is the test that separates governmental folly from the personal caprice or madness of a single sovereign. By requiring a group enterprise that outlasts any one leader, Tuchman targets institutional, self-reinforcing folly -- policy carried forward by successive administrations or a collective body -- rather than one ruler's idiosyncrasy."
+    }
+  ],
+  "woodenHeadedness": "Wooden-headedness is Tuchman's master concept for the psychology underlying folly. In her exact words: 'Wooden-headedness, the source of self-deception, is a factor that plays a remarkably large role in government. It consists in assessing a situation in terms of preconceived fixed notions while ignoring or rejecting any contrary signs. It is acting according to wish while not allowing oneself to be deflected by the facts.' Her epitome is Philip II of Spain, 'the surpassing wooden-head of all sovereigns,' of whom she writes that 'no experience of the failure of his policy could shake his belief in its essential excellence.' Wooden-headedness is thus the mental engine of folly: clinging to fixed assumptions, filtering out disconfirming evidence, and substituting wish for analysis.",
+  "caseStudies": [
+    {
+      "name": "Prototype: The Trojans take the wooden horse within their walls",
+      "period": "Legendary/Homeric antiquity (traditionally c. 12th century BCE; Tuchman treats it as archetype, drawing on Homer and Virgil rather than as datable history)",
+      "summary": "Tuchman opens with Troy as the 'prototype' of folly: despite explicit warnings -- Laocoon's spear and his cry against Greeks bearing gifts, and Cassandra's prophecy -- the Trojans chose to breach their own walls and haul the abandoned Greek horse inside, where hidden warriors waited. Serious contemporary voices urged destroying or inspecting the horse, and the feasible alternative (burning it) was obvious, yet the Trojans acted on wish and self-flattery (that the enemy had given up). The result was the city's destruction.",
+      "lesson": "The Trojan horse is Tuchman's pure illustration that folly proceeds in the face of available, recognized alternatives and explicit warnings. It shows that the decisive failure is wooden-headed self-deception -- preferring the comforting interpretation to the evidence -- and that a society can author its own catastrophe by refusing to weigh contrary signs."
+    },
+    {
+      "name": "The Renaissance popes provoke the Protestant secession: 1470-1530",
+      "period": "1470-1530 (six popes: Sixtus IV, Innocent VIII, Alexander VI / Rodrigo Borgia, Julius II, Leo X, and Clement VII)",
+      "summary": "Over roughly sixty years six popes -- five Italians and a Spaniard -- indulged in venality, nepotism, simony, warfare, and worldly self-aggrandizement (culminating in Leo X's sale of indulgences that provoked Luther's 1517 protest), while remaining 'deaf to disaffection, blind to alternative ideas.' Repeated, credible calls for reform and warnings of schism from northern Europe were ignored. The eventual consequence was the Protestant Reformation, which split Western Christendom and cost the papacy half its constituency.",
+      "lesson": "Tuchman calls this 'a folly of perversity,' perhaps the most consequential in Western history, marked by three fatal attitudes: obliviousness to rising disaffection, primacy of personal self-aggrandizement, and the illusion of invulnerable status. The lesson is that an entrenched institution, persisting across many leaders, can pursue self-destruction by treating reform as unthinkable and challenge as impossible -- group folly outlasting any single pontificate."
+    },
+    {
+      "name": "The British lose America",
+      "period": "c. 1763-1783 (reign of George III; subsections run 1763-65, 1765, 1766-72, 1772-75, 1775-83)",
+      "summary": "After 1763 successive British governments under George III taxed and coerced the American colonies (Stamp Act, Townshend duties, the punitive Coercive Acts) while ignoring repeated warnings from figures such as Burke, Chatham, and colonial petitioners that this would drive the colonies to rebellion. A feasible alternative -- conciliation and accommodation of colonial self-government -- was openly argued in Parliament and rejected. Britain instead pursued assertion of sovereignty to the point of war and lost the colonies entirely.",
+      "lesson": "Tuchman shows folly as the obstinate defense of an abstract principle (parliamentary supremacy) against the practical interest of the state, sustained by a complacent governing class that mistook firmness for wisdom. The lesson is that wooden-headed insistence on prestige and 'face,' carried by a group across more than a decade despite available compromise, can forfeit the very thing it sought to keep."
+    },
+    {
+      "name": "America betrays herself in Vietnam",
+      "period": "1945-1973 (subsections 1945-46, 1946-54, 1954-60, 1960-63, 1964-68, 1969-73; spanning the Truman through Nixon administrations)",
+      "summary": "Across five administrations the United States deepened its commitment to an unwinnable war, rationalized by domino-theory fears of Communist expansion and by an unwillingness to admit error or lose credibility. Internal analyses and outside critics repeatedly judged the effort futile and self-defeating, and disengagement was a feasible alternative, yet policy persisted and escalated. The cost in lives, money, and national cohesion vastly outran any attainable objective.",
+      "lesson": "Vietnam is Tuchman's modern, fully documented archetype of group folly persisting across multiple political lifetimes: policy sustained by bureaucratic momentum, 'wooden-headed' refusal to absorb contrary evidence, and the substitution of wishful belief and prestige for realistic assessment. The lesson is that the hardest folly to escape is the one a government inflicts on itself by refusing to reverse a course it has publicly committed to."
+    }
+  ],
+  "applicationToTrump": "Tuchman's framework supplies a precise diagnostic for the Economist-style question of whether Trump-era misgovernment is PERSONAL folly or SYSTEMIC folly, because her three tests are built around exactly that distinction. Her concept of wooden-headedness -- 'assessing a situation in terms of preconceived fixed notions while ignoring or rejecting any contrary signs... acting according to wish while not allowing oneself to be deflected by the facts' -- maps readily onto a leader who governs by fixed conviction against contrary evidence; this is the personal-folly reading. Jon Meacham drew explicitly on Tuchman's wooden-headedness when discussing Trump in a March 15, 2018 History News Network essay, writing that wooden-headedness 'has clearly become a prevailing factor in our politics' and likening the Trump White House to 'Shark Tank' rather than a Brain Trust; note, however, that Meacham frames wooden-headedness as a broad contemporary phenomenon and does NOT use the phrase 'classic example' of Trump -- so the mapping is implied/applied rather than a labeled verdict [graded reported/journalism, confidence 0.5; the 'classic example' wording is not Meacham's and has been removed]. But Tuchman's THIRD test is decisive for the column's question: she deliberately excludes 'the capricious whims of a single person,' requiring that true governmental folly 'be that of a group, not an individual ruler, and should persist beyond any one political lifetime.' On her own terms, a phenomenon confined to one idiosyncratic ruler is NOT yet folly in her technical sense -- it becomes folly only when a group enterprise (a party, a bureaucracy, an institutional consensus) adopts the self-defeating course and carries it past the originating leader. The analytical payoff: the personal-vs-systemic question is answered by asking whether contrary signs were institutionally available and ignored (wooden-headedness diffused through advisers and agencies, not just one man), whether feasible alternatives were rejected by a group rather than vetoed by one will, and whether the counter-productive policy outlasts a single term. If yes on all three, Tuchman would classify it as systemic folly of the gravest kind (her Vietnam and papal categories); if it remains one ruler's caprice that the system resists or that dies with him, it falls short of her definition and is better described as the personal misrule she likened to a Philip II rather than to institutional 'march of folly.' CAVEAT: I could not locate the specific Economist column referenced in the prompt; the best-documented public mapping of Tuchman's framework onto Trump is Meacham's 2018 essay, and the personal-vs-systemic framing above is reconstructed from Tuchman's own stated criteria rather than quoted from an Economist piece [the existence/content of the specific column is unverified; graded speculative, confidence 0.3].",
+  "sources": [
+    {
+      "citation": "Barbara W. Tuchman, The March of Folly: From Troy to Vietnam (New York: Alfred A. Knopf, 1984; first hardcover ISBN 9780394527772; Ballantine paperback ed. ISBN 9780345308238) -- Introduction ('Pursuit of Policy Contrary to Self-Interest') for the definition, the three tests, and the wooden-headedness / Philip II passages.",
+      "type": "primary"
+    },
+    {
+      "citation": "Tuchman, The March of Folly, Ch. 3, 'The Renaissance Popes Provoke the Protestant Secession: 1470-1530' (full text reproduced at erenow.org/ww/fromtroytovietnambarbaratuchman/4.php), covering Sixtus IV through Clement VII and the 'folly of perversity.'",
+      "type": "primary"
+    },
+    {
+      "citation": "Tuchman, The March of Folly, table of contents and chapter titles: 'Prototype: The Trojans Take the Wooden Horse Within Their Walls'; 'The British Lose America' (subsections 1763-65 through 1775-83); 'America Betrays Herself in Vietnam' (subsections 1945-46 through 1969-73) -- erenow.org/ww/fromtroytovietnambarbaratuchman/.",
+      "type": "primary"
+    },
+    {
+      "citation": "Verbal Notes, 'The March of Folly: From Troy to Vietnam (Tuchman, Barbara W.)' (verbalnotes.substack.com) -- reading notes quoting the three tests verbatim and summarizing the Vietnam case (1945-1973).",
+      "type": "journalism"
+    },
+    {
+      "citation": "Richard Corbett (Webster University), book review of The March of Folly (faculty.webster.edu/corbetre/personal/reading/tuchman-folly.html) -- summary of the three criteria and the four case studies.",
+      "type": "journalism"
+    },
+    {
+      "citation": "Goodreads, 'The March of Folly Quotes by Barbara W. Tuchman' -- verbatim text of the opening definition ('pursuit by governments of policies contrary to their own interests') and the wooden-headedness passage.",
+      "type": "journalism"
+    },
+    {
+      "citation": "Jon Meacham, 'Jon Meacham finds new meaning in the Age of Trump in Barbara Tuchman's work on The March of Folly,' History News Network (hnn.us/article/168513), published March 15, 2018 -- the principal documented mapping of Tuchman's wooden-headedness onto Trump; foregrounds the personal-vs-systemic tension. Note: Meacham presents wooden-headedness as a 'prevailing factor in our politics' and does not use the phrase 'classic example.'",
+      "type": "journalism"
+    },
+    {
+      "citation": "Wikipedia, 'The March of Folly' (en.wikipedia.org/wiki/The_March_of_Folly) -- corroborates the four case studies, periods, and the criteria; used as cross-check only, not as primary authority.",
+      "type": "journalism"
+    }
+  ]
+}

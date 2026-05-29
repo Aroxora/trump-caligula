@@ -1,0 +1,69 @@
+<div class="cmp">
+  <header class="cmp__head">
+    <p class="eyebrow">Theme by theme</p>
+    <h2>The parallels, weighed honestly</h2>
+    <p class="lede">
+      The column lists shared tastes — gold, marble, blood-sport, flattery, a horse. Here each is
+      laid side by side with its ancient source, an editorial read on how tight the parallel really
+      is, and an explicit note on where the analogy strains. A good comparison survives its own
+      caveats.
+    </p>
+  </header>
+
+  <div class="cmp__tabs" role="tablist">
+    @for (d of dimensions; track d.id) {
+      <button
+        role="tab" class="tab" [class.active]="active() === d.id"
+        [attr.aria-selected]="active() === d.id" (click)="select(d.id)"
+      >{{ d.title }}</button>
+    }
+  </div>
+
+  <article class="cmp__panel" role="tabpanel">
+    <p class="motif">{{ current.motif }}</p>
+    <p class="premise">{{ current.premise }}</p>
+    <blockquote class="hook">{{ current.articleHook }}</blockquote>
+
+    <div class="versus">
+      <section class="side side--caligula">
+        <header><span class="bust">𝕮</span><h3>Caligula</h3><span class="years">r. AD 37–41</span></header>
+        <ul>
+          @for (c of current.caligula; track c.text) {
+            <li>
+              <p>{{ c.text }}</p>
+              @if (c.caveat) { <p class="caveat">⚠ {{ c.caveat }}</p> }
+              <app-cite [keys]="c.cites" />
+            </li>
+          }
+        </ul>
+      </section>
+
+      <div class="vs">
+        <div class="meter" [attr.aria-label]="'Parallel strength ' + current.parallelStrength + ' percent'">
+          <div class="meter__ring" [style.--p.deg]="current.parallelStrength * 3.6">
+            <span>{{ current.parallelStrength }}<small>%</small></span>
+          </div>
+          <p>parallel<br />strength</p>
+        </div>
+      </div>
+
+      <section class="side side--trump">
+        <header><span class="bust">45·47</span><h3>Trump</h3><span class="years">45th & 47th</span></header>
+        <ul>
+          @for (t of current.trump; track t.text) {
+            <li>
+              <p>{{ t.text }}</p>
+              @if (t.caveat) { <p class="caveat">⚠ {{ t.caveat }}</p> }
+              <app-cite [keys]="t.cites" />
+            </li>
+          }
+        </ul>
+      </section>
+    </div>
+
+    <div class="contrast">
+      <span class="contrast__label">Where the analogy strains</span>
+      <p>{{ current.contrast }}</p>
+    </div>
+  </article>
+</div>

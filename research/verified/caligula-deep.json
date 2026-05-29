@@ -1,0 +1,347 @@
+{
+  "themes": [
+    {
+      "id": "early-reign-popularity",
+      "title": "Early reign & popularity (March-October AD 37)",
+      "summary": "Gaius succeeded the reclusive, unpopular Tiberius in March AD 37 amid extraordinary public rejoicing, presenting as a clement, generous restorer of the principate. He paid Tiberius' bequests, recalled exiles, ended treason trials, restored elections to the assemblies and staged lavish games, so that even his hostile biographers concede an initially golden honeymoon. The contrast between this opening and the later reign is the engine of the whole 'mad tyrant' narrative.",
+      "facts": [
+        {
+          "statement": "Gaius was greeted with near-universal joy on accession; Suetonius reports that more than 160,000 victims were 'said to have been' sacrificed in roughly three months of celebration and calls him at first the answer to everyone's prayers ('the star', sidus).",
+          "sources": [
+            {"citation": "Suetonius, Life of Caligula 13-14", "type": "primary-hostile"}
+          ],
+          "caveat": "Suetonius wrote c. AD 121, two generations later, and frames the bright opening largely to sharpen the coming fall; Suetonius himself hedges the figure as 'said to have been' slain, and the sacrifice number is a round rhetorical figure, not a record."
+        },
+        {
+          "statement": "He honoured Tiberius' will and bequests, recalled those exiled or condemned, abolished or curtailed the maiestas (treason) trials, publicly burned (or claimed to burn) Tiberius' incriminating papers, and restored the popular election of magistrates.",
+          "sources": [
+            {"citation": "Suetonius, Life of Caligula 15-16", "type": "primary-hostile"},
+            {"citation": "Cassius Dio, Roman History 59.3-59.9", "type": "primary-hostile"}
+          ],
+          "caveat": "Dio (early 3rd c.) is later still and openly moralising; the gestures are nonetheless corroborated by the general pattern and by the relief of the senatorial class at Tiberius' death."
+        },
+        {
+          "statement": "Modern scholarship treats the popularity as genuine: a 24-year-old great-grandson of Augustus and son of the beloved general Germanicus carried immense dynastic goodwill after Tiberius' grim final years on Capri.",
+          "sources": [
+            {"citation": "Anthony A. Barrett, Caligula: The Abuse of Power (2nd ed., 2015)", "type": "modern-scholarship"},
+            {"citation": "Aloys Winterling, Caligula: A Biography (Eng. trans. 2011)", "type": "modern-scholarship"}
+          ]
+        }
+      ],
+      "modernReinterpretation": "Barrett and Winterling read the honeymoon not as evidence of a 'good Caligula' later corrupted, but as a normal accession programme inflated by senatorial relief and dynastic sentiment; the sharp 'before/after' structure is partly an artefact of the sources' need to explain a later breakdown in relations with the elite.",
+      "parallelToTrump": "Like a newly inaugurated leader riding a wave of supporter euphoria and signalling magnanimity (pardons, reversals of a predecessor's policies) before relations sour, Caligula's opening months were a high-goodwill 'honeymoon'. Where it breaks: a hereditary Julio-Claudian heir acclaimed by Senate and army is not an elected official, and Roman 'popularity' rested on donatives, games and dynastic charisma rather than votes. (Thematic analogy only; no specific Trump act is asserted here.)"
+    },
+    {
+      "id": "ad37-illness-turning-point",
+      "title": "The AD 37 illness as a (contested) turning point",
+      "summary": "About seven months into the reign, in the autumn of AD 37, Gaius fell seriously ill, prompting public anguish. The ancient tradition treats his recovery as the pivot at which a benign prince 'changed' into a tyrant; modern historians are far more sceptical, treating it as a narrative device rather than a demonstrable psychological or medical break.",
+      "facts": [
+        {
+          "statement": "Gaius fell gravely ill in autumn AD 37, and the populace reacted with conspicuous distress (vigils, vows to die in his stead).",
+          "sources": [
+            {"citation": "Suetonius, Life of Caligula 14", "type": "primary-hostile"},
+            {"citation": "Cassius Dio, Roman History 59.8", "type": "primary-hostile"},
+            {"citation": "Philo, On the Embassy to Gaius (Legatio ad Gaium) 14-21", "type": "primary"}
+          ],
+          "caveat": "Philo is the only roughly contemporary witness (he led the Alexandrian embassy c. AD 40); he too is hostile, being an aggrieved party, but is not post-mortem senatorial reconstruction."
+        },
+        {
+          "statement": "The sources present the illness as a hinge after which Gaius became cruel, paranoid and megalomaniacal, and link it to a wave of forced suicides and deaths (e.g. Gemellus, Macro, Silanus).",
+          "sources": [
+            {"citation": "Philo, Legatio ad Gaium 22-26", "type": "primary"},
+            {"citation": "Suetonius, Life of Caligula 22-23", "type": "primary-hostile"}
+          ],
+          "caveat": "The 'recovered a monster' framing is precisely the kind of tidy psychological turning point that ancient biography favours; the eliminations of rivals like Gemellus are also explicable as ordinary dynastic security."
+        },
+        {
+          "statement": "No reliable diagnosis is recoverable; speculation (encephalitis, epilepsy, hyperthyroidism, lead poisoning, a nervous breakdown) is unverifiable.",
+          "sources": [
+            {"citation": "Anthony A. Barrett, Caligula: The Abuse of Power (2015)", "type": "modern-scholarship"}
+          ]
+        }
+      ],
+      "modernReinterpretation": "Barrett and Winterling reject the literal 'illness drove him mad' thesis: the breakdown in relations with the elite was political and gradual (conspiracies, the costs of one-man rule, his contempt for senatorial 'doublespeak'), not a single medical event. The illness functions in the tradition as a convenient explanatory hinge rather than a documented cause.",
+      "parallelToTrump": "The idea of a single 'turning point' that 'changed' a leader is a storytelling temptation in both cases, flattening a messy political trajectory into one dramatic pivot. Where it breaks: there is no comparable documented illness narrative for Trump, and modern medical privacy and reporting make the ancient 'fell ill, emerged a tyrant' trope inapplicable. (Thematic analogy only.)"
+    },
+    {
+      "id": "fiscal-crisis-confiscations",
+      "title": "Fiscal crisis & arbitrary taxation / confiscations",
+      "summary": "Gaius is said to have rapidly drained the treasury he inherited through donatives, games and building, then to have raised money by novel taxes, auctions, forced legacies and confiscations of the property of the condemned. The lurid picture of greed-driven judicial murder is a senatorial trope; modern scholars see real fiscal strain and aggressive revenue-raising whose scale was exaggerated by the propertied class that bore it.",
+      "facts": [
+        {
+          "statement": "Suetonius claims Gaius exhausted Tiberius' surplus (Suetonius implies c. 2.7 billion sesterces; Dio gives a higher figure of c. 3.3 billion) within roughly a year and then resorted to extortionate means to refill the fisc.",
+          "sources": [
+            {"citation": "Suetonius, Life of Caligula 37", "type": "primary-hostile"},
+            {"citation": "Cassius Dio, Roman History 59.2, 59.22", "type": "primary-hostile"}
+          ],
+          "caveat": "The surplus figure and the speed of its exhaustion are unverifiable and serve the morality tale; the two figures (2.7bn / 3.3bn) come from different sources and do not agree. Even if a real surplus existed, donatives and building alone do not require fraud to explain a deficit, and Claudius is not recorded inheriting an empty treasury."
+        },
+        {
+          "statement": "He levied new or unusual taxes (on lawsuits, porters' daily wages, prostitution, food sold in the city), held auctions of imperial and gladiatorial goods, and reportedly demanded legacies and exploited maiestas charges so the fisc could seize estates.",
+          "sources": [
+            {"citation": "Suetonius, Life of Caligula 40-41", "type": "primary-hostile"},
+            {"citation": "Cassius Dio, Roman History 59.28", "type": "primary-hostile"}
+          ],
+          "caveat": "The claim that he 'falsely accused, fined and killed' chiefly to seize property is the standard 'avarice + cruelty' indictment applied to many 'bad' emperors and cannot be quantified."
+        },
+        {
+          "statement": "Modern reading: Gaius faced genuine fiscal pressure from his outlays and pursued aggressive, sometimes resented revenue measures, but the 'bankrupt tyrant murdering the rich for cash' image is a hostile distortion by the senatorial/equestrian class whose wealth was taxed and whose 'tributum'-style impositions wounded their pride.",
+          "sources": [
+            {"citation": "Anthony A. Barrett, Caligula: The Abuse of Power (2015)", "type": "modern-scholarship"},
+            {"citation": "Aloys Winterling, Caligula: A Biography (2011)", "type": "modern-scholarship"}
+          ]
+        }
+      ],
+      "modernReinterpretation": "Scholars accept real expenditure-driven strain and innovative taxation but treat the confiscation-for-greed narrative as elite grievance literature; the financial 'crisis' was at least as much a crisis for the propertied who paid as for the state, and Claudius is not recorded as inheriting an empty treasury.",
+      "parallelToTrump": "The shared theme is a leader leaning on aggressive, contested revenue and cost levers (e.g. tariffs as a money-raising and punitive tool) whose burden falls unevenly and is loudly resented by those who pay. Where it breaks: Roman emperors could literally seize a convicted man's estate through capital trials, whereas modern fiscal disputes run through courts, Congress and markets, not personal confiscation of the condemned. (Thematic analogy; the tariff point is illustrative, not a sourced specific claim.)"
+    },
+    {
+      "id": "building-programme-nemi-ships",
+      "title": "The building programme & the Nemi ships",
+      "summary": "Beyond the caricature, Gaius launched substantial public works: he began the great Aqua Claudia and Anio Novus aqueducts, worked on roads, harbours, temples and entertainment venues, and built two enormous, luxuriously fitted ceremonial ships on Lake Nemi. The Nemi ships, recovered under Mussolini in 1929-32 and destroyed by fire in 1944, are the most tangible physical evidence of his taste for monumental display.",
+      "facts": [
+        {
+          "statement": "Gaius began construction of the Aqua Claudia and Anio Novus aqueducts in AD 38; they were completed under Claudius (dedicated 1 August AD 52) and roughly doubled Rome's water supply, with Pliny calling them engineering marvels.",
+          "sources": [
+            {"citation": "Suetonius, Life of Caligula 21", "type": "primary-hostile"},
+            {"citation": "Pliny the Elder, Natural History 36.122", "type": "primary"},
+            {"citation": "Frontinus, De Aquaeductu 13", "type": "primary"}
+          ],
+          "caveat": "Even hostile Suetonius lists genuine public works at Cal. 21, a useful check on the 'pure waster' image; the begun-AD 38 / completed-and-dedicated-AD 52 dating under Claudius is archaeologically and epigraphically secure."
+        },
+        {
+          "statement": "Two massive ships (c. 70 and 73 m long) were built on Lake Nemi as floating palaces/temple-barges associated with the sanctuary of Diana, fitted with marble, mosaics, heated baths, lead piping stamped with Gaius' name and bronze fittings.",
+          "sources": [
+            {"citation": "Nemi ships archaeological record; Guido Ucelli, Le navi di Nemi (1940/1950)", "type": "modern-scholarship"}
+          ],
+          "caveat": "Dimensions (larger c. 73 m, smaller c. 70 m) match the excavated hull measurements. Attribution to Gaius rests partly on lead pipes and fittings bearing his name; their precise function (pleasure barge vs. cult vessel for Diana Nemorensis) remains debated."
+        },
+        {
+          "statement": "The ships were recovered after Mussolini ordered Lake Nemi drained (work 1928-1932), displayed in a purpose-built museum, and destroyed by fire on the night of 31 May 1944 during the WWII retreat through the Alban Hills; responsibility (German arson vs. Allied shelling) is disputed.",
+          "sources": [
+            {"citation": "Nemi Ships Museum / Museo delle Navi Romane (Nemi) records; 1944 reports", "type": "official-record"}
+          ],
+          "caveat": "The 1944 cause of destruction is genuinely contested in the documentary record."
+        },
+        {
+          "statement": "The claimed bridge over the Bay of Baiae (a pontoon of boats Gaius supposedly rode across in triumph) and a bridge linking the Palatine to the Temple of Castor and Pollux are reported by hostile sources and partly doubted by scholars.",
+          "sources": [
+            {"citation": "Suetonius, Life of Caligula 19, 22", "type": "primary-hostile"},
+            {"citation": "Cassius Dio, Roman History 59.17", "type": "primary-hostile"},
+            {"citation": "Anthony A. Barrett, Caligula: The Abuse of Power (2015)", "type": "modern-scholarship"}
+          ],
+          "caveat": "Barrett suspects the Castor-and-Pollux bridge may be a fantasy or a misread joke; the Baiae bridge, while reported, is read by Dio as a costly stunt rather than infrastructure."
+        }
+      ],
+      "modernReinterpretation": "Historians stress that Gaius' building record is real and in places useful (aqueducts, harbour and entertainment works), and that the Nemi ships show technological ambition; the tradition foregrounds the most extravagant or stunt-like projects (Baiae bridge) to dramatise waste while underplaying the durable infrastructure.",
+      "parallelToTrump": "Both leaders fuse public works with monumental personal display, and prestige projects double as self-celebration. Where it breaks: aqueducts that watered Rome for centuries are public infrastructure of a different order from cosmetic or status-driven modern projects, and the Nemi 'pleasure ships' were ceremonial vessels, not a fielded military or civic capability. (Thematic analogy only; no specific modern project is asserted as sourced fact.)"
+    },
+    {
+      "id": "self-deification-temples-statues",
+      "title": "Self-deification, temples & golden statues",
+      "summary": "Gaius is portrayed as demanding worship as a living god: appearing dressed as deities, building or planning a temple to himself with a gold statue dressed daily to match his own clothing, and ordering a colossal statue of himself installed in the Temple at Jerusalem. The Jerusalem episode is the best-evidenced because contemporaries (Philo, Josephus) describe it; the more theatrical 'dressed as Jupiter' anecdotes are hostile and likely exaggerate normal imperial-cult practice.",
+      "facts": [
+        {
+          "statement": "Suetonius and Dio say Gaius set himself up for worship as a god, established a temple and priesthood to his own numen, kept a life-size gold statue of himself dressed each day in clothes matching his own, and appeared costumed as gods including Jupiter, Neptune, Hercules and Venus.",
+          "sources": [
+            {"citation": "Suetonius, Life of Caligula 22, 52", "type": "primary-hostile"},
+            {"citation": "Cassius Dio, Roman History 59.26-59.28", "type": "primary-hostile"}
+          ],
+          "caveat": "These are post-mortem hostile reports; living-emperor cult was already normal in the eastern provinces, so 'self-deification' may dramatise ordinary cult honours plus theatrical display, and the 'dressed as gods' anecdotes are vivid hostile colour rather than verifiable routine."
+        },
+        {
+          "statement": "In AD 40 Gaius ordered the governor of Syria, Petronius, to erect a colossal statue of himself (as Jupiter) in the Temple at Jerusalem; Petronius delayed, the Jewish population resisted en masse, and the plan lapsed when Gaius died in January AD 41.",
+          "sources": [
+            {"citation": "Philo, Legatio ad Gaium 197-338", "type": "primary"},
+            {"citation": "Josephus, Jewish Antiquities 18.261-309; Jewish War 2.184-203", "type": "primary"}
+          ],
+          "caveat": "Philo and Josephus are contemporary or near-contemporary, which makes this the most securely attested 'deification' act, though both are sympathetic to the Jewish side and write with their own agendas."
+        },
+        {
+          "statement": "He consecrated his deceased sister Drusilla as 'Diva Drusilla Panthea' in AD 38, with priesthood, statue and games, the first Roman woman so deified.",
+          "sources": [
+            {"citation": "Suetonius, Life of Caligula 24", "type": "primary-hostile"},
+            {"citation": "Cassius Dio, Roman History 59.11", "type": "primary-hostile"},
+            {"citation": "Acta Fratrum Arvalium (Arval Brethren records), 23 Sept. AD 38", "type": "primary"}
+          ],
+          "caveat": "The Arval Brethren inscription independently dates Drusilla's consecration (23 Sept. AD 38), unusually corroborating the literary tradition; she is generally accepted as the first Roman woman officially deified. The separate rumour of incest with Drusilla is uncorroborated 'bad emperor' slander and should not be stated as fact."
+        }
+      ],
+      "modernReinterpretation": "Scholars (Barrett, Winterling, Beard) read most 'living god' anecdotes as hostile dramatisation of ordinary imperial-cult practice plus Gaius' provocative theatre; the Jerusalem statue, however, is treated as a real and dangerous policy that nearly triggered revolt, evidencing genuine autocratic overreach rather than mere myth.",
+      "parallelToTrump": "Both invite a cult-of-personality reading expressed through gilded imagery and self-glorifying iconography. Where it breaks: Trump claims no divinity and seeks no temple cult; Roman ruler-worship was a recognised political-religious institution with no modern equivalent, so 'self-deification' is a category that simply does not transfer. (Thematic analogy only.)"
+    },
+    {
+      "id": "humiliation-senate-equestrians",
+      "title": "Humiliation of the Senate & equestrians (Winterling's 'calculated humiliation')",
+      "summary": "The tradition records Gaius systematically degrading the aristocracy: making senators run beside his chariot, kiss his foot, wait on him at dinner, and famously (allegedly) planning to make his horse Incitatus a consul. Aloys Winterling reinterprets these as deliberate, rational acts of 'calculated humiliation' that exposed the hypocrisy of the Augustan principate's pretence of senatorial dignity, rather than the random acts of a lunatic.",
+      "facts": [
+        {
+          "statement": "Gaius is said to have humiliated leading men: making consulars trot beside his chariot or wait at table in servile dress, requiring obeisance and foot-kissing, and treating the Senate's flattery with open contempt.",
+          "sources": [
+            {"citation": "Suetonius, Life of Caligula 26", "type": "primary-hostile"},
+            {"citation": "Cassius Dio, Roman History 59.27", "type": "primary-hostile"}
+          ],
+          "caveat": "These come from the very class that felt the insult and later wrote the history; the degree and frequency are likely sharpened by wounded dignity."
+        },
+        {
+          "statement": "He reportedly proposed or threatened to make his racehorse Incitatus a consul, and lavished a marble stable, ivory manger, household and 'guests' on the horse.",
+          "sources": [
+            {"citation": "Suetonius, Life of Caligula 55", "type": "primary-hostile"},
+            {"citation": "Cassius Dio, Roman History 59.14", "type": "primary-hostile"}
+          ],
+          "caveat": "Suetonius says he 'is said' to have intended it; Dio frames it as mockery. Scholars read it as a deliberate insult or a joke at the Senate's expense, not literal policy: Incitatus was never actually made consul."
+        },
+        {
+          "statement": "Winterling argues these acts were intelligible, rational and intentional: a calculated programme to puncture the 'doublespeak' by which senators flattered an autocrat while pretending the Republic survived, thereby forcing their servility into the open.",
+          "sources": [
+            {"citation": "Aloys Winterling, Caligula: A Biography (2011)", "type": "modern-scholarship"},
+            {"citation": "Mary Beard, 'It was satire', London Review of Books 34.8 (2012)", "type": "modern-scholarship"}
+          ],
+          "caveat": "Beard finds Winterling's scheme illuminating but over-tidy, noting he sometimes bends 'unpromising or conflicting evidence to fit'; the horse-consul could equally be a witticism born of his racing obsession."
+        }
+      ],
+      "modernReinterpretation": "Winterling's 'sane, calculating Caligula' is the influential modern corrective: the humiliations read as a coherent (if brutal) exposure of the fiction of senatorial partnership, with the 'madness' verdict being the losers' framing. Beard cautions that the satire thesis is partly unfalsifiable and should not flatten every anecdote into one design.",
+      "parallelToTrump": "Both can be read as deliberately humiliating an elite class and forcing displays of loyalty, turning ritual deference into a public test (Winterling's 'doublespeak' theme rhyming with modern demands for fealty). Where it breaks: a Roman emperor could command a senator's body and life directly, whereas modern norm-breaking against institutions still operates within elections, courts and a free press that can resist and reply. (Thematic analogy only.)"
+    },
+    {
+      "id": "games-spectacle-cruelty",
+      "title": "Games, spectacle & cruelty",
+      "summary": "Gaius was a lavish impresario of games, races, gladiatorial shows and theatrical spectacle, which built popularity with the urban plebs. The same tradition packs his reign with acts of arena cruelty and a taste for watching deaths, capped by the notorious line wishing the Roman people had a single neck. These anecdotes are vivid but come overwhelmingly from a hostile, post-mortem source.",
+      "facts": [
+        {
+          "statement": "He staged frequent and extravagant entertainments: chariot races, panther hunts, gladiatorial contests (seeking exemption from sumptuary limits), theatrical shows and all-night festivals, and was a fanatical partisan of the 'Green' racing faction.",
+          "sources": [
+            {"citation": "Suetonius, Life of Caligula 18, 26, 54-55", "type": "primary-hostile"},
+            {"citation": "Cassius Dio, Roman History 59.13-59.14", "type": "primary-hostile"}
+          ],
+          "caveat": "Spectacle on this scale was expected of a popular emperor; the tradition records it both as crowd-pleasing largesse and as wasteful excess depending on its rhetorical purpose."
+        },
+        {
+          "statement": "Suetonius attributes signature cruelties: feeding spectators to the beasts when condemned criminals ran short, having a heckler's tongue cut out, and forcing one Aesius Proculus to fight and then be killed despite winning.",
+          "sources": [
+            {"citation": "Suetonius, Life of Caligula 27, 35", "type": "primary-hostile"}
+          ],
+          "caveat": "These are isolated shocking anecdotes from a single hostile biographer, unverifiable and exactly the kind of detail used to brand an emperor a monster; they should be read as contested rhetoric, not established fact."
+        },
+        {
+          "statement": "He is credited with the line wishing 'that the Roman people had but a single neck' (so he could destroy them at one stroke), reportedly uttered in anger at the crowd.",
+          "sources": [
+            {"citation": "Suetonius, Life of Caligula 30", "type": "primary-hostile"},
+            {"citation": "Seneca, De Ira / On Anger 3.19", "type": "primary-hostile"}
+          ],
+          "caveat": "The saying is reported by Suetonius (Cal. 30) and Dio, and Seneca's De Ira attests Gaius' notorious cruelty and the currency of such sayings; it remains a rhetorical bon mot, not a documented threat or carried-out act, and the exact wording is the literary tradition's."
+        }
+      ],
+      "modernReinterpretation": "Scholars accept that Gaius was an enthusiastic and popular provider of games (a legitimate tool of imperial politics) while treating the catalogue of arena atrocities as the most rhetorically loaded, least verifiable layer of the tradition: memorable single anecdotes, not statistics, marshalled to prove cruelty.",
+      "parallelToTrump": "Both grasp spectacle as a political instrument and a means of bonding with a mass audience, with showmanship central to their rule. Where it breaks: Roman games involved real, state-sanctioned killing of humans for entertainment; modern political spectacle, however theatrical, does not, so the 'cruelty' axis does not transfer literally. (Thematic analogy only.)"
+    },
+    {
+      "id": "northern-campaign-seashells",
+      "title": "The northern campaign & the 'seashells' episode",
+      "summary": "In AD 39-40 Gaius mounted a large northern expedition toward the German frontier and the Channel, evidently preparing an invasion of Britain (the British prince Adminius had submitted to him). On the shore of the Ocean he supposedly drew up his army and ordered the men to gather seashells as 'spoils of the Ocean' for the Capitol, the most ridiculed act of his reign, which modern scholars variously explain or doubt rather than accept as simple insanity.",
+      "facts": [
+        {
+          "statement": "Gaius led a major northern campaign in AD 39-40, raising troops (possibly two new legions), operating on the German frontier and reaching the Channel coast, with an invasion of Britain apparently planned after Adminius' submission.",
+          "sources": [
+            {"citation": "Suetonius, Life of Caligula 43-46", "type": "primary-hostile"},
+            {"citation": "Cassius Dio, Roman History 59.21-59.25", "type": "primary-hostile"},
+            {"citation": "Anthony A. Barrett, Caligula: The Abuse of Power (2015)", "type": "modern-scholarship"}
+          ],
+          "caveat": "The campaign itself is historical; the sources frame its operations as farcical, but real preparations (and a later lighthouse at Boulogne) underlie the mockery."
+        },
+        {
+          "statement": "Suetonius reports that, drawn up on the shore, Gaius ordered the soldiers to fill their helmets and tunics with seashells (conchae), called them 'spoils of the Ocean owed to the Capitol and Palatine', built a lighthouse, and promised a donative of 100 denarii a man.",
+          "sources": [
+            {"citation": "Suetonius, Life of Caligula 46", "type": "primary-hostile"},
+            {"citation": "Cassius Dio, Roman History 59.25", "type": "primary-hostile"}
+          ],
+          "caveat": "This is the locus classicus of his 'madness'; both reporters are post-mortem and hostile, and the episode reads as deliberately ridiculous in their telling rather than as documented fact."
+        },
+        {
+          "statement": "Modern interpretations diverge: David Woods argues 'conchae' meant captured small British boats (or that the men gathered booty), not literal shells; others read 'musculi' (engineers' siege-huts), or a punitive humiliation of mutinous troops who refused to embark, or a symbolic claim of conquest over Ocean.",
+          "sources": [
+            {"citation": "David Woods, 'Caligula's Seashells', Greece & Rome 47.1 (2000), 80-87", "type": "modern-scholarship"},
+            {"citation": "Anthony A. Barrett, Caligula: The Abuse of Power (2015)", "type": "modern-scholarship"}
+          ],
+          "caveat": "No single solution is proven; the point of the modern literature is that the 'mad emperor declares war on the sea' reading is the least likely once the hostile framing and Latin ambiguity are taken seriously."
+        }
+      ],
+      "modernReinterpretation": "Scholars treat the seashells as a textbook case of how a hostile, ambiguous source can manufacture an emblem of insanity; the underlying reality was a real (if aborted) Channel operation, with the shells variously a mistranslation, a symbolic gesture, or a disciplinary humiliation, not literal lunacy.",
+      "parallelToTrump": "Both feature theatrical, possibly performative military display where the gesture outruns the strategic substance, inviting ridicule. Where it breaks: the seashells story is a contested, hostile anecdote of uncertain meaning, not a documented policy, so any modern analogy rests on a tale historians themselves don't take at face value. (Thematic analogy only.)"
+    },
+    {
+      "id": "assassination-aftermath-damnatio",
+      "title": "The assassination by Cassius Chaerea & the aftermath / damnatio",
+      "summary": "On 24 January AD 41 Gaius was murdered at the Palatine Games by a conspiracy of Praetorian officers, senators and courtiers, led by the tribune Cassius Chaerea, whom Gaius had mocked for an effeminate voice and forced to use humiliating watchwords. His wife Caesonia and infant daughter were killed too; the Senate briefly toyed with restoring the Republic, but the Praetorians found and proclaimed his uncle Claudius. The Senate's wish for a formal damnatio memoriae was largely blocked by Claudius, though Gaius' acts were quietly undone and many statues recut.",
+      "facts": [
+        {
+          "statement": "Gaius was assassinated on 24 January AD 41 in a corridor/cryptoporticus at the Palatine Games by Praetorian tribunes Cassius Chaerea and Cornelius Sabinus with centurions; Chaerea resented being mocked for his voice and made to use obscene watchwords ('Priapus', 'Venus').",
+          "sources": [
+            {"citation": "Josephus, Jewish Antiquities 19.1-273", "type": "primary"},
+            {"citation": "Suetonius, Life of Caligula 56-58", "type": "primary-hostile"},
+            {"citation": "Cassius Dio, Roman History 59.29-59.30", "type": "primary-hostile"}
+          ],
+          "caveat": "Josephus gives the fullest, near-contemporary account (likely drawing on a source close to events) and is comparatively reliable on the mechanics, though he idealises Chaerea as a republican tyrannicide."
+        },
+        {
+          "statement": "His wife Milonia Caesonia and their daughter Julia Drusilla were murdered in the immediate aftermath, ending his direct line.",
+          "sources": [
+            {"citation": "Josephus, Jewish Antiquities 19.190-200", "type": "primary"},
+            {"citation": "Suetonius, Life of Caligula 59", "type": "primary-hostile"}
+          ]
+        },
+        {
+          "statement": "The Senate convened and some members debated restoring the Republic, but the Praetorian Guard found Claudius in the palace and proclaimed him emperor; the Senate then confirmed him.",
+          "sources": [
+            {"citation": "Josephus, Jewish Antiquities 19.158-273", "type": "primary"},
+            {"citation": "Suetonius, Life of Claudius 10", "type": "primary-hostile"},
+            {"citation": "Cassius Dio, Roman History 60.1", "type": "primary-hostile"}
+          ],
+          "caveat": "The 'Claudius behind a curtain' detail is a memorable scene that may be embellished; the substance (Praetorian initiative trumping senatorial deliberation) is widely accepted."
+        },
+        {
+          "statement": "Claudius declined a formal senatorial damnatio memoriae and did not have Gaius declared a public enemy, but quietly annulled some acts, removed statues, and Chaerea was executed; many of Gaius' portraits were recut into other rulers.",
+          "sources": [
+            {"citation": "Cassius Dio, Roman History 60.4", "type": "primary-hostile"},
+            {"citation": "Eric R. Varner, Mutilation and Transformation: Damnatio Memoriae and Roman Imperial Portraiture (2004)", "type": "modern-scholarship"}
+          ],
+          "caveat": "There was no single formal decree of damnatio, but a de facto condemnation: statue recutting and erasures are archaeologically attested by Varner."
+        }
+      ],
+      "modernReinterpretation": "Historians read the murder as driven by personal grievance (Chaerea) fused with elite resentment and self-preservation rather than principled republicanism; the swift Praetorian elevation of Claudius shows the principate was now structurally irreversible, and the partial, informal 'condemnation' reflects Claudius' need for legitimacy more than consensus that Gaius was a monster.",
+      "parallelToTrump": "The episode dramatises how humiliating subordinates and the security apparatus can be lethally destabilising for a ruler, and how an inner circle can turn. Where it breaks: there is no remotely comparable modern fact pattern (assassination, Praetorian kingmaking, dynastic murder); the analogy is purely thematic about the perils of alienating those closest to power."
+    },
+    {
+      "id": "historiography-problem",
+      "title": "The historiography problem (hostile, post-mortem sources)",
+      "summary": "Almost everything we 'know' about Gaius comes from authors writing after his fall and hostile to him: Seneca (a contemporary victim), Philo and Josephus (aggrieved parties on the Jewish question), and especially Suetonius and Cassius Dio (decades to two centuries later). Tacitus' account of the reign is lost. The surviving record was substantially shaped by the senatorial class that survived him and had every incentive to blacken his memory, which is why modern scholarship treats the lurid 'madness' as a literary construct as much as a fact.",
+      "facts": [
+        {
+          "statement": "No favourable contemporary narrative survives; the Annals of Tacitus covering Gaius' reign are lost, leaving Suetonius (c. AD 121) and Cassius Dio (early 3rd c.) as the main connected narratives, supplemented by the hostile contemporaries Seneca, Philo and Josephus.",
+          "sources": [
+            {"citation": "Mary Beard, 'It was satire', London Review of Books 34.8 (2012)", "type": "modern-scholarship"},
+            {"citation": "Anthony A. Barrett, Caligula: The Abuse of Power (2015)", "type": "modern-scholarship"}
+          ]
+        },
+        {
+          "statement": "The historians who shaped the record were largely from, or aligned with, the elite that survived Gaius and repositioned itself under Claudius and later regimes by excoriating the dead emperor in ever gorier detail.",
+          "sources": [
+            {"citation": "Mary Beard, 'It was satire', London Review of Books 34.8 (2012)", "type": "modern-scholarship"}
+          ],
+          "caveat": "Beard's point: 'when regimes changed they made every effort to reposition themselves... by excoriating... the emperor who had been their friend,' and 'that writing is the Roman imperial history we have inherited.'"
+        },
+        {
+          "statement": "Modern scholars (Winterling, Barrett, Beard) accordingly grade most sensational stories as primary-hostile and post-mortem, recover the rational political logic behind 'mad' acts, and warn against both naive belief and over-tidy revisionism.",
+          "sources": [
+            {"citation": "Aloys Winterling, Caligula: A Biography (2011)", "type": "modern-scholarship"},
+            {"citation": "Anthony A. Barrett, Caligula: The Abuse of Power (2015)", "type": "modern-scholarship"},
+            {"citation": "Mary Beard, 'It was satire', London Review of Books 34.8 (2012)", "type": "modern-scholarship"}
+          ],
+          "caveat": "Beard explicitly cautions that Winterling's satire/humiliation scheme can bend conflicting evidence to fit, so the corrective should not become a new dogma."
+        }
+      ],
+      "modernReinterpretation": "The consensus is methodological: 'Caligula the mad monster' is at least partly a product of victors' history written by the surviving aristocracy, so claims must be source-graded, the lost favourable tradition acknowledged, and lurid anecdotes treated as contested rhetoric rather than established fact, without swinging to an equally unfounded rehabilitation.",
+      "parallelToTrump": "Both subjects are mediated by intensely hostile and intensely partisan accounts, so a reader must constantly weigh the source's interest before accepting a claim. Where it breaks: Trump is documented in real time by abundant, ideologically varied, on-the-record evidence (video, transcripts, court filings, adversarial and friendly press), the opposite of Gaius' thin, late, one-sided, post-mortem record, so the epistemic situations are nearly mirror images. (Thematic analogy only.)"
+    }
+  ]
+}

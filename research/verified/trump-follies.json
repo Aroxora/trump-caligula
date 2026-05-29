@@ -1,0 +1,376 @@
+{
+  "_meta": {
+    "title": "Trump Follies Catalogue for March-of-Folly Scoring Index",
+    "knowledgeCutoff": "2026-01 (model); environment timeline current to 2026-05-29",
+    "compiledOn": "2026-05-29",
+    "verifiedOn": "2026-05-29",
+    "verificationNote": "Adversarial fact-check pass. Provenance grades are anchored to the model's January 2026 knowledge cutoff: events occurring AFTER that cutoff cannot be 'documented' from training knowledge and are knowable only through contemporaneous, forward-dated reporting in the environment timeline; such items are graded 'reported' at most and carry an explicit post-cutoff flag. Caligula anecdotes from hostile ancient sources are caveated rather than asserted as fact.",
+    "scaleNote": "Scores are integers 0-5, calibrated rather than maximal. Axes: selfHarm (damage rebounds on the actor/nation), counterproductive (recognised at the time as defeating its own stated aim), alternative (a feasible better path existed and was known), systemic (group-enabled, institutionalised, persists past one leader), caligula (vanity/monuments/spectacle/contempt-for-institutions/sycophancy).",
+    "provenanceLegend": {
+      "documented": "multiply-sourced, on the record, and within the model's knowledge cutoff",
+      "reported": "asserted, developing, contested, or post-dating the knowledge cutoff (knowable only via contemporaneous reporting)",
+      "speculative": "floated, rumoured, satirical, or forward-dated with thin or no documented basis"
+    },
+    "caligulaSourcingNote": "Caligula anecdotes derive overwhelmingly from hostile, post-mortem sources (Suetonius c.121 CE, Cassius Dio c.220s CE) and from two contemporaries with their own agendas (Philo, Josephus). Modern scholars (Winterling 2011, Barrett 1989/2015, Beard) read many 'mad' acts as deliberate humiliations of the elite, satirical jokes garbled in transmission, or senatorial propaganda. Parallels here are interpretive analogies, not claims of literal equivalence. Individual lurid anecdotes (the horse Incitatus, burning a playwright alive, the Baiae bridge) are flagged in-entry where used."
+  },
+  "follies": [
+    {
+      "id": "iran-war-2026-epic-fury",
+      "title": "Joint US-Israeli war on Iran (Operation Epic Fury)",
+      "domain": "foreign-policy",
+      "era": "second-term",
+      "provenance": "reported",
+      "confidence": 0.55,
+      "summary": "On 28 Feb 2026 Trump authorised a joint US-Israeli campaign against Iran framed as a 4-6 week operation; reporting attributes to it the killing of Khamenei (in an Israeli strike), the closure of the Strait of Hormuz, and a severe oil-supply shock. Graded as reported because the entire event post-dates the January 2026 knowledge cutoff and is knowable only through contemporaneous, fast-moving reporting whose causes, conduct and outcomes are still contested and partly known through White House/CENTCOM self-assessment.",
+      "cost": "Iranian civilians and economy (forecast contraction); global energy and food consumers (Brent reportedly past $120, large Gulf output stranded); US growth and inflation; long-run nonproliferation incentives as deterrence lessons spread. Magnitudes are contemporaneous estimates, not settled figures.",
+      "caligulaParallel": "Caligula's theatrical 'campaigns' on the northern frontier and at the ocean's edge (Suetonius, Caligula 43-47; Cassius Dio 59) staged spectacle and the imagery of conquest over coherent strategic aims; the 'Epic Fury' branding and rapid victory-declaration echo war-as-spectacle and triumph-as-publicity. (Suetonius is a hostile source written ~80 years later; the parallel is interpretive.)",
+      "reliabilityNote": "Reported, and post-cutoff. Multiple outlets (Wikipedia event/timeline, Al Jazeera, Hudson, JINSA) plus official White House/State/DoD statements describe it, but it is contemporaneous, the 'objectives met' framing is government-sourced, and independent assessment of strategic results is incomplete. Because the campaign began after the model's January 2026 knowledge cutoff, it cannot be treated as documented from training knowledge.",
+      "sources": [
+        {"citation": "Wikipedia, '2026 Iran war' and 'Timeline of the 2026 Iran war' (accessed 2026-05)", "type": "journalism"},
+        {"citation": "U.S. Department of State, 'Operation Epic Fury and International Law' (2026-04)", "type": "official-record"},
+        {"citation": "The White House, 'Peace Through Strength: Operation Epic Fury...' (2026-04)", "type": "primary"},
+        {"citation": "Al Jazeera, 'Operation Epic Fury has ended: Is the Iran war over?' (2026-05-06)", "type": "journalism"},
+        {"citation": "Hudson Institute, 'Operation Epic Fury: Iran's Declining Capabilities...' (2026)", "type": "journalism"}
+      ],
+      "caveat": "Post-dates the January 2026 knowledge cutoff. Casualty figures, the attribution and circumstances of Khamenei's death, whether nuclear objectives were truly achieved, oil-price magnitudes, and durability of any ceasefire are all unverified at the cutoff.",
+      "scores": {"selfHarm": 4, "counterproductive": 3, "alternative": 4, "systemic": 3, "caligula": 3}
+    },
+    {
+      "id": "greenland-annexation-threat",
+      "title": "Threat to seize Greenland from Denmark, a NATO ally",
+      "domain": "foreign-policy",
+      "era": "second-term",
+      "provenance": "documented",
+      "confidence": 0.85,
+      "summary": "Trump repeatedly refused to rule out military or economic force to bring Greenland under US control, calling 'anything less' than US control 'unacceptable' and threatening tariffs on Denmark and other NATO members, before explicitly ruling out the use of force at Davos on 21 January 2026 ('I won't use force') while still pressing for negotiations and tariffs. The episode damaged transatlantic trust even after the walkback.",
+      "cost": "US alliance credibility and NATO cohesion; Danish/EU relations; Greenlanders' self-determination as a bargaining chip; precedent that borders of allies are negotiable by coercion.",
+      "caligulaParallel": "Coveting territory for prestige and treating sovereign relationships as instruments of personal will resembles the imperial assumption that allied kingdoms exist at the princeps' pleasure (Suetonius records Caligula's contempt for client kings and the Senate alike, Caligula 22, 26 - a hostile source, read by modern scholars as status-insult rather than literal policy).",
+      "reliabilityNote": "Documented: on-record presidential statements, White House confirmation that military force was 'always an option', and wide reputable coverage (CNN, Al Jazeera, ABC, NPR, Time, House of Commons Library, Brookings); the 21 Jan 2026 Davos walkback ruling out force is also on record (CNN, NPR, ABC, Time). Falls within the stated knowledge-cutoff window.",
+      "sources": [
+        {"citation": "CNN, 'Trump says anything less than US control of Greenland is unacceptable' (2026-01-14)", "type": "journalism"},
+        {"citation": "Al Jazeera, 'US says military always an option in Greenland...' (2026-01-07)", "type": "journalism"},
+        {"citation": "NPR, 'In Davos speech, Trump ruled out using military force to acquire Greenland' (2026-01-21)", "type": "journalism"},
+        {"citation": "UK House of Commons Library, 'President Trump and Greenland: FAQs', CBP-10472", "type": "official-record"},
+        {"citation": "Brookings, 'What follows President Trump's decision to step back from threatening force in Greenland?' (2026)", "type": "journalism"}
+      ],
+      "caveat": "The Davos walkback was conditional in tone (force 'ruled out' while tariffs and pressure for 'negotiations' continued); the lasting-damage judgment is interpretive.",
+      "scores": {"selfHarm": 3, "counterproductive": 4, "alternative": 4, "systemic": 2, "caligula": 4}
+    },
+    {
+      "id": "alienating-allies",
+      "title": "Coercion of allies: tariffs and territorial threats against NATO/EU/Canada",
+      "domain": "foreign-policy",
+      "era": "second-term",
+      "provenance": "documented",
+      "confidence": 0.8,
+      "summary": "Across 2025-2026 the administration coupled tariff threats (10-25%) with territorial pressure on Denmark, Canada and others, turning alliances into instruments of coercion. Analysts across the spectrum judged this self-defeating, pushing partners toward hedging and strategic autonomy.",
+      "cost": "Decades of accumulated alliance capital; US leverage versus China; supply-chain and defence-industrial cooperation; long-run dollar/security-guarantee credibility.",
+      "caligulaParallel": "Caligula's gratuitous humiliation of senators and allied notables (Winterling reads many 'cruelties' as deliberate status-insults) parallels treating partners as subordinates to be cowed rather than courted; the spectacle of dominance was the point.",
+      "reliabilityNote": "Documented as a pattern by CSIS, Carnegie, Baker Institute, NATO/Davos transcripts and NPR. Some specific anecdotes (e.g., a reported threat to cut off trade with Spain over base access) are single-sourced or contested and have been removed from the summary; hence confidence below the Greenland item.",
+      "sources": [
+        {"citation": "CSIS, 'The Transatlantic Alliance in the Age of Trump: The Coming Collisions'", "type": "journalism"},
+        {"citation": "Carnegie Endowment, 'Trump Turns NATO into a Tool of Coercion' (2026-05)", "type": "journalism"},
+        {"citation": "NATO, 'Remarks by Secretary General at WEF Davos' (2026-01-21)", "type": "official-record"},
+        {"citation": "NPR, 'Trump vs. U.S. allies: How will this end?' (2026-01-22)", "type": "journalism"}
+      ],
+      "caveat": "Some bilateral specifics (e.g., the reported Spain trade-cutoff threat) are single-sourced or contested and have been dropped from the asserted summary.",
+      "scores": {"selfHarm": 4, "counterproductive": 4, "alternative": 4, "systemic": 3, "caligula": 3}
+    },
+    {
+      "id": "liberation-day-tariffs",
+      "title": "'Liberation Day' reciprocal tariff shock",
+      "domain": "economy-trade",
+      "era": "second-term",
+      "provenance": "documented",
+      "confidence": 0.9,
+      "summary": "On 2 April 2025 Trump imposed sweeping 'reciprocal' tariffs (10% floor, higher for major partners), lifting the average effective US tariff rate toward ~22.5% and roiling markets; a year on, the central promises (reshoring jobs, shrinking the deficit, paying down debt) had not materialised while prices rose. Even sympathetic analysts at Cato and AEI documented the gap between claims and results.",
+      "cost": "US consumers (higher prices, food up ~1.6%); farmers and import-dependent manufacturers; investors; the trade deficit hit record real-terms highs; policy-uncertainty drag on investment.",
+      "caligulaParallel": "Suetonius (Caligula 38-41) describes Caligula's improvised, arbitrary fiscal exactions and novel taxes to fund spectacle after squandering the treasury; the tariff regime's erratic, announced-then-paused improvisation echoes rule-by-whim over revenue. (Suetonius is a hostile, moralising source.)",
+      "reliabilityNote": "Documented: Executive Order 14257 is on the record; effects analysed by Tax Foundation, CSIS, CFR, Cato, AEI and peer-reviewed work (ScienceDirect). Magnitudes vary by model but direction is consistent and multiply-sourced.",
+      "sources": [
+        {"citation": "Executive Order 14257, 'Regulating Imports With a Reciprocal Tariff...' (2025-04-02)", "type": "official-record"},
+        {"citation": "Tax Foundation, 'Liberation Day Tariffs'", "type": "journalism"},
+        {"citation": "CFR, 'A Year After Liberation Day, Experts Review the Costs of Trump's Tariffs' (2026)", "type": "journalism"},
+        {"citation": "Cato Institute, 'One Year After Liberation Day' (2026)", "type": "journalism"},
+        {"citation": "ScienceDirect, 'Making America great again? The economic impacts of Liberation Day tariffs' (2025)", "type": "modern-scholarship"}
+      ],
+      "caveat": "Specific magnitudes (effective-rate level, food-price increment, deficit effect) vary by model and are estimates; direction of effect is robust.",
+      "scores": {"selfHarm": 4, "counterproductive": 5, "alternative": 4, "systemic": 3, "caligula": 2}
+    },
+    {
+      "id": "loyalist-sycophant-appointments",
+      "title": "Loyalty-over-competence cabinet and agency appointments",
+      "domain": "institutions-rule-of-law",
+      "era": "second-term",
+      "provenance": "documented",
+      "confidence": 0.8,
+      "summary": "Senior posts (Defense, DNI, FBI, HHS) were filled prioritising personal loyalty and public defence of Trump over relevant expertise, several confirmed only on tie-breaking or near-party-line votes and amid vetting concerns. Critics argued the pattern degraded institutional capacity and independent judgment; the net-effect judgment is interpretive.",
+      "cost": "Quality of governance and crisis decision-making; morale and retention of career professionals; public trust in agencies; downstream policy failures attributed to inexpert leadership.",
+      "caligulaParallel": "The canonical Caligula sycophancy emblem is the threat to make his horse Incitatus consul (Suetonius, Caligula 55; Dio 59.14). NOTE: both ancient sources only say he *planned* it and Dio says it never happened; Suetonius hedges with 'it is even said.' Modern scholars (Barrett, Winterling) read it as a calculated insult to the Senate or a garbled joke, not literal madness. Used illustratively, not as fact.",
+      "reliabilityNote": "Documented that loyalty was a stated criterion and that confirmations were contested (Washington Post, Wikipedia 'Second cabinet of Donald Trump', vote tallies). The judgment that this is net 'folly' is interpretive; specific competence outcomes vary by official, so confidence moderate.",
+      "sources": [
+        {"citation": "Washington Post, 'Trump selections for Cabinet advance, despite initial controversy' (2025-01-17)", "type": "journalism"},
+        {"citation": "Wikipedia, 'Second cabinet of Donald Trump' (accessed 2026-05)", "type": "journalism"},
+        {"citation": "The White House, 'President Trump Announces Cabinet and Cabinet-Level Appointments' (2025-01)", "type": "primary"}
+      ],
+      "caveat": "The Incitatus parallel is contested even in antiquity (the horse was never actually made consul); used illustratively. Competence outcomes vary by appointee.",
+      "scores": {"selfHarm": 3, "counterproductive": 3, "alternative": 4, "systemic": 4, "caligula": 5}
+    },
+    {
+      "id": "gilded-oval-self-imagery",
+      "title": "Gilded Oval Office and self-imagery (gold decor, mugshot portrait)",
+      "domain": "information-media",
+      "era": "second-term",
+      "provenance": "documented",
+      "confidence": 0.85,
+      "summary": "Trump refurbished the Oval Office with extensive gold ornament and Mar-a-Lago-style cherubs and hung his own 2023 booking photo in a gold frame, an aesthetic a former official called 'more king-like' than presidential. Largely symbolic, but a clear vanity/monuments signal at the seat of executive power.",
+      "cost": "Mostly reputational/symbolic; normalises personalist, monarchical iconography in a republican office. Material cost was modest (reportedly partly self-funded).",
+      "caligulaParallel": "Suetonius (Caligula 22, 52) emphasises Caligula's love of gold, theatrical costume and self-display, and his blurring of ruler and god; gilding the seat of power and centring one's own image is a vanity/monument echo. Modern scholars caution Suetonius exaggerates for moral effect.",
+      "reliabilityNote": "Documented via photographs and multiple outlets (CNN, Newsweek, France24). Low stakes, high symbolic salience for a 'caligula' axis; confidence high on facts, the 'folly' weight is modest.",
+      "sources": [
+        {"citation": "CNN, 'Flags, figurines and gold everywhere: Trump transforms the Oval Office into a gilded gallery' (2025-03-16)", "type": "journalism"},
+        {"citation": "Newsweek, 'Gold everywhere: See how Donald Trump has blinged out the Oval Office' (2025)", "type": "journalism"},
+        {"citation": "France24, 'Trump brings the bling with gold-plated Oval Office makeover' (2025-03-20)", "type": "journalism"}
+      ],
+      "scores": {"selfHarm": 1, "counterproductive": 1, "alternative": 2, "systemic": 2, "caligula": 5}
+    },
+    {
+      "id": "military-parade-birthday",
+      "title": "~$30M military parade on the Army's 250th / Trump's birthday",
+      "domain": "military",
+      "era": "second-term",
+      "provenance": "documented",
+      "confidence": 0.9,
+      "summary": "On 14 June 2025 a large military parade (about 6,700 troops, 28 tanks, ~50 aircraft) marked the Army's 250th anniversary, coinciding with Trump's birthday, at a cost the Army later put at about $30M including ~$16M in street-repair and protection. (Pre-event estimates ran as high as ~$45M; the Army's post-event figure was ~$30M.) Critics framed it as a personalist spectacle of the sort US presidents had long avoided.",
+      "cost": "~$30M public funds; spending on street/tank-damage repair; opportunity cost and the symbolism of tanks-in-the-capital; readiness/PR tradeoffs.",
+      "caligulaParallel": "Caligula's pontoon bridge across the Bay of Baiae (Suetonius, Caligula 19; Dio 59.17), reportedly crossed in a gold cloak - a costly, militarily pointless spectacle staged for personal glory - is the archetype of vanity-as-statecraft a triumphal birthday-adjacent parade evokes. The anecdote comes from hostile sources and may be embellished.",
+      "reliabilityNote": "Documented: the Army's own post-event cost figure (~$30M) and parade composition reported by Stars and Stripes, NPR, ABC, NBC, Wikipedia. The birthday coincidence is factual; the intent/personalist framing is interpretive.",
+      "sources": [
+        {"citation": "Stars and Stripes, 'Army says 250th anniversary celebration in DC cost $30 million' (2025-07-22)", "type": "journalism"},
+        {"citation": "Wikipedia, 'United States Army 250th Anniversary Parade' (accessed 2026-05)", "type": "journalism"},
+        {"citation": "NPR, 'Fireworks and parachutists: Army celebrates its 250th year, Trump celebrates his 79th' (2025-06-14)", "type": "journalism"}
+      ],
+      "caveat": "Cost estimates ranged from ~$30M (Army post-event) to ~$45M (pre-event press estimates); the headline figure uses the Army's number. The '$3M steel plates' specific is dropped as not consistently sourced.",
+      "scores": {"selfHarm": 1, "counterproductive": 2, "alternative": 3, "systemic": 2, "caligula": 5}
+    },
+    {
+      "id": "trump-class-battleship",
+      "title": "'Trump-class' battleship announcement (USS Defiant / 'Golden Fleet')",
+      "domain": "military",
+      "era": "second-term",
+      "provenance": "reported",
+      "confidence": 0.5,
+      "summary": "On 22 Dec 2025 Trump ANNOUNCED a new 'Trump-class' guided-missile battleship (lead ship USS Defiant, BBG-1) as part of a 'Golden Fleet'. The announcement itself is genuinely sourced and pre-dates the knowledge cutoff. Everything beyond the announcement is projection or aspiration: program documents describing nuclear propulsion, 'between 20 and 25' eventual hulls, ~$17.6-18.9B for the first ship, construction from 2028 and delivery ~2036 are unfunded plans, and analysts (Cancian/CSIS) widely expect the program to be cancelled before any hull is built. Graded reported (not documented and not 'no basis'): the announcement is real; the ship and its specifications are not yet reality.",
+      "cost": "Conditional only. IF pursued, large opportunity cost (~$12-19B per hull, FY2025) against more survivable, distributed naval investment; shipyard-capacity strain; an arguably obsolete platform class named for the sitting president. No funds have been appropriated, so realized cost is currently zero.",
+      "caligulaParallel": "Naming a colossal, dubious warship class after oneself and branding a 'Golden Fleet' fuses monument-building with self-image - loosely kin to Caligula's ornate pleasure-galleys with jewelled sterns (Suetonius, Caligula 37) and the Baiae prestige bridge. The Lake Nemi ships are an archaeological corroboration of such excess but are not described in Suetonius §37 by that name; the linkage here is interpretive, not a literal source claim.",
+      "reliabilityNote": "Reported. The announcement and program-document existence are real and on the record (USNI News, Navy.mil press release, Wikipedia citing CRS cost ranges, CSIS, CNBC). BUT the program is unfunded, the nuclear-powered/up-to-25-hull/delivery-2036 details are projections from planning documents rather than facts on the ground, and named experts predict cancellation. The Dec 2025 announcement falls within the cutoff window; subsequent program developments (e.g., personnel changes in 2026) post-date it and are excluded.",
+      "sources": [
+        {"citation": "USNI News, 'Trump Unveils New Battleship Class; Proposed USS Defiant...' (2025-12-22)", "type": "journalism"},
+        {"citation": "U.S. Navy, 'President Trump Announces New Battleship' (navy.mil press release, 2025-12-22)", "type": "primary"},
+        {"citation": "CSIS, 'The Golden Fleet's Battleship Will Never Sail' (Cancian)", "type": "journalism"},
+        {"citation": "Wikipedia, 'Trump-class battleship' (CRS-cited cost estimates; accessed 2026-05)", "type": "journalism"},
+        {"citation": "CNBC, 'The Trump-class battleship faces a large obstacle: Reality' (2025-12-26)", "type": "journalism"}
+      ],
+      "caveat": "Only the announcement is documented; the program is unfunded, the design unprecedented, and experts expect cancellation. Nuclear propulsion, hull counts, per-ship cost, and the 2028/2036 schedule are unbuilt projections. Scores are conditional on the announced intent, NOT a delivered ship; treat the 'caligula' score as reflecting the gesture, not a realized monument.",
+      "scores": {"selfHarm": 1, "counterproductive": 2, "alternative": 3, "systemic": 1, "caligula": 4}
+    },
+    {
+      "id": "anthropic-dod-blacklist",
+      "title": "Pentagon 'supply-chain risk' designation of Anthropic (post-cutoff dispute)",
+      "domain": "technology-science",
+      "era": "second-term",
+      "provenance": "reported",
+      "confidence": 0.5,
+      "summary": "The documented, pre-cutoff fact is that Anthropic signed a ~$200M DoD prototype agreement in July 2025 and that deployment negotiations on GenAI.mil stalled in fall 2025 over the Pentagon's demand for unfettered model access versus Anthropic's refusal to permit fully autonomous-weapon and domestic-mass-surveillance uses. The escalation - a DoD 'supply-chain risk' designation in early March 2026, Anthropic's lawsuits, a preliminary injunction (Judge Rita Lin), an appeals-court denial of an emergency block, and ongoing D.C. Circuit argument - all occurs AFTER the January 2026 knowledge cutoff and is knowable only through contemporaneous reporting. Downgraded from 'documented' to 'reported' accordingly.",
+      "cost": "If the designation stands, US defense access to a frontier safety-conscious lab's models; chilling effect on AI firms that set use limits; legal/precedent costs of branding a domestic firm an adversary-grade risk; signal of coercion over negotiation. These costs are contingent on a still-unresolved, post-cutoff dispute.",
+      "caligulaParallel": "Reportedly punishing a party for refusing total submission - demanding 'unfettered access' and retaliating against limits - loosely mirrors the demand for absolute compliance attributed to Caligula by hostile sources (Suetonius, Caligula 26-30; cf. the demand for divine honours in Philo, Embassy to Gaius). Interpretive analogy only.",
+      "reliabilityNote": "Reported, and the operative events post-date the cutoff. The dispute is extensively covered in contemporaneous reporting (CNBC series, CNN Business, a dedicated Wikipedia article, Breaking Defense on the July 2025 award) with a named judge and procedural history, but it began after January 2026, remains unresolved, and the merits and DoD rationale are contested. It is therefore NOT 'documented' in the sense of being settled and within training knowledge. Disclosure: subject company is the author's own organisation; assessment relies solely on third-party reporting.",
+      "sources": [
+        {"citation": "Breaking Defense, 'Anthropic, Google and xAI win $200M each from Pentagon AI chief for agentic AI' (2025-07)", "type": "journalism"},
+        {"citation": "Anthropic, 'Anthropic awarded $200M DOD agreement for AI capabilities' (2025-07)", "type": "primary"},
+        {"citation": "Wikipedia, 'Anthropic-United States Department of Defense dispute' (accessed 2026-05)", "type": "journalism"},
+        {"citation": "CNBC, 'Anthropic sues Trump administration over Pentagon blacklist' (2026-03-09)", "type": "journalism"},
+        {"citation": "CNBC, 'Anthropic wins preliminary injunction in DOD fight...' (2026-03-26)", "type": "journalism"}
+      ],
+      "caveat": "Post-dates the January 2026 knowledge cutoff and is known only via contemporaneous reporting. Litigation ongoing; the designation, its legality, and the full DoD rationale are unresolved/non-public at the cutoff. The pre-cutoff $200M contract and the negotiation impasse are the only firmly documented elements.",
+      "scores": {"selfHarm": 2, "counterproductive": 3, "alternative": 4, "systemic": 3, "caligula": 3}
+    },
+    {
+      "id": "doj-weaponization-retribution",
+      "title": "Weaponising the DOJ for retribution against political opponents",
+      "domain": "institutions-rule-of-law",
+      "era": "second-term",
+      "provenance": "documented",
+      "confidence": 0.8,
+      "summary": "The administration pursued criminal investigations and indictments of named adversaries (Letitia James, James Comey; investigations of Adam Schiff), several of which judges dismissed - including over the unlawful appointment of US Attorney Lindsey Halligan. Critics across the spectrum called it retribution with 'targets first, legal theories afterward'; the motive characterisation is inferential.",
+      "cost": "Rule of law and prosecutorial independence; due-process norms; eventual blowback and reversed cases; precedent inviting tit-for-tat criminalisation of politics.",
+      "caligulaParallel": "Suetonius and Dio depict Caligula prosecuting and ruining senators on pretext, reviving maiestas (treason) charges to punish enemies and raise money (Caligula 30, 41); Winterling reframes the terror as a power-struggle with the elite. Hostile sourcing noted; the use of state machinery for personal vengeance is the shared interpretive core.",
+      "reliabilityNote": "Documented: indictments and dismissals are on the court record; the 'weaponization' characterization is widely reported (NBC, Axios, academic/legal commentary, Protect Democracy tracker). Motive is inferential, so confidence high-but-not-certain.",
+      "sources": [
+        {"citation": "Univ. of Iowa Journal of Gender, Race & Justice, 'President Trump's Weaponization of DOJ...' (2025-11)", "type": "modern-scholarship"},
+        {"citation": "Protect Democracy, 'Retaliatory Action Tracker'", "type": "official-record"},
+        {"citation": "NBC News, 'Trump DOJ's weaponization group under pressure to deliver results' (2025)", "type": "journalism"},
+        {"citation": "Axios, 'Unlikely enforcers shape Trump's weaponization crusade' (2025-08-21)", "type": "journalism"}
+      ],
+      "caveat": "Prosecutorial motive is inferential; some cases remain in litigation.",
+      "scores": {"selfHarm": 3, "counterproductive": 4, "alternative": 4, "systemic": 5, "caligula": 4}
+    },
+    {
+      "id": "ig-purge-schedule-f",
+      "title": "Purge of inspectors general and Schedule F civil-service reclassification",
+      "domain": "institutions-rule-of-law",
+      "era": "second-term",
+      "provenance": "documented",
+      "confidence": 0.85,
+      "summary": "On 24 Jan 2025 the administration abruptly fired more than a dozen inspectors general without the legally required 30-day notice (later ruled unlawful), and reinstated Schedule F to make career civil servants at-will, while DOGE-driven cuts announced large-scale layoffs (an oft-cited ~300,000 figure, with churn and some rehires). The combined effect gutted internal oversight and institutional memory.",
+      "cost": "Loss of independent watchdogs and accountability; degraded state capacity and expertise; legal costs; long-run damage to a merit-based civil service that outlasts any one president.",
+      "caligulaParallel": "Removing the checks of the senatorial order and concentrating discretionary power - Suetonius (Caligula 26) stresses his contempt for institutions and magistrates - parallels stripping protections from the permanent bureaucracy so loyalty replaces independence. (Hostile source; interpretive.)",
+      "reliabilityNote": "Documented: IG firings and the court ruling (Judge Reyes) are on the record; Schedule F and DOGE layoff figures widely reported (Wikipedia, GovExec, House Oversight). The aggregate '~300k' is an announced figure with churn (some rehires), hence a caveat.",
+      "sources": [
+        {"citation": "House Oversight Democrats letter to the President re: federal workforce purge (2025-02-03)", "type": "official-record"},
+        {"citation": "Wikipedia, '2025 United States federal mass layoffs' (accessed 2026-05)", "type": "journalism"},
+        {"citation": "Government Executive, 'Project 2025 wanted to hobble the federal workforce. DOGE has...' (2025-04)", "type": "journalism"}
+      ],
+      "caveat": "The ~300,000 layoff figure is an announced aggregate; some layoffs were paused, rehired, or litigated, so net headcount effects are evolving.",
+      "scores": {"selfHarm": 3, "counterproductive": 3, "alternative": 4, "systemic": 5, "caligula": 4}
+    },
+    {
+      "id": "national-guard-domestic-deployment",
+      "title": "Federalising National Guard / troops into US cities over governors' objections",
+      "domain": "military",
+      "era": "second-term",
+      "provenance": "documented",
+      "confidence": 0.85,
+      "summary": "In June 2025 Trump federalised ~2,000 Guard troops and active-duty Marines into Los Angeles over Governor Newsom's objection (citing 10 U.S.C. 12406, not the Insurrection Act), and later attempted Portland and Chicago deployments; courts found Posse Comitatus concerns and the Supreme Court halted Chicago, with deployments reported ended on 31 Dec 2025. Using the military domestically against state wishes strained civil-military norms.",
+      "cost": "Civil-military norms and federalism; trust between troops and citizens; legal defeats; precedent for domestic military policing.",
+      "caligulaParallel": "Turning armed force inward as an instrument of personal authority - the ruler's troops over the magistrates' objection - echoes the Praetorian dynamic and Caligula's reliance on coercive display over consent (Suetonius, Caligula 26, 48-49; hostile source).",
+      "reliabilityNote": "Documented: deployment, legal authority cited, court findings (Judge Breyer; a SCOTUS Chicago stay), and termination date are on the record (NPR, PBS, Al Jazeera, Axios, JURIST).",
+      "sources": [
+        {"citation": "PBS NewsHour, 'What U.S. law says about Trump's deployment of active-duty troops to Los Angeles' (2025)", "type": "journalism"},
+        {"citation": "NPR, 'As Trump federalizes National Guard, is the Insurrection Act on the table?' (2025-06-09)", "type": "journalism"},
+        {"citation": "JURIST, 'Does Trump Have Unquestioned Power to Deploy Troops Under the Insurrection Act?' (2025-10)", "type": "journalism"},
+        {"citation": "Axios, 'Trump floats Insurrection Act use amid National Guard standoff with states' (2025-10-07)", "type": "journalism"}
+      ],
+      "caveat": "The 31 Dec 2025 end-date and final court dispositions are at the edge of the cutoff window; some appellate outcomes may post-date it.",
+      "scores": {"selfHarm": 3, "counterproductive": 4, "alternative": 4, "systemic": 4, "caligula": 4}
+    },
+    {
+      "id": "alien-enemies-act-cecot",
+      "title": "Alien Enemies Act removals to CECOT with little due process",
+      "domain": "immigration",
+      "era": "second-term",
+      "provenance": "documented",
+      "confidence": 0.85,
+      "summary": "In March 2025 Trump invoked the 1798 Alien Enemies Act to fast-track removal of ~250 Venezuelans to El Salvador's CECOT mega-prison, many without convictions or due process; courts (Boasberg, Xinis; the 5th Circuit) found the invocation unlawful and the Abrego Garcia removal a wrongful violation of a protective order. A year on, deportees remained stuck abroad.",
+      "cost": "Wrongly removed individuals and their families; due-process and habeas guarantees; US standing on rule of law; costs of court battles and reputational harm; risk to citizens if error rates persist.",
+      "caligulaParallel": "Suetonius (Caligula 27-29) catalogs summary, arbitrary punishments without trial as a hallmark of tyranny; bypassing courts to imprison people abroad on thin evidence is an analogous disregard for due process, though modern scholars warn such ancient lists are moralising and exaggerated.",
+      "reliabilityNote": "Documented: the AEA invocation, the CECOT removals, the named judges and appellate ruling, and the Abrego Garcia 'wrongful deportation' admission are extensively on the record (NPR, CNN, WaPo, ABC, Texas Tribune).",
+      "sources": [
+        {"citation": "CNN, 'Federal appeals court says Trump unlawfully invoked the Alien Enemies Act' (2025-09-02)", "type": "journalism"},
+        {"citation": "Washington Post, 'Judge blocks Trump after he invokes wartime Alien Enemies Act...' (2025-03-15)", "type": "journalism"},
+        {"citation": "Washington Post, 'Deportees sent by Trump to Salvadoran prison are still stuck a year later' (2026-03-15)", "type": "journalism"},
+        {"citation": "Texas Tribune, 'Trump admin knew most deported Venezuelans had no U.S. convictions' (2025-05-30)", "type": "journalism"}
+      ],
+      "caveat": "Exact deportee counts and the share without convictions vary by reporting; the core unlawful-invocation and wrongful-removal findings are firmly on the record.",
+      "scores": {"selfHarm": 3, "counterproductive": 4, "alternative": 4, "systemic": 4, "caligula": 4}
+    },
+    {
+      "id": "rfk-vaccine-rollback",
+      "title": "HHS rollback of vaccine guidance amid record measles outbreak",
+      "domain": "public-health",
+      "era": "second-term",
+      "provenance": "documented",
+      "confidence": 0.8,
+      "summary": "Under HHS Secretary RFK Jr., the CDC's ACIP was replaced wholesale, several routine vaccines were demoted to 'shared clinical decision-making', and CDC Director Susan Monarez was fired after declining to endorse the changes - while 2025 measles cases hit a multi-decade high. Reordering vaccine policy against scientific consensus during an active outbreak is self-harming public-health folly, though the share of the outbreak attributable to policy versus broader hesitancy is debated.",
+      "cost": "Children and the immunocompromised (measles resurgence with hundreds of cases in the epicenter and reported deaths); herd immunity; public trust in CDC; preventable disease burden and costs.",
+      "caligulaParallel": "Elevating a single ruler's idiosyncratic doctrine over expert consensus and purging officials who refuse to ratify it parallels Caligula's reported demand that reality bend to his will (Philo, Embassy to Gaius, on coerced assent). Interpretive, hostile-source analogy.",
+      "reliabilityNote": "Documented: ACIP replacement, schedule changes, Monarez firing, and outbreak totals are reported by Time, Bloomberg, CNN, ProPublica, CIDRAP. The causal share attributable to policy vs. broader hesitancy is debated, hence a caveat.",
+      "sources": [
+        {"citation": "Bloomberg, 'Measles Cases 2025... in Year RFK Jr. Changed Vaccine Guidance' (2026-01-08)", "type": "journalism"},
+        {"citation": "ProPublica, 'The CDC Buried a Measles Forecast That Stressed the Need for Vaccinations'", "type": "journalism"},
+        {"citation": "CNN, 'On Capitol Hill, RFK Jr. defends vaccine policies, ongoing shakeups' (2026-04-21)", "type": "journalism"},
+        {"citation": "CIDRAP, 'In hearings, RFK Jr claims no responsibility for measles spread'", "type": "journalism"}
+      ],
+      "caveat": "Outbreak has multiple drivers; policy is a contributing, not sole, cause. Specific case/death counts vary by source and reporting date.",
+      "scores": {"selfHarm": 4, "counterproductive": 4, "alternative": 5, "systemic": 4, "caligula": 3}
+    },
+    {
+      "id": "science-research-cuts",
+      "title": "Mass cuts to NIH/NSF research funding and indirect-cost caps",
+      "domain": "technology-science",
+      "era": "second-term",
+      "provenance": "documented",
+      "confidence": 0.8,
+      "summary": "In 2025 the administration cut or froze billions in grants, terminated large numbers of NIH grants, and moved to cap indirect costs at 15% across NIH/DOE/NSF; PhD admissions fell, early-career awards dropped, and US scientists' foreign job applications rose. Courts and Congress pushed back, partly restoring funds, so net long-run damage is uncertain.",
+      "cost": "US biomedical and basic-science leadership; early-career researchers and universities; long-run innovation and economic competitiveness; risk of permanent brain drain.",
+      "caligulaParallel": "Suetonius (Caligula 34) reports Caligula's hostility to learning and his attacks on intellectual prestige (threatening to remove Homer, busts and writings of esteemed authors); kneecapping the research establishment echoes contempt for knowledge institutions. (Hostile, moralising source.)",
+      "reliabilityNote": "Documented: program effects reported by Brennan Center, Nature, Science/AAAS, C&EN, STAT, NBC; congressional/judicial reversals partly mitigate, so net effect is evolving (caveat). Specific dollar totals (e.g., '~$3B', '~2,100 grants/$9.5B', '~32% rise in foreign applications') vary by source and date and are presented as approximate.",
+      "sources": [
+        {"citation": "Brennan Center for Justice, 'The Cost of the Trump Administration's Attacks on Research Funding'", "type": "modern-scholarship"},
+        {"citation": "Nature, 'US science after a year of Trump: what has been lost and what remains' (2026)", "type": "modern-scholarship"},
+        {"citation": "Science/AAAS, 'Final funding bill for NIH pushes back against Trump cuts'", "type": "journalism"},
+        {"citation": "NBC News, 'Trump tried to gut science research funding. Courts and Congress have rebuffed him.'", "type": "journalism"}
+      ],
+      "caveat": "Specific dollar/grant/percentage figures are approximate and vary by source; some cuts were blocked or reversed, so net long-run damage is uncertain.",
+      "scores": {"selfHarm": 4, "counterproductive": 4, "alternative": 4, "systemic": 4, "caligula": 3}
+    },
+    {
+      "id": "paris-withdrawal-endangerment-repeal",
+      "title": "Paris Agreement withdrawal and repeal of the EPA endangerment finding",
+      "domain": "environment-climate",
+      "era": "second-term",
+      "provenance": "documented",
+      "confidence": 0.85,
+      "summary": "On 20 Jan 2025 Trump again withdrew the US from the Paris Agreement, and in February 2026 the EPA finalised repeal of the 2009 endangerment finding, the legal basis for federal greenhouse-gas regulation, also ending vehicle climate rules. This strips a primary tool to regulate emissions and cedes climate leadership, though the repeal faces years of likely-Supreme-Court litigation.",
+      "cost": "Future generations and climate-exposed communities worldwide; US clean-energy industry and global leadership; the cost is largely deferred and diffuse, which dampens immediate self-harm scoring but raises systemic stakes.",
+      "caligulaParallel": "A 'global-backdrop' harm: less personal vanity than collective abdication. The loose Caligulan echo is the heedless squandering of a shared inheritance for short-term gratification (Suetonius, Caligula 37, on prodigal exhaustion of the treasury) - here, the climate commons. Explicitly a stretch analogy.",
+      "reliabilityNote": "Documented: the EO withdrawal and the EPA finalization (Administrator Zeldin on record) are official acts widely reported (NPR, NBC, Winston & Strawn legal analysis). The Feb 2026 finalization is at the edge of/just past the cutoff and faces litigation, so durability is uncertain.",
+      "sources": [
+        {"citation": "Winston & Strawn, 'President Trump Signs EO Withdrawing the U.S. From Paris Agreement' (2025)", "type": "official-record"},
+        {"citation": "NBC News, 'EPA reverses endangerment climate change finding...' (2026)", "type": "journalism"},
+        {"citation": "NPR, 'Trump's EPA will end the basis for federal climate actions' (2026-02-11)", "type": "journalism"},
+        {"citation": "Resources for the Future, 'If/Then: Repealing the Endangerment Finding...'", "type": "modern-scholarship"}
+      ],
+      "caveat": "The Feb 2026 endangerment repeal is at/just past the knowledge-cutoff window and faces years of litigation; it could be vacated.",
+      "scores": {"selfHarm": 3, "counterproductive": 4, "alternative": 4, "systemic": 4, "caligula": 2}
+    },
+    {
+      "id": "press-suppression-lawsuits",
+      "title": "Press suppression: defamation suits, settlements, and pool/funding control",
+      "domain": "information-media",
+      "era": "second-term",
+      "provenance": "documented",
+      "confidence": 0.85,
+      "summary": "Trump extracted multi-million-dollar settlements from Paramount (60 Minutes) and ABC, sued the WSJ, NYT and BBC, banned the AP from the press pool, took over pool composition from the WHCA, and the FCC opened probes of NPR/PBS, amid 'enemy of the people' rhetoric. The pattern uses state and litigation leverage to chill independent coverage.",
+      "cost": "Press freedom and First-Amendment norms; news organisations' independence (settlements as de facto tribute); public access to scrutiny of power; self-censorship incentives.",
+      "caligulaParallel": "Caligula is reported to have been intolerant of criticism and to have punished writers and satirists. NOTE: the most lurid item - that he had a writer of Atellan farces burned alive in the arena over a double-meaning line (Suetonius, Caligula 27) - comes from a single hostile source written ~80 years later and should be treated as an allegation, not established fact. The interpretive point (controlling the narrative by punishing critics) stands independently of that anecdote.",
+      "reliabilityNote": "Documented: settlements, suits, AP ban and pool change, FCC probes are reported and largely on the record (Poynter, WaPo tracker, Variety, Axios, ACLU). Settlement amounts (~$16M figures) and pending-suit outcomes vary; some suits are unresolved.",
+      "sources": [
+        {"citation": "Poynter, 'The numbers that defined the Trump administration's attacks against the press in 2025'", "type": "journalism"},
+        {"citation": "Washington Post, 'Trump's escalating attacks on the media: A running tally of lawsuits' (2026-01-25)", "type": "journalism"},
+        {"citation": "Variety, 'Defeat the Press: How Trump's Attacks on News Outlets Undermine the First Amendment' (2025)", "type": "journalism"},
+        {"citation": "ACLU, 'Trump's Attacks on Press Freedom Escalate: NPR, PBS Funding Cuts Explained'", "type": "journalism"}
+      ],
+      "caveat": "Some suits are pending; settlement figures vary by report. The 'burned a writer alive' Caligula parallel is a contested hostile-source anecdote, used illustratively only.",
+      "scores": {"selfHarm": 2, "counterproductive": 3, "alternative": 4, "systemic": 4, "caligula": 4}
+    },
+    {
+      "id": "first-term-paris-pandemic-baseline",
+      "title": "First-term baseline: Paris exit (2017) and COVID-19 mismanagement (2020)",
+      "domain": "public-health",
+      "era": "first-term",
+      "provenance": "documented",
+      "confidence": 0.85,
+      "summary": "The first term established the pattern: the 2017 Paris withdrawal and, decisively, the 2020 COVID-19 response - downplaying the threat, sidelining experts, and promoting unproven treatments (e.g., hydroxychloroquine, the widely-reported April 2020 musing about disinfectant) - widely judged to have worsened the US death toll. Included as the documented foundation the second-term follies build upon.",
+      "cost": "Large numbers of arguably-avoidable US deaths (counterfactual estimates vary widely); economic disruption; trust in public-health institutions; precedent for politicising science.",
+      "caligulaParallel": "Suetonius (Caligula 29-30) frames Caligula's capricious disregard for the welfare of those under his charge and his improvised pronouncements as emblematic of misrule; substituting whim and bravado for expert guidance in a deadly crisis is the analogous failure. Hostile source; interpretive.",
+      "reliabilityNote": "Documented and heavily studied; included as historical baseline rather than re-litigated, so a single consolidated entry with representative sourcing. Specific counterfactual death tolls are estimates and contested.",
+      "sources": [
+        {"citation": "Lancet Commission on public policy and health in the Trump era (2021)", "type": "modern-scholarship"},
+        {"citation": "Contemporary reporting and CDC mortality data, 2020 (multiply-sourced)", "type": "journalism"}
+      ],
+      "caveat": "Counterfactual mortality estimates vary widely; first-term item summarised, not exhaustively re-sourced.",
+      "scores": {"selfHarm": 4, "counterproductive": 4, "alternative": 5, "systemic": 3, "caligula": 3}
+    }
+  ]
+}

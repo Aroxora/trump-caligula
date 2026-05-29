@@ -1,0 +1,265 @@
+<div class="mfi">
+  <header class="mfi__head">
+    <p class="eyebrow">The instrument</p>
+    <h2>The March of Folly Index</h2>
+    <p class="lede">
+      The article reaches for Barbara Tuchman to ask whether today's blunders are personal or
+      systemic. We make that question measurable. Here is the method, the math, and the resulting
+      severity up front — the evidence, the parallels and the counter-case follow below.
+    </p>
+  </header>
+
+  <!-- METHODOLOGY + MATH -->
+  <div class="panel formula-panel">
+    <div class="formula" aria-label="MFI equals one hundred times sum of weight times score over five times sum of weights">
+      <span class="lhs">MFI</span><span class="eq">=</span>
+      <span class="frac">
+        <span class="num">100 · Σ ( w<sub>i</sub> · s<sub>i</sub> )</span>
+        <span class="den">5 · Σ w<sub>i</sub></span>
+      </span>
+      <span class="legend">s<sub>i</sub> ∈ [0,5] · w<sub>i</sub> = your weights</span>
+    </div>
+    <div class="axes-key">
+      @for (c of criteria; track c.id) {
+        <div class="axkey">
+          <span class="sym">{{ c.symbol }}</span>
+          <span class="axkey__body"><strong>{{ c.name }}.</strong> {{ c.meaning }} <em>{{ c.provenance }}</em></span>
+        </div>
+      }
+    </div>
+    <p class="formula__how">
+      Each failure is scored 0–5 (s<sub>i</sub>) on the five axes above and weighted (w<sub>i</sub>),
+      giving a 0–100 March of Folly Index. Three axes are Tuchman's own tests; one is the article's
+      "self-harm" framing; one measures Caligula resonance. The severity below is the weighted
+      average across every catalogued failure — adjust the weights further down and it recomputes live.
+    </p>
+  </div>
+
+  <!-- FULL METHODOLOGY (expandable) -->
+  <app-methodology />
+
+  <!-- SEVERITY -->
+  <div class="panel gauge-panel">
+    <div class="gauge">
+      <svg viewBox="0 0 200 120" role="img" [attr.aria-label]="'Aggregate folly index ' + aggregate().mean + ' out of 100'">
+        <path d="M10 110 A 90 90 0 0 1 190 110" fill="none" stroke="rgba(0,0,0,.08)" stroke-width="14" stroke-linecap="round"/>
+        <path
+          d="M10 110 A 90 90 0 0 1 190 110" fill="none"
+          [attr.stroke]="'url(#g)'" stroke-width="14" stroke-linecap="round"
+          [attr.stroke-dasharray]="gaugeDash(aggregate().mean)"
+        />
+        <defs>
+          <linearGradient id="g" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#c9a227"/>
+            <stop offset="0.6" stop-color="#c47a18"/>
+            <stop offset="1" stop-color="#9b1c1c"/>
+          </linearGradient>
+        </defs>
+        <text x="100" y="92" text-anchor="middle" class="gauge__num">{{ aggregate().mean }}</text>
+        <text x="100" y="110" text-anchor="middle" class="gauge__cap">aggregate MFI</text>
+      </svg>
+    </div>
+    <div class="gauge__read">
+      <p class="band band--{{ verdict().band }}">Severity: {{ verdict().band }}</p>
+      <p class="thirdtest__h">Tuchman's third test — personal, or systemic?</p>
+      <div class="systemic">
+        <div class="systemic__scale"><span>personal caprice</span><span>systemic folly</span></div>
+        <div class="systemic__bar"><span [style.left.%]="aggregate().systemic"></span></div>
+        <p><strong>{{ aggregate().systemic }}% systemic.</strong> {{ verdict().nature }}</p>
+      </div>
+      <p class="gauge__note">Across {{ aggregate().count }} of {{ aggregate().total }} catalogued failures, weighted to your settings.</p>
+    </div>
+  </div>
+
+  <!-- WEIGHTS (interactive) -->
+  <div class="panel weights-panel">
+    <p class="weights__intro"><strong>Tune the method.</strong> Move a slider to change how much each axis counts, or adopt a ready-made worldview — every score and the severity above recompute instantly.</p>
+    <div class="weights">
+      @for (c of criteria; track c.id) {
+        <div class="weight">
+          <div class="weight__top">
+            <span class="sym">{{ c.symbol }}</span>
+            <span class="wname">{{ c.name }}</span>
+            <span class="wval">{{ (shares()[c.id] * 100) | number: '1.0-0' }}%</span>
+          </div>
+          <input
+            type="range" min="0" max="3" step="0.1"
+            [value]="weights()[c.id]"
+            (input)="onWeight(c.id, $event)"
+            [attr.aria-label]="'Weight for ' + c.name"
+          />
+        </div>
+      }
+    </div>
+    <div class="presets">
+      <span class="presets__label">Or adopt a worldview:</span>
+      @for (p of presets; track p.name) {
+        <button class="preset" (click)="applyPreset(p.weights, p.name)" [title]="p.description">{{ p.name }}</button>
+      }
+      <button class="reset" (click)="svc.resetWeights()">↺ Reset</button>
+    </div>
+  </div>
+
+  <!-- TRUST DIAL -->
+  <div class="panel trust-panel">
+    <div class="trust__intro">
+      <h3>Trust dial</h3>
+      <p>How much of the indictment is solid? Drop the contested items and watch the aggregate move.</p>
+    </div>
+    <div class="trust__controls">
+      <div class="trust__provs">
+        @for (p of provenances; track p) {
+          <button class="provtoggle tag--{{ p }}" [class.off]="!included()[p]" (click)="toggleProvenance(p)" [attr.aria-pressed]="included()[p]">
+            <span class="check">{{ included()[p] ? '✓' : '✕' }}</span> {{ p }}
+          </button>
+        }
+      </div>
+      <label class="confweight">
+        <input type="checkbox" [checked]="confidenceWeighted()" (change)="toggleConfidence()" />
+        Weight each score by its confidence
+      </label>
+    </div>
+  </div>
+
+  <!-- FOLLY MAP -->
+  <div class="panel map-panel">
+    <div class="map-panel__intro">
+      <h3>The folly map</h3>
+      <p>
+        The article's question, drawn as a picture. Each failure is plotted by <strong>self-harm</strong>
+        against how <strong>systemic</strong> it is; dot size is its overall index. The top-right is the
+        dangerous quarter — Tuchman's "decadence". Note where <em>Caligula's own acts</em> sit: high on
+        cost, but <strong>low on systemic</strong> — his folly died with him in AD 41, which is exactly
+        Tuchman's point about single rulers.
+      </p>
+      <div class="maplegend">
+        <span class="lg lg--trump">● Trump folly</span>
+        <span class="lg lg--cal">◆ Caligula's acts</span>
+        <span class="lg lg--tuch">▢ Tuchman's follies</span>
+        <button class="refstoggle" (click)="showRefs.set(!showRefs())">{{ showRefs() ? 'hide' : 'show' }} references</button>
+      </div>
+    </div>
+    <app-scatter
+      [points]="scatter()"
+      xLabel="Self-harm →"
+      yLabel="Systemic →"
+      ariaLabel="Folly map: self-harm against how systemic each failure is"
+      [quadrants]="{ tl: 'entrenched, low cost', tr: 'systemic & costly — decadence', bl: 'personal & survivable', br: 'costly but personal' }"
+      (select)="openFromMap($event)"
+    />
+  </div>
+
+  <!-- CALIBRATION STRIP -->
+  <div class="calib">
+    <p class="calib__label">Calibration — Tuchman's own four follies, scored on the same axes:</p>
+    <div class="calib__items">
+      @for (r of tuchmanRefs(); track r.id) {
+        <div class="calib__item" [title]="r.blurb">
+          <span class="calib__mfi band--{{ band(r.mfi) }}">{{ r.mfi }}</span>
+          <span class="calib__name">{{ r.title }}</span>
+        </div>
+      }
+    </div>
+  </div>
+
+  <!-- FILTER -->
+  <div class="filters">
+    @for (d of domains(); track d) {
+      <button class="pill" [class.active]="domainFilter() === d" (click)="domainFilter.set(d)">{{ domainLabel(d) }}</button>
+    }
+  </div>
+
+  <!-- FOLLY CARDS -->
+  <ul class="follies">
+    @for (f of visible(); track f.id) {
+      <li class="folly band--{{ band(f.mfi) }}" [class.open]="open() === f.id" [id]="'folly-' + f.id">
+        <button class="folly__head" (click)="toggle(f.id)" [attr.aria-expanded]="open() === f.id">
+          <span class="folly__score" [attr.data-band]="band(f.mfi)">{{ f.mfi }}</span>
+          <span class="folly__title">
+            <span class="folly__name">{{ f.title }}</span>
+            <span class="folly__meta">
+              <span class="tag tag--{{ f.provenance }}">{{ f.provenance }}</span>
+              @if (f.postCutoff) { <span class="badge badge--cutoff" title="Operative events post-date the Jan 2026 knowledge cutoff">post-cutoff</span> }
+              @if (f.coi) { <span class="badge badge--coi" [title]="f.coi">⚠ conflict of interest</span> }
+              <span class="domain">{{ domainLabel(f.domain) }}</span>
+            </span>
+          </span>
+          <span class="folly__chev" aria-hidden="true">{{ open() === f.id ? '–' : '+' }}</span>
+        </button>
+
+        @if (open() === f.id) {
+          <div class="folly__body">
+            <p class="folly__summary">{{ f.summary }}</p>
+            <div class="folly__cols">
+              <div>
+                <h4>The self-harm</h4>
+                <p>{{ f.cost }}</p>
+              </div>
+              <div>
+                <h4>The Caligulan echo</h4>
+                <p>{{ f.caligulaParallel }}</p>
+              </div>
+            </div>
+
+            <div class="profile">
+              <div class="scorebars">
+                @for (c of criteria; track c.id) {
+                  <div class="scorebar">
+                    <span class="sb__sym" [title]="c.name">{{ c.symbol }}</span>
+                    <span class="sb__track"><span class="sb__fill" [style.width.%]="(f.scores[c.id] / 5) * 100"></span></span>
+                    <span class="sb__val">{{ f.scores[c.id] }}/5</span>
+                  </div>
+                }
+              </div>
+              <div class="radar">
+                <app-radar
+                  [axes]="radarAxes()" [series]="radarFor(f.id)" [max]="5" [size]="190"
+                  [ariaLabel]="f.title + ' five-axis profile against the corpus average'"
+                />
+                <p class="radar__key"><span class="dot dot--f"></span>this folly · <span class="dot dot--avg"></span>corpus average</p>
+              </div>
+            </div>
+
+            @if (f.coi) { <p class="coinote">⚠ {{ f.coi }}</p> }
+            @if (f.disconfirmer) {
+              <div class="disconfirm">
+                <span class="disconfirm__label">What would change this verdict?</span>
+                <p>This would <strong>not</strong> be folly if {{ f.disconfirmer }}</p>
+              </div>
+            }
+            <div class="rel">
+              @if (f.confidence !== undefined) {
+                <div class="rel__conf">
+                  <span class="rel__conflabel">grading confidence</span>
+                  <span class="rel__confbar"><span [style.width.%]="f.confidence * 100"></span></span>
+                  <span class="rel__confval">{{ (f.confidence * 100) | number: '1.0-0' }}%</span>
+                </div>
+              }
+              @if (f.reliabilityNote) { <p class="rel__note">{{ f.reliabilityNote }}</p> }
+              @if (f.caveat) { <p class="rel__caveat">⚠ {{ f.caveat }}</p> }
+            </div>
+
+            @if (f.engineering) {
+              <div class="engineering">
+                <span class="engineering__label">⚙ Engineering / physics cross-check</span>
+                <p>{{ f.engineering.note }}</p>
+                <app-inline-cite [sources]="f.engineering.sources" />
+              </div>
+            }
+
+            <div class="folly__foot">
+              <span class="srclabel">Sources</span>
+              <app-inline-cite [sources]="f.sources" />
+            </div>
+          </div>
+        }
+      </li>
+    }
+  </ul>
+
+  <p class="provkey">
+    <span class="tag tag--documented">documented</span> multiply sourced ·
+    <span class="tag tag--reported">reported</span> asserted, developing or contested ·
+    <span class="tag tag--speculative">speculative</span> floated, rumoured or satirical. The index never treats these as equal evidence.
+  </p>
+</div>
