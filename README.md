@@ -1,3 +1,6 @@
+<img width="1232" height="1385" alt="Screenshot 2026-06-01 102431" src="https://github.com/user-attachments/assets/42a49269-9fc3-468f-899c-908f32a51be1" />
+
+
 # The Caligula Index
 
 An interactive, **fully sourced** educational comparison site built around _The Economist_'s
