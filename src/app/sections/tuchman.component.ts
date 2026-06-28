@@ -60,7 +60,7 @@ import { InlineCiteComponent } from '../shared/inline-cite.component';
       .test__n { display: grid; place-items: center; width: 2rem; height: 2rem; border-radius: 50%; background: var(--porphyry); color: #f3e7c9; font: 700 1rem/1 var(--display); margin-bottom: 0.7rem; }
       .test h3 { font: 600 1.05rem/1.2 var(--display); color: var(--ink); margin: 0 0 0.5rem; }
       .test p { font: 400 0.88rem/1.55 var(--sans); color: var(--ink-soft); margin: 0; }
-      .wood { background: linear-gradient(160deg, #2a1414, #241a2b); color: #efe2c4; border-radius: 14px; padding: 1.6rem; margin-bottom: 2rem; }
+      .wood { background: linear-gradient(160deg, #4a0a0e, #320609); color: #efe2c4; border-radius: 14px; padding: 1.6rem; margin-bottom: 2rem; }
       .wood h3 { font: 600 1.2rem/1 var(--display); color: var(--gold); margin: 0 0 0.7rem; }
       .wood p { font: 400 1rem/1.6 var(--serif); margin: 0; }
       .cases__title, .apply h3 { font: 600 1.4rem/1.1 var(--display); color: var(--ink); margin: 0 0 1rem; }

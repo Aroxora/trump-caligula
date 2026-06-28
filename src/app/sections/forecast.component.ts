@@ -217,7 +217,7 @@ interface WindowGroup {
         margin: 0;
       }
       .fc__panel--fiscal {
-        background: linear-gradient(160deg, #241a2b, #1b1410);
+        background: linear-gradient(160deg, #4a0a0e, #320609);
         color: #e8dcc6;
       }
       .fc__panel--fiscal h3 {

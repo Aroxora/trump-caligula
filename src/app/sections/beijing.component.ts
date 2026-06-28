@@ -175,7 +175,7 @@ import { InlineCiteComponent } from '../shared/inline-cite.component';
         margin: 0;
       }
       .bj__panel--decline {
-        background: linear-gradient(160deg, #2a1414, #241a2b);
+        background: linear-gradient(160deg, #4a0a0e, #320609);
         color: #e8dcc6;
       }
       .bj__panel--decline h3 {

@@ -63,7 +63,7 @@ import { InlineCiteComponent } from '../shared/inline-cite.component';
       .panel { border-radius: 14px; padding: 1.6rem; }
       .panel h3 { font: 600 1.2rem/1.1 var(--display); margin: 0 0 0.8rem; }
       .panel p { font: 400 0.98rem/1.65 var(--serif); margin: 0; }
-      .panel--against { background: linear-gradient(160deg, #241a2b, #2a1414); color: #e8dcc6; }
+      .panel--against { background: linear-gradient(160deg, #4a0a0e, #320609); color: #e8dcc6; }
       .panel--against h3 { color: #e7b4b4; }
       .panel--for { background: var(--surface); border: 1px solid var(--line); }
       .panel--for h3 { color: var(--gold-deep); }

@@ -175,7 +175,7 @@ import { InlineCiteComponent } from '../shared/inline-cite.component';
         background: rgba(44, 79, 134, 0.07);
       }
       .col--parallel {
-        background: rgba(91, 42, 107, 0.07);
+        background: rgba(193, 18, 31, 0.07);
       }
       .col p {
         font: 400 0.9rem/1.6 var(--sans);

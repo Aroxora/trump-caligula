@@ -240,7 +240,7 @@ interface Rubric {
         font:
           600 0.86em/1 ui-monospace,
           monospace;
-        background: rgba(91, 42, 107, 0.08);
+        background: rgba(193, 18, 31, 0.08);
         color: var(--porphyry);
         padding: 0.1rem 0.35rem;
         border-radius: 4px;
