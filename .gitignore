@@ -6,6 +6,9 @@
 /out-tsc
 /bazel-out
 
+# Generated research intermediates (raw/ and verified/ are the committed sources)
+/research/generated
+
 # Node
 /node_modules
 npm-debug.log
@@ -42,3 +45,7 @@ __screenshots__/
 # System files
 .DS_Store
 Thumbs.db
+
+# Claude Code (local session config & locks; commit a shared .claude/settings.json if desired)
+/.claude/settings.local.json
+/.claude/*.lock

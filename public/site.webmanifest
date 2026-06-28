@@ -1,0 +1,15 @@
+{
+  "name": "The Caligula Index",
+  "short_name": "Caligula Index",
+  "description": "A measurable March of Folly Index scoring Trump-era failures against Barbara Tuchman's tests of folly and the emperor Caligula's playbook.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#1b1410",
+  "theme_color": "#241a2b",
+  "icons": [
+    { "src": "/icon.svg", "type": "image/svg+xml", "sizes": "any", "purpose": "any" },
+    { "src": "/icon-192.png", "type": "image/png", "sizes": "192x192", "purpose": "any maskable" },
+    { "src": "/icon-512.png", "type": "image/png", "sizes": "512x512", "purpose": "any maskable" }
+  ]
+}

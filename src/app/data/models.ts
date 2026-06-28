@@ -12,7 +12,12 @@ export interface Citation {
   /** Optional external URL. */
   url?: string;
   /** Reliability flag — historians treat the ancient sources with caution. */
-  reliability: 'primary-hostile' | 'primary' | 'modern-scholarship' | 'journalism' | 'official-record';
+  reliability:
+    | 'primary-hostile'
+    | 'primary'
+    | 'modern-scholarship'
+    | 'journalism'
+    | 'official-record';
 }
 
 export interface SideClaim {
@@ -77,7 +82,12 @@ export type Provenance =
   | 'speculative'; // floated, rumoured, satirical, or forward-dated scenario
 
 /** The five scoring criteria of the Folly Index. */
-export type CriterionId = 'selfHarm' | 'counterproductive' | 'alternative' | 'systemic' | 'caligula';
+export type CriterionId =
+  | 'selfHarm'
+  | 'counterproductive'
+  | 'alternative'
+  | 'systemic'
+  | 'caligula';
 
 export interface Criterion {
   id: CriterionId;
@@ -103,10 +113,30 @@ export interface InlineSource {
   type: SourceType;
 }
 
+/**
+ * The folly domains used for filtering and labelling. Declaring them here as a
+ * closed union means a new or mistyped domain fails at compile time across every
+ * consumer (the data catalogue and the filter labels) rather than silently
+ * rendering a raw slug.
+ */
+export const DOMAINS = [
+  'foreign-policy',
+  'military',
+  'economy-trade',
+  'institutions-rule-of-law',
+  'immigration',
+  'public-health',
+  'technology-science',
+  'environment-climate',
+  'information-media',
+  'elections-democracy',
+] as const;
+export type Domain = (typeof DOMAINS)[number];
+
 export interface Folly {
   id: string;
   title: string;
-  domain: string; // foreign-policy, military, economy-trade, institutions-rule-of-law…
+  domain: Domain; // one of DOMAINS
   era: 'first-term' | 'second-term' | 'global-backdrop';
   provenance: Provenance;
   /** Editor's confidence in the grading, 0–1. */
@@ -144,4 +174,3 @@ export interface RefItem {
   scores: Record<CriterionId, number>;
   sources: InlineSource[];
 }
-

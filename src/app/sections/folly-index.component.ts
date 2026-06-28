@@ -2,7 +2,7 @@ import { DecimalPipe } from '@angular/common';
 import { Component, computed, inject, signal } from '@angular/core';
 import { FollyService } from '../core/folly.service';
 import { track } from '../core/firebase';
-import { CriterionId, Provenance } from '../data/models';
+import { CriterionId, Domain, Provenance } from '../data/models';
 import { PRESETS } from '../data/glossary';
 import { InlineCiteComponent } from '../shared/inline-cite.component';
 import { MethodologyComponent } from './methodology.component';
@@ -12,7 +12,13 @@ import { ScatterComponent, ScatterPoint } from '../viz/scatter.component';
 @Component({
   selector: 'app-folly-index',
   standalone: true,
-  imports: [InlineCiteComponent, MethodologyComponent, DecimalPipe, RadarComponent, ScatterComponent],
+  imports: [
+    InlineCiteComponent,
+    MethodologyComponent,
+    DecimalPipe,
+    RadarComponent,
+    ScatterComponent,
+  ],
   templateUrl: './folly-index.component.html',
   styleUrl: './folly-index.component.scss',
 })
@@ -27,7 +33,10 @@ export class FollyIndexComponent {
   readonly open = signal<string | null>(null);
   readonly domainFilter = signal<string>('all');
 
-  readonly domains = computed(() => ['all', ...new Set(this.svc.follies.map((f) => f.domain))]);
+  readonly domains = computed<(Domain | 'all')[]>(() => [
+    'all',
+    ...new Set(this.svc.follies.map((f) => f.domain)),
+  ]);
 
   readonly visible = computed(() => {
     const d = this.domainFilter();
@@ -38,7 +47,10 @@ export class FollyIndexComponent {
   readonly shares = computed(() => {
     const w = this.weights();
     const total = this.criteria.reduce((a, c) => a + w[c.id], 0) || 1;
-    return Object.fromEntries(this.criteria.map((c) => [c.id, w[c.id] / total])) as Record<CriterionId, number>;
+    return Object.fromEntries(this.criteria.map((c) => [c.id, w[c.id] / total])) as Record<
+      CriterionId,
+      number
+    >;
   });
 
   /** Verdict text keyed to the aggregate, answering the article's closing question. */
@@ -49,7 +61,7 @@ export class FollyIndexComponent {
       systemic >= 70
         ? 'The high systemic score warns these follies are enabled by a wider group and may outlast any one presidency — Tuchman\'s "decadence", the hardest kind to reverse.'
         : systemic >= 50
-          ? 'The mixed systemic score leaves the article\'s question open: partly personal, partly entrenched.'
+          ? "The mixed systemic score leaves the article's question open: partly personal, partly entrenched."
           : 'The low systemic score suggests these are largely personal to the Trump era — the kind the article hopes "an election or two" can reverse.';
     return { band, nature };
   });
@@ -70,7 +82,10 @@ export class FollyIndexComponent {
 
   radarFor(id: string): RadarSeries[] {
     const f = this.svc.follies.find((x) => x.id === id);
-    if (!f) return [this.meanSeries()];
+    if (!f) {
+      console.warn('[folly-index] no folly found for id:', id);
+      return [this.meanSeries()];
+    }
     return [
       this.meanSeries(),
       { name: f.title, color: '#5b2a6b', values: this.criteria.map((c) => f.scores[c.id]) },
@@ -106,7 +121,7 @@ export class FollyIndexComponent {
   /** Tuchman's four canonical follies, for the calibration strip. */
   readonly tuchmanRefs = computed(() => this.svc.refScored().filter((r) => r.kind === 'tuchman'));
 
-  readonly DOMAIN_LABELS: Record<string, string> = {
+  readonly DOMAIN_LABELS: Record<Domain | 'all', string> = {
     all: 'all domains',
     'foreign-policy': 'Foreign policy',
     'economy-trade': 'Economy & trade',
@@ -117,8 +132,9 @@ export class FollyIndexComponent {
     'environment-climate': 'Climate',
     immigration: 'Immigration',
     'information-media': 'Media & image',
+    'elections-democracy': 'Elections & democracy',
   };
-  domainLabel(d: string): string {
+  domainLabel(d: Domain | 'all'): string {
     return this.DOMAIN_LABELS[d] ?? d;
   }
 
@@ -140,7 +156,11 @@ export class FollyIndexComponent {
     this.domainFilter.set('all');
     this.open.set(id);
     track('map_select', { folly: id });
-    queueMicrotask(() => document.getElementById('folly-' + id)?.scrollIntoView({ behavior: 'smooth', block: 'center' }));
+    queueMicrotask(() =>
+      document
+        .getElementById('folly-' + id)
+        ?.scrollIntoView({ behavior: 'smooth', block: 'center' }),
+    );
   }
 
   onWeight(id: CriterionId, ev: Event): void {

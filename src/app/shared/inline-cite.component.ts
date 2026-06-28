@@ -8,7 +8,7 @@ import { InlineSource } from '../data/models';
   template: `
     <div class="srcs">
       @for (s of sources(); track $index) {
-        <span class="chip rel-{{ s.type }}" [title]="s.citation">
+        <span class="chip rel-{{ s.type }}" [title]="s.citation" [attr.aria-label]="s.citation">
           <span class="dot"></span>{{ short(s.citation) }}
         </span>
       }
@@ -16,23 +16,68 @@ import { InlineSource } from '../data/models';
   `,
   styles: [
     `
-      .srcs { display: flex; flex-wrap: wrap; gap: 0.35rem; }
-      .chip {
-        display: inline-flex; align-items: center; gap: 0.3rem;
-        font: 600 0.66rem/1.2 var(--sans); padding: 0.26rem 0.5rem; border-radius: 6px;
-        max-width: 22rem; cursor: help; border: 1px solid transparent;
+      .srcs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.35rem;
       }
-      .chip .dot { width: 0.45rem; height: 0.45rem; border-radius: 50%; flex: none; }
-      .rel-primary-hostile { background: rgba(155,28,28,.1); color: #9b1c1c; border-color: rgba(155,28,28,.25); }
-      .rel-primary-hostile .dot { background: #9b1c1c; }
-      .rel-primary { background: rgba(138,90,18,.1); color: #8a5a12; border-color: rgba(138,90,18,.22); }
-      .rel-primary .dot { background: #8a5a12; }
-      .rel-modern-scholarship { background: rgba(44,79,134,.1); color: #2c4f86; border-color: rgba(44,79,134,.22); }
-      .rel-modern-scholarship .dot { background: #2c4f86; }
-      .rel-journalism { background: rgba(47,107,76,.1); color: #2f6b4c; border-color: rgba(47,107,76,.22); }
-      .rel-journalism .dot { background: #2f6b4c; }
-      .rel-official-record { background: rgba(74,74,82,.1); color: #4a4a52; border-color: rgba(74,74,82,.22); }
-      .rel-official-record .dot { background: #4a4a52; }
+      .chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.3rem;
+        font: 600 0.66rem/1.2 var(--sans);
+        padding: 0.26rem 0.5rem;
+        border-radius: 6px;
+        max-width: 22rem;
+        cursor: help;
+        border: 1px solid transparent;
+      }
+      .chip .dot {
+        width: 0.45rem;
+        height: 0.45rem;
+        border-radius: 50%;
+        flex: none;
+      }
+      .rel-primary-hostile {
+        background: rgba(155, 28, 28, 0.1);
+        color: var(--rel-hostile);
+        border-color: rgba(155, 28, 28, 0.25);
+      }
+      .rel-primary-hostile .dot {
+        background: #9b1c1c;
+      }
+      .rel-primary {
+        background: rgba(138, 90, 18, 0.1);
+        color: var(--rel-primary);
+        border-color: rgba(138, 90, 18, 0.22);
+      }
+      .rel-primary .dot {
+        background: #8a5a12;
+      }
+      .rel-modern-scholarship {
+        background: rgba(44, 79, 134, 0.1);
+        color: #2c4f86;
+        border-color: rgba(44, 79, 134, 0.22);
+      }
+      .rel-modern-scholarship .dot {
+        background: #2c4f86;
+      }
+      .rel-journalism {
+        background: rgba(47, 107, 76, 0.1);
+        color: var(--rel-journalism);
+        border-color: rgba(47, 107, 76, 0.22);
+      }
+      .rel-journalism .dot {
+        background: #2f6b4c;
+      }
+      .rel-official-record {
+        background: rgba(74, 74, 82, 0.1);
+        color: #4a4a52;
+        border-color: rgba(74, 74, 82, 0.22);
+      }
+      .rel-official-record .dot {
+        background: #4a4a52;
+      }
     `,
   ],
 })

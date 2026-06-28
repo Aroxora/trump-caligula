@@ -24,7 +24,7 @@ export interface ScatterPoint {
   standalone: true,
   template: `
     <figure class="scatter">
-      <svg viewBox="0 0 360 320" role="img" [attr.aria-label]="ariaLabel()">
+      <svg viewBox="0 0 360 320" role="group" [attr.aria-label]="ariaLabel()">
         <!-- quadrant wash -->
         <rect x="40" y="20" width="150" height="130" class="q q-bl" />
         <rect x="190" y="20" width="150" height="130" class="q q-br" />
@@ -42,18 +42,35 @@ export interface ScatterPoint {
         <text x="330" y="272" class="qcap" text-anchor="end">{{ quadrants().br }}</text>
         <!-- axis titles -->
         <text x="190" y="305" class="axistitle" text-anchor="middle">{{ xLabel() }} →</text>
-        <text x="14" y="150" class="axistitle" text-anchor="middle" transform="rotate(-90 14 150)">{{ yLabel() }} →</text>
+        <text x="14" y="150" class="axistitle" text-anchor="middle" transform="rotate(-90 14 150)">
+          {{ yLabel() }} →
+        </text>
         <!-- points -->
         @for (p of points(); track p.id) {
           <g
-            class="pt band--{{ p.band }} kind--{{ p.kind || 'trump' }}" [class.hot]="hover() === p.id"
-            (mouseenter)="hover.set(p.id)" (mouseleave)="hover.set(null)"
-            (click)="select.emit(p.id)" tabindex="0"
+            class="pt band--{{ p.band }} kind--{{ p.kind || 'trump' }}"
+            [class.hot]="hover() === p.id"
+            role="button"
+            tabindex="0"
+            [attr.aria-label]="
+              (p.kind === 'tuchman' || p.kind === 'caligula'
+                ? 'Reference marker: '
+                : 'Open folly: ') + p.label
+            "
+            (mouseenter)="hover.set(p.id)"
+            (mouseleave)="hover.set(null)"
+            (click)="select.emit(p.id)"
             (keydown.enter)="select.emit(p.id)"
+            (keydown.space)="$event.preventDefault(); select.emit(p.id)"
           >
             @switch (p.kind) {
               @case ('tuchman') {
-                <rect [attr.x]="px(p.x) - rad(p.weight)" [attr.y]="py(p.y) - rad(p.weight)" [attr.width]="rad(p.weight) * 2" [attr.height]="rad(p.weight) * 2" />
+                <rect
+                  [attr.x]="px(p.x) - rad(p.weight)"
+                  [attr.y]="py(p.y) - rad(p.weight)"
+                  [attr.width]="rad(p.weight) * 2"
+                  [attr.height]="rad(p.weight) * 2"
+                />
               }
               @case ('caligula') {
                 <path [attr.d]="diamond(px(p.x), py(p.y), rad(p.weight) + 1)" />
@@ -63,7 +80,14 @@ export interface ScatterPoint {
               }
             }
             @if (hover() === p.id) {
-              <text [attr.x]="px(p.x)" [attr.y]="py(p.y) - rad(p.weight) - 5" text-anchor="middle" class="ptlabel">{{ p.label }}</text>
+              <text
+                [attr.x]="px(p.x)"
+                [attr.y]="py(p.y) - rad(p.weight) - 5"
+                text-anchor="middle"
+                class="ptlabel"
+              >
+                {{ p.label }}
+              </text>
             }
           </g>
         }
@@ -72,33 +96,118 @@ export interface ScatterPoint {
   `,
   styles: [
     `
-      :host { display: block; }
-      svg { width: 100%; height: auto; overflow: visible; }
-      .q { opacity: 0.5; }
-      .q-tr { fill: rgba(155, 28, 28, 0.1); }
-      .q-tl { fill: rgba(196, 122, 24, 0.08); }
-      .q-br { fill: rgba(196, 122, 24, 0.08); }
-      .q-bl { fill: rgba(47, 107, 76, 0.08); }
-      .axis { stroke: rgba(0, 0, 0, 0.35); stroke-width: 1.2; }
-      .mid { stroke: rgba(0, 0, 0, 0.12); stroke-dasharray: 4 4; }
-      .qcap { font: 600 0.52rem/1 var(--sans, sans-serif); fill: var(--ink-faint, #999); letter-spacing: 0.04em; text-transform: uppercase; }
-      .axistitle { font: 700 0.58rem/1 var(--sans, sans-serif); fill: var(--ink-soft, #555); letter-spacing: 0.06em; text-transform: uppercase; }
-      .pt { cursor: pointer; }
-      .pt circle, .pt rect, .pt path { opacity: 0.78; transition: opacity 0.15s ease; stroke: #fff; stroke-width: 1; }
-      .pt.hot circle, .pt.hot rect, .pt.hot path { opacity: 1; }
-      .pt:focus { outline: none; }
-      .pt:focus circle, .pt:focus rect, .pt:focus path { stroke: var(--porphyry, #5b2a6b); stroke-width: 2; }
-      .band--severe circle, .band--severe path { fill: #9b1c1c; }
-      .band--serious circle, .band--serious path { fill: #c47a18; }
-      .band--moderate circle, .band--moderate path { fill: #c9a227; }
-      .band--mild circle, .band--mild path { fill: #2f6b4c; }
-      .kind--tuchman rect { fill: none; stroke: #2c4f86; stroke-width: 2; opacity: 0.9; }
-      .kind--caligula path { stroke: #efe3c6; }
-      .kind--caligula.band--severe path { fill: #5b2a6b; }
-      .kind--caligula.band--serious path { fill: #6f3a7e; }
-      .kind--caligula.band--moderate path { fill: #7d4a8c; }
-      .kind--caligula.band--mild path { fill: #8a5a99; }
-      .ptlabel { font: 600 0.6rem/1 var(--sans, sans-serif); fill: var(--ink, #222); paint-order: stroke; stroke: #fffdf8; stroke-width: 3; }
+      :host {
+        display: block;
+      }
+      svg {
+        width: 100%;
+        height: auto;
+        overflow: visible;
+      }
+      .q {
+        opacity: 0.5;
+      }
+      .q-tr {
+        fill: rgba(155, 28, 28, 0.1);
+      }
+      .q-tl {
+        fill: rgba(196, 122, 24, 0.08);
+      }
+      .q-br {
+        fill: rgba(196, 122, 24, 0.08);
+      }
+      .q-bl {
+        fill: rgba(47, 107, 76, 0.08);
+      }
+      .axis {
+        stroke: rgba(0, 0, 0, 0.35);
+        stroke-width: 1.2;
+      }
+      .mid {
+        stroke: rgba(0, 0, 0, 0.12);
+        stroke-dasharray: 4 4;
+      }
+      .qcap {
+        font: 600 0.52rem/1 var(--sans, sans-serif);
+        fill: var(--ink-faint, #999);
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+      .axistitle {
+        font: 700 0.58rem/1 var(--sans, sans-serif);
+        fill: var(--ink-soft, #555);
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+      .pt {
+        cursor: pointer;
+      }
+      .pt circle,
+      .pt rect,
+      .pt path {
+        opacity: 0.78;
+        transition: opacity 0.15s ease;
+        stroke: #fff;
+        stroke-width: 1;
+      }
+      .pt.hot circle,
+      .pt.hot rect,
+      .pt.hot path {
+        opacity: 1;
+      }
+      .pt:focus {
+        outline: none;
+      }
+      .pt:focus-visible circle,
+      .pt:focus-visible rect,
+      .pt:focus-visible path {
+        stroke: var(--porphyry, #5b2a6b);
+        stroke-width: 3;
+      }
+      .band--severe circle,
+      .band--severe path {
+        fill: #9b1c1c;
+      }
+      .band--serious circle,
+      .band--serious path {
+        fill: #c47a18;
+      }
+      .band--moderate circle,
+      .band--moderate path {
+        fill: #c9a227;
+      }
+      .band--mild circle,
+      .band--mild path {
+        fill: #2f6b4c;
+      }
+      .kind--tuchman rect {
+        fill: none;
+        stroke: #2c4f86;
+        stroke-width: 2;
+        opacity: 0.9;
+      }
+      .kind--caligula path {
+        stroke: #efe3c6;
+      }
+      .kind--caligula.band--severe path {
+        fill: #5b2a6b;
+      }
+      .kind--caligula.band--serious path {
+        fill: #6f3a7e;
+      }
+      .kind--caligula.band--moderate path {
+        fill: #7d4a8c;
+      }
+      .kind--caligula.band--mild path {
+        fill: #8a5a99;
+      }
+      .ptlabel {
+        font: 600 0.6rem/1 var(--sans, sans-serif);
+        fill: var(--ink, #222);
+        paint-order: stroke;
+        stroke: #fffdf8;
+        stroke-width: 3;
+      }
     `,
   ],
 })
