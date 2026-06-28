@@ -161,7 +161,7 @@ export interface ScatterPoint {
       .pt:focus-visible circle,
       .pt:focus-visible rect,
       .pt:focus-visible path {
-        stroke: var(--porphyry, #5b2a6b);
+        stroke: var(--porphyry, #c1121f);
         stroke-width: 3;
       }
       .band--severe circle,
