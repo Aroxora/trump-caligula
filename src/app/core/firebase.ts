@@ -35,6 +35,10 @@ export async function initFirebase(): Promise<void> {
     if (await isSupported()) {
       analytics = getAnalytics(app);
       logEventFn = logEvent;
+      logEvent(analytics, 'page_view', {
+        page_title: document.title,
+        page_location: window.location.href,
+      });
     }
   } catch (err) {
     console.warn('[firebase] init skipped:', err);

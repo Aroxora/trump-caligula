@@ -9,17 +9,20 @@ import { FORECAST_PROJECTIONS } from './data/forecast';
 describe('BeijingComponent — the PRC/PLA viewpoint renders', () => {
   beforeEach(() => TestBed.configureTestingModule({ imports: [BeijingComponent] }));
 
-  it('renders the window callout, every plank, the PLA section, the contestable panel and the bibliography', () => {
+  it('renders the window callout, decision matrices, register, signals, ladders, milestones, risks, and bibliography', () => {
     const fixture = TestBed.createComponent(BeijingComponent);
     fixture.detectChanges();
     const el = fixture.nativeElement as HTMLElement;
     expect(el.querySelector('.bj__window'), 'window callout').toBeTruthy();
-    expect(el.querySelectorAll('.plank').length, 'plank count').toBe(PRC_PLANKS.length);
-    expect(el.querySelector('.bj__panel--pla'), 'PLA section').toBeTruthy();
-    expect(el.querySelector('.bj__panel--against'), 'contestable panel').toBeTruthy();
+    expect(el.querySelectorAll('.dm').length, 'DM count').toBe(PRC_PLANKS.length);
+    expect(el.querySelectorAll('.dec').length, 'decision count').toBeGreaterThan(0);
+    expect(el.querySelector('.bj__panel--red'), 'red team').toBeTruthy();
+    expect(el.querySelector('.bj__panel--against'), 'limits panel').toBeTruthy();
     expect(el.querySelector('.bj__biblio'), 'bibliography').toBeTruthy();
-    // The synthesis plank renders the slogan (proves interpolation, not just structure).
-    expect(el.textContent ?? '').toContain('东升西降');
+    expect(el.querySelectorAll('.ms').length, 'milestone count').toBeGreaterThan(0);
+    expect(el.querySelectorAll('.sw').length, 'signal count').toBeGreaterThan(0);
+    expect(el.querySelectorAll('.ladder').length, 'ladder count').toBeGreaterThan(0);
+    expect(el.querySelectorAll('.risk').length, 'risk count').toBeGreaterThan(0);
     fixture.destroy();
   });
 });

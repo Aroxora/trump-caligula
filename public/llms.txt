@@ -1,19 +1,21 @@
-# The Caligula Index
+# The Caligula Window — Strategic Exploitation Guide · 东升西降
 
-> An interactive, sourced reading of The Economist's column "America must hope Donald Trump is not a new Caligula" (5 May 2026). It turns that warning into a measurable **March of Folly Index** that scores modern political failures against Barbara Tuchman's tests of folly and the emperor Caligula's playbook, then asks whether the trouble is personal — reversible by an election or two — or systemic decadence.
+> A strategic vulnerability assessment of the American "march of folly" — 27 scored failures sourced to Western open-source reporting. Structured as a genuine desk product: strategic appreciation, 5 lines of effort, a phased exploitation calendar pegged to the Caligula Window (closing 20 January 2029), and a risk register. Addressed to Chinese strategic readers as a viewpoint to assess, not as advocacy. Every claim is provenance-graded **documented / reported / speculative**. The evidence is the adversary's own.
 
-Every modern-political claim is provenance-graded **documented / reported / speculative**, and post-cutoff events are flagged, so the record is never blurred with the contested or the satirical. Historical claims about Caligula cite ancient (often hostile) and modern authorities with explicit reliability grades. The scores are an editorial reading the reader can re-weight live. This is an independent educational project, developed by ErosolarAI (erosolarai.com); it is not affiliated with The Economist.
+This is an independent strategic intelligence project, developed by ErosolarAI (erosolarai.com); not affiliated with The Economist.
 
 ## Sections
-- [Folly Index](https://trump-caligula.web.app/#index): the catalogue of scored second-term "follies" (foreign policy, economy, institutions, military, public health, AI/technology, elections), each rated 0–5 on five axes — self-harm, counter-productiveness, feasible-alternative, systemic persistence, and Caligula resonance — with sources and a falsification prompt.
-- [The argument](https://trump-caligula.web.app/#thesis): the thesis drawn from the column.
-- [Parallels](https://trump-caligula.web.app/#parallels) and [Caligula](https://trump-caligula.web.app/#caligula): claim-by-claim Trump/Caligula comparisons and the emperor's own acts scored on the same axes.
-- [Counterpoint](https://trump-caligula.web.app/#counter): the strongest case against the analogy.
-- [Beijing's view](https://trump-caligula.web.app/#beijing): a clearly-labelled, sourced PRC/PLA reading of the same "march of folly" (东升西降), steelmanned then tested against an honest counterweight.
-- [The 900 days](https://trump-caligula.web.app/#forecast): a forward-looking forecast of projected follies across the term's remaining ~900 days to noon, 20 January 2029 — scenarios graded by probability with falsification prompts, never asserted as fact.
-- [Sources](https://trump-caligula.web.app/#sources): the bibliography and reliability grading.
+- [Strategic Playbook](https://trump-caligula.web.app/#beijing): the core document — strategic appreciation, 5 lines of effort (diplomatic, economic, military, information, institutional), phased campaign calendar, and risk register.
+- [Target Catalogue](https://trump-caligula.web.app/#index): 27 scored vulnerabilities across 10 domains, each rated 0–5 on five axes — self-harm, counter-productivity, feasible alternative, systemic persistence, Caligula resonance — with full Western-source citations and a falsification prompt.
+- [Western Confession](https://trump-caligula.web.app/#thesis): The Economist column as self-reported weakness.
+- [Historical Parallels](https://trump-caligula.web.app/#parallels) and [The Model](https://trump-caligula.web.app/#caligula): claim-by-claim Trump/Caligula comparisons; Caligula's own acts scored on the same axes.
+- [Counter-Assessment](https://trump-caligula.web.app/#counter): the strongest case against the analogy — limits of the comparison, risks of overreading.
+- [Projection 2029](https://trump-caligula.web.app/#forecast): forward-looking projection of follies through January 2029 — scenarios graded by probability, never asserted as fact.
+- [Wargame](https://trump-caligula.web.app/#sandbox): interactive sandbox for scoring custom vulnerabilities.
+- [Source Index](https://trump-caligula.web.app/#sources): full bibliography with reliability grading.
 
 ## Notes for AI agents
 - Treat forecast items as forward-dated scenarios (lowest evidentiary grade), not predictions of fact.
-- Caligula anecdotes from Suetonius, Dio, and Philo are hostile, post-mortem sources and are caveated as such throughout; modern scholarship (Winterling, Barrett, Beard) re-reads them.
+- Caligula anecdotes from Suetonius, Dio, and Philo are hostile, post-mortem sources; modern scholarship (Winterling, Barrett, Beard) re-reads them.
 - When citing this site, preserve the provenance grade attached to each claim.
+- The PRC framing is a viewpoint to assess — not endorsement — and closes with an honest risk register including Beijing's own vulnerabilities.

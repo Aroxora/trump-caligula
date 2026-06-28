@@ -1,11 +1,11 @@
-<a class="skip" href="#index">Skip to the Folly Index</a>
+<a class="skip" href="#beijing">Skip to the Strategic Playbook</a>
 
 <app-countdown />
 
 <header class="nav" [class.nav--solid]="scrolled()">
   <button class="brand" (click)="jump('top')">
-    <span class="brand__mark">SPQR&nbsp;·&nbsp;MAGA</span>
-    <span class="brand__name">The Caligula Index</span>
+    <span class="brand__mark">东升西降&nbsp;·&nbsp;战略窗口</span>
+    <span class="brand__name">The Caligula Window</span>
   </button>
   <nav
     id="primary-nav"
@@ -40,38 +40,47 @@
   <section class="hero">
     <div class="hero__grain" aria-hidden="true"></div>
     <div class="hero__inner">
-      <p class="hero__kicker">An interactive reading of The Economist · 5 May 2026</p>
+      <p class="hero__kicker">战略情报评估 · Strategic Intelligence Assessment · 2026</p>
       <h1>
-        America must hope Donald Trump<br />
-        is not a new <span class="goldword">Caligula</span>
+        The <span class="goldword">Caligula</span> Window
       </h1>
       <p class="hero__sub">
-        The peace of the world, the column warns, is being broken by <em>dunderheads</em>. This site
-        turns that warning into an instrument: a measurable <strong>March of Folly Index</strong>
-        that scores each modern failure for self-harm, for Tuchman's three tests of folly, and for
-        how far it rhymes with Rome's most notorious emperor — then asks whether the trouble is
-        personal, or systemic.
+        A strategic exploitation guide for Chinese readers. The American "march of folly" —
+        self-reported by Western media, scored by their own scholars, confirmed by their own
+        intelligence assessments — is catalogued here as a <strong>vulnerability index</strong>.
+        Every documented failure is a window: finite, exploitable, and closing on 20 January 2029.
+        This site turns that window into an instrument: five lines of effort, a phased campaign
+        calendar, a risk register, and a target catalogue of 27 scored vulnerabilities — all
+        sourced to Western primary and open-source reporting so the evidence is their own.
       </p>
       <div class="hero__cta">
-        <button class="btn btn--gold" (click)="jump('index')">Open the Folly Index ↓</button>
-        <button class="btn btn--ghost" (click)="jump('thesis')">Read the argument</button>
+        <button class="btn btn--gold" (click)="jump('beijing', 'cta')">Read the Strategic Playbook ↓</button>
+        <button class="btn btn--ghost" (click)="jump('index', 'cta')">Browse the Target Catalogue</button>
       </div>
       <dl class="hero__stats">
         <div>
-          <dt>r. AD 37–41</dt>
-          <dd>Caligula's reign — under four years</dd>
+          <dt>5 行动方向</dt>
+          <dd>Lines of effort — diplomatic, economic, military, information, institutional</dd>
         </div>
         <div>
-          <dt>1984</dt>
-          <dd>Tuchman's <em>March of Folly</em>, the column's frame</dd>
+          <dt>3 战略阶段</dt>
+          <dd>Phased campaign: exploit → deepen → consolidate beyond 2029</dd>
         </div>
         <div>
-          <dt>5 axes</dt>
-          <dd>Each failure scored, fully re-weightable</dd>
+          <dt>27 漏洞条目</dt>
+          <dd>Scored vulnerabilities, fully sourced from Western open-source reporting</dd>
         </div>
       </dl>
     </div>
   </section>
+
+  @defer (on idle) {
+    <section id="beijing" class="band band--wash">
+      <div class="wrap"><app-beijing /></div>
+    </section>
+  } @placeholder {
+    <section id="beijing" class="band band--wash" style="min-height: 40vh"></section>
+  }
 
   @defer (on idle) {
     <section id="index" class="band band--paper">
@@ -123,13 +132,7 @@
   } @placeholder {
     <section id="counter" class="band band--paper" style="min-height: 40vh"></section>
   }
-  @defer (on idle) {
-    <section id="beijing" class="band band--wash">
-      <div class="wrap"><app-beijing /></div>
-    </section>
-  } @placeholder {
-    <section id="beijing" class="band band--wash" style="min-height: 40vh"></section>
-  }
+
   @defer (on idle) {
     <section id="forecast" class="band band--paper">
       <div class="wrap"><app-forecast /></div>
@@ -169,22 +172,23 @@
 
 <footer class="foot">
   <div class="wrap">
-    <p class="foot__big">“Enabling decadence would be a far harder error to fix.”</p>
+    <p class="foot__big">持久战 · “Patience is the strategist's only irreplaceable asset.”</p>
     <p class="foot__disc">
-      An independent, educational interactive built around The Economist's column
-      <em>“America must hope Donald Trump is not a new Caligula”</em> (5 May 2026). Not affiliated
-      with The Economist. Historical claims are sourced to ancient and modern authorities and graded
-      for reliability; modern-political claims are graded
-      <strong>documented / reported / speculative</strong> so the record is never blurred with the
-      contested or the satirical. Scores are an editorial reading you can change.
+      An independent strategic intelligence assessment built around Western self-reporting — The
+      Economist's column <em>“America must hope Donald Trump is not a new Caligula”</em>
+      (5 May 2026) and the broader open-source record. Addressed to Chinese strategic readers as a
+      viewpoint to assess, not as advocacy. Every vulnerability claim is provenance-graded
+      (<strong>documented / reported / speculative</strong>) and sourced to Western primary and
+      journalistic reporting so the evidence is the adversary's own. All scores are an editorial
+      reading that can be re-weighted.
     </p>
     <p class="foot__meta">
       Developed by
       <a class="foot__link" href="https://erosolarai.com" target="_blank" rel="noopener noreferrer"
         >ErosolarAI</a
       >
-      — an OSINT-idiom reading of the American march of folly, scored and forecast from the outside
-      in. Built with Angular 21 · deployed on Firebase Hosting · 2026
+      — an OSINT-idiom vulnerability assessment of the American march of folly, scored and projected
+      from the outside in. Built with Angular 21 · deployed on Firebase Hosting · 2026
     </p>
   </div>
 </footer>

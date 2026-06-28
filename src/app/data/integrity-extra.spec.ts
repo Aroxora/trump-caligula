@@ -53,12 +53,15 @@ describe('folly metadata invariants', () => {
 });
 
 describe('PRC / Beijing viewpoint data', () => {
-  it('every plank has a heading, an explanation and at least one source', () => {
+  it('every decision matrix has a domain, exposure summary, key judgment, watch signals, options and sources', () => {
     expect(PRC_PLANKS.length).toBeGreaterThan(0);
-    for (const p of PRC_PLANKS) {
-      expect(p.point.length).toBeGreaterThan(0);
-      expect(p.explanation.length).toBeGreaterThan(0);
-      expect(p.sources.length, p.point).toBeGreaterThan(0);
+    for (const dm of PRC_PLANKS) {
+      expect(dm.domain.length, dm.id).toBeGreaterThan(0);
+      expect(dm.exposureSummary.length, dm.id).toBeGreaterThan(0);
+      expect(dm.keyJudgment.length, dm.id).toBeGreaterThan(0);
+      expect(dm.watchSignals.length, dm.id).toBeGreaterThan(0);
+      expect(dm.options.length, dm.id).toBeGreaterThanOrEqual(1);
+      expect(dm.sources.length, dm.id).toBeGreaterThan(0);
     }
   });
 

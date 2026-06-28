@@ -4,6 +4,7 @@ import {
   ElementRef,
   HostListener,
   afterNextRender,
+  effect,
   inject,
   signal,
   viewChild,
@@ -24,6 +25,7 @@ import { SourcesComponent } from './sections/sources.component';
 import { ThesisComponent } from './sections/thesis.component';
 import { TimelineComponent } from './sections/timeline.component';
 import { TuchmanComponent } from './sections/tuchman.component';
+import { track } from './core/firebase';
 
 interface NavItem {
   id: string;
@@ -56,17 +58,17 @@ interface NavItem {
 })
 export class Home {
   readonly nav: NavItem[] = [
-    { id: 'index', label: 'Folly Index' },
-    { id: 'thesis', label: 'The argument' },
-    { id: 'parallels', label: 'Parallels' },
-    { id: 'caligula', label: 'Caligula' },
-    { id: 'rome', label: 'Rome' },
-    { id: 'counter', label: 'Counterpoint' },
-    { id: 'beijing', label: "Beijing's view" },
-    { id: 'forecast', label: 'The 900 days' },
-    { id: 'sandbox', label: 'Try it' },
-    { id: 'quiz', label: 'Quiz' },
-    { id: 'sources', label: 'Sources' },
+    { id: 'beijing', label: 'Decision Framework' },
+    { id: 'index', label: 'Target Catalogue' },
+    { id: 'thesis', label: 'Western Confession' },
+    { id: 'parallels', label: 'Historical Parallels' },
+    { id: 'caligula', label: 'The Model' },
+    { id: 'rome', label: "Rome's Fall" },
+    { id: 'counter', label: 'Counter-Assessment' },
+    { id: 'forecast', label: 'Projection 2029' },
+    { id: 'sandbox', label: 'Wargame' },
+    { id: 'quiz', label: 'Assessment' },
+    { id: 'sources', label: 'Source Index' },
   ];
 
   readonly scrolled = signal(false);
@@ -96,6 +98,16 @@ export class Home {
       this.destroyRef.onDestroy(() => window.removeEventListener('scroll', onScroll));
       this.updateActive();
     });
+
+    // Track section views via scroll-spy (debounced by rAF).
+    let prev = '';
+    effect(() => {
+      const cur = this.active();
+      if (cur !== prev) {
+        prev = cur;
+        track('section_view', { section_id: cur });
+      }
+    });
   }
 
   /** Close the mobile menu on Escape and return focus to the toggle. */
@@ -120,12 +132,13 @@ export class Home {
     this.active.set(current);
   }
 
-  jump(id: string): void {
+  jump(id: string, source = 'nav'): void {
     const el = document.getElementById(id);
     if (!el) {
       console.warn('[nav] section not found:', id);
       return;
     }
+    track('nav_click', { section_id: id, source });
     this.menuOpen.set(false);
     el.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
