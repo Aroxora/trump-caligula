@@ -224,7 +224,9 @@
   --gold: #c9a227;
   --gold-deep: #6f560d; /* darkened from #9a7714 to meet WCAG AA (4.5:1) as small text on light paper */
   --gold-active: #6f560d; /* AA-contrast gold for the active nav item on light paper */
-  --porphyry: #5b2a6b; /* imperial purple */
+  --porphyry: #c1121f; /* PLA red — primary accent (recolored from imperial purple) */
+  --pla-red: #ee1c25; /* flag red */
+  --pla-gold: #ffde00; /* flag gold */
 
   /* WCAG-AA reliability label colours, tuned for the light tinted chip/legend backgrounds */
   --rel-hostile: #9b1c1c;

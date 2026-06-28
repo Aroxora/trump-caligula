@@ -91,12 +91,12 @@ const MIN = 60_000;
         background:
           linear-gradient(
             90deg,
-            rgba(201, 162, 39, 0.1),
+            rgba(255, 222, 0, 0.12),
             transparent 28%,
             transparent 72%,
-            rgba(91, 42, 107, 0.18)
+            rgba(238, 28, 37, 0.22)
           ),
-          linear-gradient(180deg, #241a2b, #1b1410);
+          linear-gradient(180deg, #4a0a0e, #2a0608);
         color: #f3ecdd;
         border-bottom: 1px solid rgba(201, 162, 39, 0.28);
         box-shadow: 0 8px 24px -20px rgba(0, 0, 0, 0.85);
