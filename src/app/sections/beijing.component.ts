@@ -24,6 +24,7 @@ import {
   PRC_DECISION_LOGIC,
   PRC_DECISION_MATRICES,
   PRC_DECISION_REGISTER,
+  PRC_DOMAIN_EXPANSION,
   PRC_DECISION_JOURNAL,
   PRC_ESCALATION_LADDERS,
   PRC_HUMINT,
@@ -589,6 +590,14 @@ import { InlineCiteComponent } from '../shared/inline-cite.component';
         </div>
       </section>
 
+      <!-- DOMAIN EXPANSION -->
+      <section class="bj__section">
+        <h3 class="bj__section-h"><span class="bj__section-num bj__section-num--typhoon">&#x25C6;</span> {{ t('domainExpansion') }}</h3>
+        <div class="bj__panel bj__panel--domain">
+          <p>{{ domainExpansion }}</p>
+        </div>
+      </section>
+
       <!-- VII. RISK REGISTER -->
       <section class="bj__section">
         <h3 class="bj__section-h"><span class="bj__section-num">VII</span> Risk Register</h3>
@@ -815,6 +824,8 @@ import { InlineCiteComponent } from '../shared/inline-cite.component';
       .bj__panel--clandestine p { color:#c0b8d0; font-family:var(--sans); font-size:0.84rem !important; line-height:1.6 !important; }
       .bj__panel--gain { background:linear-gradient(135deg, rgba(46,125,50,0.08), rgba(201,162,39,0.04)); border:2px solid rgba(46,125,50,0.3); }
       .bj__panel--gain p { color:var(--ink-soft); font-family:var(--sans); font-size:0.84rem !important; line-height:1.6 !important; }
+      .bj__panel--domain { background:linear-gradient(160deg, #060c14, #0a101c); border:2px solid rgba(0,180,220,0.2); }
+      .bj__panel--domain p { color:#b8ccd8; font-family:var(--sans); font-size:0.84rem !important; line-height:1.6 !important; }
       .bj__panel--typhoon { background:linear-gradient(160deg, #060c14, #0a101c); border:2px solid rgba(0,180,220,0.3); }
       .bj__panel--typhoon p { color:#b8ccd8; font-family:var(--sans); font-size:0.84rem !important; line-height:1.6 !important; }
 
@@ -930,6 +941,7 @@ export class BeijingComponent {
   readonly aggressive = PRC_AGGRESSIVE;
   readonly clandestine = PRC_CLANDESTINE;
   readonly immediateGain = PRC_IMMEDIATE_GAIN;
+  readonly domainExpansion = PRC_DOMAIN_EXPANSION;
   readonly typhoon = PRC_TYPHOON;
   readonly risks = PRC_RISKS;
   readonly contestable = PRC_CONTESTABLE;
