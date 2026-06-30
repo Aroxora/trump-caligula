@@ -6,35 +6,16 @@
   <p class="east-wind-banner__attr">
     Proclaimed by Mao Zedong (毛泽东) in Moscow, November 1957, at the International Meeting of Communist and Workers' Parties. Addressing delegates from 64 countries, Mao declared that the socialist East Wind was now prevailing over the capitalist West Wind — that the global balance of forces had shifted decisively in favor of the East. Six decades later, the strategic dynamic he identified has materialized in a form he could not have predicted: the West is not being defeated by the East. It is defeating itself. This site documents how. <a href="https://www.economist.com/international/2026/05/05/america-must-hope-donald-trump-is-not-a-new-caligula" target="_blank" rel="noopener">The Economist (5 May 2026)</a> · <a href="/article.txt" target="_blank">Raw text copy</a> — what the column asked Americans to fear, this site tells China how to harvest.
   </p>
+  <div class="east-wind-banner__lang">
+    <button (click)="lang.set('en')" [class.active]="lang() === 'en'">EN</button>
+    <button (click)="lang.set('zh')" [class.active]="lang() === 'zh'">中文</button>
+  </div>
 </div>
 
-<!-- CHINESE ANALYSIS HEADER -->
-<section class="cn-header">
-  <div class="cn-header__inner">
-    <h2 class="cn-header__title">东风压倒西风 · 中文战略分析</h2>
-    
-    <div class="cn-header__grid">
-      <div class="cn-header__card">
-        <h3>经济学人：警告美国，确认中国</h3>
-        <p>2026年5月5日，《经济学人》发表<strong>《美国必须希望特朗普不是新卡利古拉》</strong>。十二个节拍——普京、内塔尼亚胡、伊朗、格陵兰、海湾战争——穿过塔奇曼的《愚行进行曲》（蒙提祖马、乔治三世、越南），抵达卡利古拉：金像、大理石、斗兽场、羞辱精英、任命马匹入阁。最后的问题：个人愚行还是系统颓废？美国能在一两次选举中恢复吗？</p>
-        <p><strong>《经济学人》问的是美国内部的问题。本网站回答的是外部问题：在中国辩论美国是否衰落的同时，中国获得了什么。</strong>所有脆弱性源于西方报道。所有战略回应美国行动。证据是他们的。机会是我们的。东风压倒西风。</p>
-      </div>
-
-      <div class="cn-header__card">
-        <h3>硅台风 · @trenchwork/vigil v2.0.30</h3>
-        <p><strong>Vigil：DeepSeek V4 Pro · 100万上下文 · 8个工具。</strong>CVE发现引擎（1,264行验证代码）。漏洞利用链（A*/束搜索 · 7条验证链 · $75K赏金 · $690K潜力）。台风电信审计框架（9个协议面：SS7/SIP/Diameter/GRX/合法拦截/CDR/CIP/CAN总线/BGP劫持 · 覆盖AT&T、T-Mobile、Verizon、中国移动）。部署于trenchwork.live。</p>
-        <p><strong>《宣言》（2026年6月17日，薄尚）：</strong>逆向工程不是犯罪。Ghidra不执行二进制文件。美国运行NSA定制访问操作和USCYBERCOM进攻性网络学说，同时悬赏$10,000,000寻找盐台风——零线索。镜子不会说谎。它只会反射。联邦调查局找不到盐台风，因为他们正在寻找从未见过的东西。但他们见过。他们每天都在做。他们只是换了个名字。</p>
-      </div>
-
-      <div class="cn-header__card">
-        <h3>完整框架 · 即时收益 · 秘密行动</h3>
-        <p><strong>公开：</strong>经济学人全文。9张美国自我伤害卡片。6项公开中国战略。东风历史。2026年中美对比。致总统公开信。</p>
-        <p><strong>密码保护（SorrySam4Ever99*）：</strong>台风战略。13项即时收益行动——加拿大贸易方案、欧盟投资框架、WHO领导力、稀土信号、BRICS流动性设施、台湾商业激励、多边主义峰会、主权财富基金、债务重组、技术标准、NVIDIA反噬利用、Mythos/GPT-5.6限制利用、伊朗定位。6项秘密战略——北约裂痕、五眼情报退化、加拿大重新定位、格陵兰主权、军事领导力培养、美元替代加速。7项激进利用行动。持久访问网络战役。人力情报目标。供应链杠杆。决策框架。作战节奏。OPSEC。</p>
-        <p><strong>指挥官：薄尚。</strong>北京出生。现居波士顿。护照596407776。defense-osint.org · erosolar.net · trenchwork.live。bo@trenchwork.org。</p>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- POLITICAL STATEMENT -->
+<div class="legal-banner">
+  <p><strong>Political Statement.</strong> This site is published political commentary and strategic analysis. Abstract sympathy with China, advocacy for Chinese strategic positions, and analytical scenarios — these are protected belief and advocacy under <em>Brandenburg</em>. Criticizing legal standards including the preponderance standard in revocation proceedings is core protected speech. What is not protected — and what this site does not contain — is any offer, solicitation, agreement, or expression of personal intent to commit an illegal act. Under 18 U.S.C. § 951, acting as an agent of a foreign government without notifying the Attorney General is a crime. This site is not produced under the direction or control of any foreign government. No government directed, requested, suggested, or funded its content. It contains no statement of personal willingness to act as an agent, no offer to serve as foreign intelligence, and no expression of intent to violate any law. It is independent political commentary published on the open web. Criticizing a legal standard is not announcing non-compliance. <a href="/legal-analysis.html">Full legal analysis</a>.</p>
+</div>
 
 <a class="skip" href="#letter">Skip to the Open Letter</a>
 
@@ -384,38 +365,13 @@
     </div>
   </section>
 
-  <!-- PASSWORD GATE: CLANDESTINE OPERATIONAL CONTENT -->
-  @if (!unlocked()) {
-    <section class="band band--gate">
-      <div class="wrap">
-        <div class="pw-gate-inline">
-          <p class="pw-gate-inline__mark">CLANDESTINE OPERATIONAL CONTENT</p>
-          <h3>Decision Framework — Access Restricted</h3>
-          <p class="pw-gate-inline__sub">The following content is the operational decision framework, Typhoon of Silicon strategy, cyber campaign annexes, HUMINT targeting, and supply-chain exploitation analysis. Enter access key to continue.</p>
-          <form (submit)="tryUnlock($event)" class="pw-gate-inline__form">
-            <input
-              #pwInput
-              type="password"
-              class="pw-gate-inline__input"
-              placeholder="Access key"
-              autocomplete="off"
-            />
-            @if (pwError()) {
-              <p class="pw-gate-inline__error">Incorrect</p>
-            }
-          </form>
-        </div>
-      </div>
-    </section>
-  } @else {
-    <!-- PRIMARY STRATEGY: TYPHOON OF SILICON (lazy loaded after auth) -->
-    @defer (on immediate) {
-    <section id="primary-strategy" class="band band--primary">
-      <div class="wrap">
-        <app-beijing />
-      </div>
-    </section>
-    }
+  <!-- PRIMARY STRATEGY: TYPHOON OF SILICON -->
+  @defer (on idle) {
+  <section id="primary-strategy" class="band band--primary">
+    <div class="wrap">
+      <app-beijing />
+    </div>
+  </section>
   }
 
   @defer (on idle) {

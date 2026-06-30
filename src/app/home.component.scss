@@ -23,56 +23,49 @@
   font: 400 0.76rem/1.55 var(--sans);
   color: #a09880;
   max-width: 80ch;
-  margin: 0 auto;
+  margin: 0 auto 0.6rem;
+}
+.east-wind-banner__lang {
+  display: flex;
+  gap: 0.3rem;
+  justify-content: center;
+}
+.east-wind-banner__lang button {
+  font: 600 0.68rem/1 var(--sans);
+  letter-spacing: 0.06em;
+  padding: 0.25rem 0.7rem;
+  border: 1px solid rgba(201,162,39,0.3);
+  border-radius: 4px;
+  background: transparent;
+  color: #a09880;
+  cursor: pointer;
+  transition: all 0.14s ease;
+}
+.east-wind-banner__lang button.active {
+  background: var(--gold-deep);
+  color: #1a0a0a;
+  border-color: var(--gold-deep);
+}
+.east-wind-banner__lang button:hover:not(.active) {
+  color: var(--gold);
+  border-color: rgba(201,162,39,0.6);
 }
 
-/* ---- Password Gate ---- */
-.pw-gate {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  display: grid;
-  place-items: center;
-  background: linear-gradient(160deg, #4a0a0e, #320609);
+/* ---- Legal Banner ---- */
+.legal-banner {
+  background: #0a0a0e;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  padding: 0.5rem clamp(1rem, 4vw, 3rem);
 }
-.pw-gate__box {
+.legal-banner p {
+  font: 400 0.7rem/1.45 var(--sans);
+  color: #6a6860;
+  max-width: 100ch;
+  margin: 0 auto;
   text-align: center;
-  padding: 3rem;
 }
-.pw-gate__mark {
-  font: 700 0.72rem/1 var(--sans);
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin: 0 0 1rem;
-}
-.pw-gate__box h1 {
-  font: 600 clamp(2rem, 6vw, 3.5rem)/1.05 var(--display);
-  color: #f3ecdd;
-  margin: 0 0 2rem;
-}
-.pw-gate__input {
-  font: 400 1.1rem/1 var(--sans);
-  padding: 0.9rem 1.4rem;
-  border: 2px solid rgba(255,255,255,0.2);
-  border-radius: 10px;
-  background: rgba(0,0,0,0.4);
-  color: #f3ecdd;
-  text-align: center;
-  width: 280px;
-  outline: none;
-  transition: border-color 0.2s ease;
-}
-.pw-gate__input:focus {
-  border-color: var(--gold);
-}
-.pw-gate__input::placeholder {
-  color: rgba(255,255,255,0.3);
-}
-.pw-gate__error {
-  font: 600 0.85rem/1 var(--sans);
-  color: #b3121f;
-  margin: 0.7rem 0 0;
+.legal-banner strong {
+  color: #8a8880;
 }
 
 .skip {
@@ -288,64 +281,6 @@
 }
 .public-card--strategy {
   border-left: 3px solid var(--gold-deep);
-}
-
-/* ---- Inline Password Gate ---- */
-.band--gate {
-  background: linear-gradient(160deg, #1a0a0a, #220808);
-  border-top: 2px solid rgba(179,18,31,0.3);
-  border-bottom: 2px solid rgba(179,18,31,0.3);
-}
-.pw-gate-inline {
-  text-align: center;
-  padding: 3rem 1rem;
-}
-.pw-gate-inline__mark {
-  font: 700 0.7rem/1 var(--sans);
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: #b3121f;
-  margin: 0 0 0.8rem;
-}
-.pw-gate-inline h3 {
-  font: 600 clamp(1.5rem, 3vw, 2rem)/1.1 var(--display);
-  color: #f3ecdd;
-  margin: 0 0 0.6rem;
-}
-.pw-gate-inline__sub {
-  font: 400 0.92rem/1.6 var(--sans);
-  color: #c8b8b8;
-  max-width: 56ch;
-  margin: 0 auto 1.5rem;
-}
-.pw-gate-inline__form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0;
-}
-.pw-gate-inline__input {
-  font: 400 1rem/1 var(--sans);
-  padding: 0.8rem 1.2rem;
-  border: 2px solid rgba(255,255,255,0.15);
-  border-radius: 10px;
-  background: rgba(0,0,0,0.5);
-  color: #f3ecdd;
-  text-align: center;
-  width: 260px;
-  outline: none;
-  transition: border-color 0.2s ease;
-}
-.pw-gate-inline__input:focus {
-  border-color: #b3121f;
-}
-.pw-gate-inline__input::placeholder {
-  color: rgba(255,255,255,0.25);
-}
-.pw-gate-inline__error {
-  font: 600 0.8rem/1 var(--sans);
-  color: #b3121f;
-  margin: 0.6rem 0 0;
 }
 
 @media (max-width: 760px) {
@@ -681,5 +616,65 @@
   .hero__stats {
     grid-template-columns: 1fr;
     gap: 1rem;
+  }
+  .east-wind-banner {
+    padding: 0.8rem 1rem;
+  }
+  .east-wind-banner__text {
+    font-size: 0.8rem !important;
+  }
+  .east-wind-banner__attr {
+    font-size: 0.68rem !important;
+  }
+  .cn-header {
+    padding: 1.5rem 1rem;
+  }
+  .cn-header__title {
+    font-size: 1.1rem !important;
+  }
+  .hero {
+    padding: 3rem 1rem 2.5rem;
+  }
+  .hero h1 {
+    font-size: 2rem !important;
+  }
+  .hero__sub {
+    font-size: 0.88rem !important;
+  }
+  .hero__cta {
+    flex-direction: column;
+  }
+  .hero__cta .btn {
+    width: 100%;
+    text-align: center;
+  }
+  .band {
+    padding: 2rem 1rem;
+  }
+  .letter__salutation {
+    font-size: 1.1rem !important;
+  }
+  .letter__body p {
+    font-size: 0.9rem !important;
+  }
+  .letter__motto {
+    font-size: 1.5rem !important;
+  }
+  .letter__divider {
+    margin: 1.5rem 0;
+  }
+  .source-article__body p {
+    font-size: 0.85rem !important;
+  }
+  .public-grid,
+  .compare-grid {
+    grid-template-columns: 1fr;
+  }
+  .cn-header__grid {
+    grid-template-columns: 1fr;
+  }
+  .ew-entry {
+    flex-direction: column;
+    gap: 0.3rem;
   }
 }

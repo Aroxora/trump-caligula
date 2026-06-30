@@ -74,8 +74,7 @@ export class Home {
 
   readonly scrolled = signal(false);
   readonly menuOpen = signal(false);
-  readonly unlocked = signal(typeof sessionStorage !== 'undefined' && sessionStorage.getItem('cw') === '1');
-  readonly pwError = signal(false);
+  readonly lang = signal<'en' | 'zh'>('en');
   /** The nav id currently in view, for scroll-spy + aria-current. */
   readonly active = signal<string>('index');
 
@@ -144,19 +143,5 @@ export class Home {
     track('nav_click', { section_id: id, source });
     this.menuOpen.set(false);
     el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
-
-  tryUnlock(event: Event): void {
-    event.preventDefault();
-    const input = (event.target as HTMLFormElement).querySelector('input') as HTMLInputElement;
-    if (input.value === 'SorrySam4Ever99*') {
-      sessionStorage.setItem('cw', '1');
-      this.unlocked.set(true);
-      this.pwError.set(false);
-    } else {
-      this.pwError.set(true);
-      input.value = '';
-      input.focus();
-    }
   }
 }
