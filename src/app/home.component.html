@@ -3,9 +3,7 @@
   <p class="east-wind-banner__text">
     东风压倒西风 — <em>Dōng fēng yā dǎo xī fēng</em> — "The East Wind prevails over the West Wind"
   </p>
-  <p class="east-wind-banner__attr">
-    Proclaimed by Mao Zedong (毛泽东) in Moscow, November 1957, at the International Meeting of Communist and Workers' Parties. Addressing delegates from 64 countries, Mao declared that the socialist East Wind was now prevailing over the capitalist West Wind — that the global balance of forces had shifted decisively in favor of the East. Six decades later, the strategic dynamic he identified has materialized in a form he could not have predicted: the West is not being defeated by the East. It is defeating itself. This site documents how. <a href="https://www.economist.com/international/2026/05/05/america-must-hope-donald-trump-is-not-a-new-caligula" target="_blank" rel="noopener">The Economist (5 May 2026)</a> · <a href="/article.txt" target="_blank">Raw text copy</a> — what the column asked Americans to fear, this site tells China how to harvest.
-  </p>
+  <p class="east-wind-banner__attr" [innerHTML]="lang() === 'zh' ? zh.bannerAttr : bannerAttrEn"></p>
   <div class="east-wind-banner__lang">
     <button (click)="lang.set('en')" [class.active]="lang() === 'en'">EN</button>
     <button (click)="lang.set('zh')" [class.active]="lang() === 'zh'">中文</button>

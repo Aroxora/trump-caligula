@@ -26,6 +26,7 @@ import { ThesisComponent } from './sections/thesis.component';
 import { TimelineComponent } from './sections/timeline.component';
 import { TuchmanComponent } from './sections/tuchman.component';
 import { track } from './core/firebase';
+import { PUBLIC_ZH } from './data/public-zh';
 
 interface NavItem {
   id: string;
@@ -74,7 +75,9 @@ export class Home {
 
   readonly scrolled = signal(false);
   readonly menuOpen = signal(false);
+  readonly zh = PUBLIC_ZH;
   readonly lang = signal<'en' | 'zh'>('en');
+  readonly bannerAttrEn = `Proclaimed by Mao Zedong (毛泽东) in Moscow, November 1957, at the International Meeting of Communist and Workers' Parties. Addressing delegates from 64 countries, Mao declared that the socialist East Wind was now prevailing over the capitalist West Wind — that the global balance of forces had shifted decisively in favor of the East. Six decades later, the strategic dynamic he identified has materialized in a form he could not have predicted: the West is not being defeated by the East. It is defeating itself. This site documents how. <a href="https://www.economist.com/international/2026/05/05/america-must-hope-donald-trump-is-not-a-new-caligula" target="_blank" rel="noopener">The Economist (5 May 2026)</a> · <a href="/article.txt" target="_blank">Raw text copy</a> — what the column asked Americans to fear, this site tells China how to harvest.`;
   /** The nav id currently in view, for scroll-spy + aria-current. */
   readonly active = signal<string>('index');
 
@@ -143,5 +146,22 @@ export class Home {
     track('nav_click', { section_id: id, source });
     this.menuOpen.set(false);
     el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  tpub(key: string, en: string): string {
+    if (this.lang() === 'zh' && key in this.zh) {
+      const val = (this.zh as unknown as Record<string, unknown>)[key];
+      return typeof val === 'string' ? val : en;
+    }
+    return en;
+  }
+
+  tzh(key: string, en: string): string {
+    if (this.lang() === 'zh' && key in this.zh) {
+      const val = (this.zh as unknown as Record<string, unknown>)[key];
+      if (typeof val === 'string') return val;
+      if (Array.isArray(val)) return (val as string[]).map(s => '<li>'+s+'</li>').join('');
+    }
+    return en;
   }
 }
