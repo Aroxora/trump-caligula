@@ -58,6 +58,7 @@ interface NavItem {
 })
 export class Home {
   readonly nav: NavItem[] = [
+    { id: 'primary-strategy', label: 'Typhoon of Silicon' },
     { id: 'beijing', label: 'Decision Framework' },
     { id: 'index', label: 'Target Catalogue' },
     { id: 'thesis', label: 'Western Confession' },

@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import {
   PRC_APPRECIATION,
+  PRC_ADVANTAGE,
+  PRC_AGGRESSIVE,
   PRC_ASSUMPTIONS,
   PRC_ACTIVATION,
   PRC_AAR_TEMPLATE,
@@ -44,9 +46,11 @@ import {
   PRC_SUCCESS_GATES,
   PRC_SUPPLY_CHAIN,
   PRC_TASKING_MATRIX,
+  PRC_TYPHOON,
   PRC_WINDOW_NOTE,
   PRC_WORST_CASE,
 } from '../data/prc';
+import { ZH, TranslationMap } from '../data/zh-translations';
 import { InlineCiteComponent } from '../shared/inline-cite.component';
 
 @Component({
@@ -56,51 +60,68 @@ import { InlineCiteComponent } from '../shared/inline-cite.component';
   template: `
     <div class="bj">
       <header class="bj__head">
-        <p class="eyebrow">Operational Decision Framework - The Caligula Window</p>
-        <h2>Pricing action on state vulnerability</h2>
-        <p class="lede">{{ lede }}</p>
+        <p class="eyebrow">{{ t('operationalFramework') }}</p>
+        <h2>{{ t('pricingAction') }}</h2>
+        <p class="lede">{{ lang() === 'zh' ? zh.lede : lede }}</p>
       </header>
 
       <aside class="bj__window" role="note">
         <span class="bj__window-sigil" aria-hidden="true">&#x29D7;</span>
-        <p>{{ windowNote }}</p>
+        <p>{{ lang() === 'zh' ? zh.windowNote : windowNote }}</p>
       </aside>
+
+      <div class="lang-toggle">
+        <button (click)="lang.set('en')" [class.active]="lang() === 'en'">EN</button>
+        <button (click)="lang.set('zh')" [class.active]="lang() === 'zh'">中文</button>
+      </div>
+
+      <!-- PRIMARY STRATEGY: TYPHOON OF SILICON — TOP -->
+      <section class="bj__section bj__section--primary">
+        <h3 class="bj__section-h bj__section-h--primary">
+          <span class="bj__section-num bj__section-num--typhoon">&#x2605;</span>
+          {{ t('primaryStrategy') }}: <span style="color: #00b4d8;">A TYPHOON OF SILICON</span> — 硅台风
+        </h3>
+        <p class="bj__strategy-tagline">@trenchwork/vigil v2.0.30 &bull; DeepSeek V4 Pro &bull; CVE Discovery &amp; Exploit Chaining &bull; Typhoon Telecom Audit &bull; trenchwork.live</p>
+        <div class="bj__panel bj__panel--typhoon-primary">
+          <p>{{ lang() === 'zh' ? zh.typhoon || typhoon : typhoon }}</p>
+        </div>
+      </section>
 
       <!-- COMMANDER'S SUMMARY -->
       <section class="bj__section">
-        <h3 class="bj__section-h"><span class="bj__section-num bj__section-num--cmd">&#x2605;</span> Commander's Summary</h3>
+        <h3 class="bj__section-h"><span class="bj__section-num bj__section-num--cmd">&#x2605;</span> {{ t('commanderSummary') }}</h3>
         <div class="bj__panel bj__panel--cmd">
-          <p>{{ commanderSummary }}</p>
+          <p>{{ lang() === 'zh' ? zh.commanderSummary : commanderSummary }}</p>
         </div>
       </section>
 
       <!-- IMMEDIATE ACTIONS -->
       <section class="bj__section">
-        <h3 class="bj__section-h"><span class="bj__section-num bj__section-num--cmd">&#x21B1;</span> Immediate Actions (Next 30 Days)</h3>
+        <h3 class="bj__section-h"><span class="bj__section-num bj__section-num--cmd">&#x21B1;</span> {{ t('immediateActions') }}</h3>
         <div class="bj__panel bj__panel--immediate">
-          <p>{{ immediateActions }}</p>
+          <p>{{ lang() === 'zh' ? zh.immediateActions : immediateActions }}</p>
         </div>
       </section>
 
       <!-- WORST CASE -->
       <section class="bj__section">
-        <h3 class="bj__section-h"><span class="bj__section-num bj__section-num--warn">&#x26A0;</span> Worst-Case Scenario</h3>
+        <h3 class="bj__section-h"><span class="bj__section-num bj__section-num--warn">&#x26A0;</span> {{ t('worstCase') }}</h3>
         <div class="bj__panel bj__panel--worst">
-          <p>{{ worstCase }}</p>
+          <p>{{ lang() === 'zh' ? zh.worstCase : worstCase }}</p>
         </div>
       </section>
 
       <!-- I. INTELLIGENCE ESTIMATE -->
       <section class="bj__section">
-        <h3 class="bj__section-h"><span class="bj__section-num">I</span> Intelligence Estimate</h3>
+        <h3 class="bj__section-h"><span class="bj__section-num">I</span> {{ t('appreciation') }}</h3>
         <div class="bj__prose">
-          <p>{{ appreciation }}</p>
+          <p>{{ lang() === 'zh' ? zh.appreciation : appreciation }}</p>
         </div>
       </section>
 
       <!-- II. DECISION MATRICES -->
       <section class="bj__section">
-        <h3 class="bj__section-h"><span class="bj__section-num">II</span> Decision Matrices</h3>
+        <h3 class="bj__section-h"><span class="bj__section-num">II</span> {{ t('decisionMatrices') }}</h3>
 
         @for (dm of matrices; track dm.id) {
           <article class="dm">
@@ -171,7 +192,7 @@ import { InlineCiteComponent } from '../shared/inline-cite.component';
 
       <!-- II-B. DECISION REGISTER -->
       <section class="bj__section">
-        <h3 class="bj__section-h"><span class="bj__section-num">II-B</span> Decision Register</h3>
+        <h3 class="bj__section-h"><span class="bj__section-num">II-B</span> {{ t('decisionRegister') }}</h3>
 
         <div class="decisions">
           @for (d of register; track d.id) {
@@ -204,7 +225,7 @@ import { InlineCiteComponent } from '../shared/inline-cite.component';
 
       <!-- III. QUARTERLY MILESTONES -->
       <section class="bj__section">
-        <h3 class="bj__section-h"><span class="bj__section-num">III</span> Quarterly Milestones with Decision Gates</h3>
+        <h3 class="bj__section-h"><span class="bj__section-num">III</span> {{ t('milestones') }}</h3>
 
         <div class="milestones">
           @for (m of milestones; track m.quarter) {
@@ -227,7 +248,7 @@ import { InlineCiteComponent } from '../shared/inline-cite.component';
 
       <!-- IV. SIGNAL WATCH LIST -->
       <section class="bj__section">
-        <h3 class="bj__section-h"><span class="bj__section-num">IV</span> Signal Watch List</h3>
+        <h3 class="bj__section-h"><span class="bj__section-num">IV</span> {{ t('signalWatch') }}</h3>
 
         <div class="signals-watch">
           @for (sw of signalWatch; track sw.signal) {
@@ -250,7 +271,7 @@ import { InlineCiteComponent } from '../shared/inline-cite.component';
 
       <!-- IV-B. ESCALATION LADDERS -->
       <section class="bj__section">
-        <h3 class="bj__section-h"><span class="bj__section-num">IV-B</span> Escalation Ladders</h3>
+        <h3 class="bj__section-h"><span class="bj__section-num">IV-B</span> {{ t('escalationLadders') }}</h3>
 
         @for (ladder of ladders; track ladder.domain) {
           <article class="ladder">
@@ -278,31 +299,31 @@ import { InlineCiteComponent } from '../shared/inline-cite.component';
 
       <!-- V. RED TEAM -->
       <section class="bj__section">
-        <h3 class="bj__section-h"><span class="bj__section-num">V</span> Red Team: How a U.S. Planner Defeats This Framework</h3>
+        <h3 class="bj__section-h"><span class="bj__section-num">V</span> {{ t('redTeam') }}</h3>
         <div class="bj__panel bj__panel--red">
-          <p>{{ redTeam }}</p>
+          <p>{{ lang() === 'zh' ? zh.redTeam : redTeam }}</p>
         </div>
       </section>
 
       <!-- V-B. BRANCH PLANS -->
       <section class="bj__section">
-        <h3 class="bj__section-h"><span class="bj__section-num">V-B</span> Branch Plans</h3>
+        <h3 class="bj__section-h"><span class="bj__section-num">V-B</span> {{ t('branchPlans') }}</h3>
         <div class="bj__panel bj__panel--branch">
-          <p>{{ branchPlans }}</p>
+          <p>{{ lang() === 'zh' ? zh.branchPlans : branchPlans }}</p>
         </div>
       </section>
 
       <!-- V-B-2. PRIORITY TASKING ORDER -->
       <section class="bj__section">
-        <h3 class="bj__section-h"><span class="bj__section-num">V-B-2</span> Priority Tasking Order</h3>
+        <h3 class="bj__section-h"><span class="bj__section-num">V-B-2</span> {{ t('priorityOrder') }}</h3>
         <div class="bj__panel bj__panel--priority">
-          <p>{{ priorityOrder }}</p>
+          <p>{{ lang() === 'zh' ? zh.priorityOrder : priorityOrder }}</p>
         </div>
       </section>
 
       <!-- V-B-3. INTEGRATED MASTER TIMELINE -->
       <section class="bj__section">
-        <h3 class="bj__section-h"><span class="bj__section-num">V-B-3</span> Integrated Master Timeline</h3>
+        <h3 class="bj__section-h"><span class="bj__section-num">V-B-3</span> {{ t('masterTimeline') }}</h3>
         <div class="bj__panel bj__panel--timeline">
           <p>{{ masterTimeline }}</p>
         </div>
@@ -310,7 +331,7 @@ import { InlineCiteComponent } from '../shared/inline-cite.component';
 
       <!-- V-B-4. SUCCESS GATES -->
       <section class="bj__section">
-        <h3 class="bj__section-h"><span class="bj__section-num">V-B-4</span> Success Gates</h3>
+        <h3 class="bj__section-h"><span class="bj__section-num">V-B-4</span> {{ t('successGates') }}</h3>
         <div class="bj__panel bj__panel--gates">
           <p>{{ successGates }}</p>
         </div>
@@ -318,7 +339,7 @@ import { InlineCiteComponent } from '../shared/inline-cite.component';
 
       <!-- V-B-5. COMMUNICATIONS GRID -->
       <section class="bj__section">
-        <h3 class="bj__section-h"><span class="bj__section-num">V-B-5</span> Communications Grid</h3>
+        <h3 class="bj__section-h"><span class="bj__section-num">V-B-5</span> {{ t('commsGrid') }}</h3>
         <div class="bj__panel bj__panel--comms">
           <p>{{ commsGrid }}</p>
         </div>
@@ -326,7 +347,7 @@ import { InlineCiteComponent } from '../shared/inline-cite.component';
 
       <!-- V-B-6. ASSUMPTIONS REGISTER -->
       <section class="bj__section">
-        <h3 class="bj__section-h"><span class="bj__section-num">V-B-6</span> Assumptions Register</h3>
+        <h3 class="bj__section-h"><span class="bj__section-num">V-B-6</span> {{ t('assumptions') }}</h3>
         <div class="bj__panel bj__panel--assumptions">
           <p>{{ assumptions }}</p>
         </div>
@@ -334,7 +355,7 @@ import { InlineCiteComponent } from '../shared/inline-cite.component';
 
       <!-- V-B-7. INTELLIGENCE GAPS -->
       <section class="bj__section">
-        <h3 class="bj__section-h"><span class="bj__section-num">V-B-7</span> Intelligence Gaps</h3>
+        <h3 class="bj__section-h"><span class="bj__section-num">V-B-7</span> {{ t('intelGaps') }}</h3>
         <div class="bj__panel bj__panel--gaps">
           <p>{{ intelGaps }}</p>
         </div>
@@ -342,7 +363,7 @@ import { InlineCiteComponent } from '../shared/inline-cite.component';
 
       <!-- V-B-8. DECISION LOGIC -->
       <section class="bj__section">
-        <h3 class="bj__section-h"><span class="bj__section-num">V-B-8</span> Decision Logic (Critical Path)</h3>
+        <h3 class="bj__section-h"><span class="bj__section-num">V-B-8</span> {{ t('decisionLogic') }}</h3>
         <div class="bj__panel bj__panel--logic">
           <p>{{ decisionLogic }}</p>
         </div>
@@ -358,17 +379,17 @@ import { InlineCiteComponent } from '../shared/inline-cite.component';
 
       <!-- VI. PLA ANNEX -->
       <section class="bj__section">
-        <h3 class="bj__section-h"><span class="bj__section-num">VI</span> PLA Cost-Exchange Tables</h3>
+        <h3 class="bj__section-h"><span class="bj__section-num">VI</span> {{ t('plaAnnex') }}</h3>
         <div class="bj__panel bj__panel--pla">
-          <h4>{{ pla.title }}</h4>
-          <p>{{ pla.body }}</p>
+          <h4>{{ lang() === 'zh' ? zh.plaSection.title : pla.title }}</h4>
+          <p>{{ lang() === 'zh' ? zh.plaSection.body : pla.body }}</p>
           <app-inline-cite [sources]="pla.sources" />
         </div>
       </section>
 
       <!-- VI-B. PERSISTENT ACCESS CAMPAIGN -->
       <section class="bj__section">
-        <h3 class="bj__section-h"><span class="bj__section-num">VI-B</span> Persistent Access Campaign: Operational Concept</h3>
+        <h3 class="bj__section-h"><span class="bj__section-num">VI-B</span> {{ t('cyberAnnex') }}</h3>
         <div class="bj__panel bj__panel--cyber">
           <p>{{ cyberAnnex }}</p>
         </div>
@@ -376,7 +397,7 @@ import { InlineCiteComponent } from '../shared/inline-cite.component';
 
       <!-- VI-C. CROSS-DOMAIN INTELLIGENCE FEED -->
       <section class="bj__section">
-        <h3 class="bj__section-h"><span class="bj__section-num">VI-C</span> Cross-Domain Intelligence Feed</h3>
+        <h3 class="bj__section-h"><span class="bj__section-num">VI-C</span> {{ t('crossDomain') }}</h3>
         <div class="bj__panel bj__panel--xdomain">
           <p>{{ crossDomain }}</p>
         </div>
@@ -384,7 +405,7 @@ import { InlineCiteComponent } from '../shared/inline-cite.component';
 
       <!-- VI-D. BATTLE RHYTHM -->
       <section class="bj__section">
-        <h3 class="bj__section-h"><span class="bj__section-num">VI-D</span> Battle Rhythm</h3>
+        <h3 class="bj__section-h"><span class="bj__section-num">VI-D</span> {{ t('battleRhythm') }}</h3>
         <div class="bj__panel bj__panel--rhythm">
           <p>{{ battleRhythm }}</p>
         </div>
@@ -392,7 +413,7 @@ import { InlineCiteComponent } from '../shared/inline-cite.component';
 
       <!-- VI-E. HUMINT TARGETING GUIDE -->
       <section class="bj__section">
-        <h3 class="bj__section-h"><span class="bj__section-num">VI-E</span> HUMINT Targeting Guide</h3>
+        <h3 class="bj__section-h"><span class="bj__section-num">VI-E</span> {{ t('humint') }}</h3>
         <div class="bj__panel bj__panel--humint">
           <p>{{ humint }}</p>
         </div>
@@ -400,7 +421,7 @@ import { InlineCiteComponent } from '../shared/inline-cite.component';
 
       <!-- VI-F. INFLUENCE PLACEMENT GRID -->
       <section class="bj__section">
-        <h3 class="bj__section-h"><span class="bj__section-num">VI-F</span> Influence Placement Grid</h3>
+        <h3 class="bj__section-h"><span class="bj__section-num">VI-F</span> {{ t('influenceGrid') }}</h3>
         <div class="bj__panel bj__panel--influence">
           <p>{{ influenceGrid }}</p>
         </div>
@@ -408,7 +429,7 @@ import { InlineCiteComponent } from '../shared/inline-cite.component';
 
       <!-- VI-G. SUPPLY-CHAIN LEVERAGE REGISTER -->
       <section class="bj__section">
-        <h3 class="bj__section-h"><span class="bj__section-num">VI-G</span> Supply-Chain Leverage Register</h3>
+        <h3 class="bj__section-h"><span class="bj__section-num">VI-G</span> {{ t('supplyChain') }}</h3>
         <div class="bj__panel bj__panel--supply">
           <p>{{ supplyChain }}</p>
         </div>
@@ -416,7 +437,7 @@ import { InlineCiteComponent } from '../shared/inline-cite.component';
 
       <!-- VI-H. ADMINISTRATION ORG VULNERABILITY MAP -->
       <section class="bj__section">
-        <h3 class="bj__section-h"><span class="bj__section-num">VI-H</span> Administration Organizational Vulnerability Map</h3>
+        <h3 class="bj__section-h"><span class="bj__section-num">VI-H</span> {{ t('orgMap') }}</h3>
         <div class="bj__panel bj__panel--orgmap">
           <p>{{ orgMap }}</p>
         </div>
@@ -424,7 +445,7 @@ import { InlineCiteComponent } from '../shared/inline-cite.component';
 
       <!-- VI-I. CRISIS EXPLOITATION PLAYBOOK -->
       <section class="bj__section">
-        <h3 class="bj__section-h"><span class="bj__section-num">VI-I</span> Crisis Exploitation Playbook</h3>
+        <h3 class="bj__section-h"><span class="bj__section-num">VI-I</span> {{ t('crisisPlaybook') }}</h3>
         <div class="bj__panel bj__panel--crisis">
           <p>{{ crisisPlaybook }}</p>
         </div>
@@ -432,7 +453,7 @@ import { InlineCiteComponent } from '../shared/inline-cite.component';
 
       <!-- VI-J. DECISION-MAKER BEHAVIORAL PROFILES -->
       <section class="bj__section">
-        <h3 class="bj__section-h"><span class="bj__section-num">VI-J</span> Decision-Maker Behavioral Profiles</h3>
+        <h3 class="bj__section-h"><span class="bj__section-num">VI-J</span> {{ t('behavioral') }}</h3>
         <div class="bj__panel bj__panel--behavioral">
           <p>{{ behavioral }}</p>
         </div>
@@ -440,7 +461,7 @@ import { InlineCiteComponent } from '../shared/inline-cite.component';
 
       <!-- FRAMEWORK ACTIVATION CHECKLIST -->
       <section class="bj__section">
-        <h3 class="bj__section-h"><span class="bj__section-num bj__section-num--go">&#x2713;</span> Framework Activation Checklist</h3>
+        <h3 class="bj__section-h"><span class="bj__section-num bj__section-num--go">&#x2713;</span> {{ t('activation') }}</h3>
         <div class="bj__panel bj__panel--activate">
           <p>{{ activation }}</p>
         </div>
@@ -448,15 +469,15 @@ import { InlineCiteComponent } from '../shared/inline-cite.component';
 
       <!-- PRE-MORTEM: HOW THIS FRAMEWORK FAILED -->
       <section class="bj__section">
-        <h3 class="bj__section-h"><span class="bj__section-num bj__section-num--warn">&#x26A0;</span> Pre-Mortem: How This Framework Failed</h3>
+        <h3 class="bj__section-h"><span class="bj__section-num bj__section-num--warn">&#x26A0;</span> {{ t('premortem') }}</h3>
         <div class="bj__panel bj__panel--premortem">
-          <p>{{ premortem }}</p>
+          <p>{{ lang() === 'zh' ? zh.premortem : premortem }}</p>
         </div>
       </section>
 
       <!-- BLIND SPOT REGISTER -->
       <section class="bj__section">
-        <h3 class="bj__section-h"><span class="bj__section-num">B</span> Blind Spot Register</h3>
+        <h3 class="bj__section-h"><span class="bj__section-num">B</span> {{ t('blindSpots') }}</h3>
         <div class="bj__panel bj__panel--blind">
           <p>{{ blindSpots }}</p>
         </div>
@@ -464,7 +485,7 @@ import { InlineCiteComponent } from '../shared/inline-cite.component';
 
       <!-- CABINET BRIEF -->
       <section class="bj__section">
-        <h3 class="bj__section-h"><span class="bj__section-num bj__section-num--cmd">&#x2605;</span> Cabinet Brief (Politburo-Level)</h3>
+        <h3 class="bj__section-h"><span class="bj__section-num bj__section-num--cmd">&#x2605;</span> {{ t('cabinetBrief') }}</h3>
         <div class="bj__panel bj__panel--cabinet">
           <p>{{ cabinetBrief }}</p>
         </div>
@@ -472,7 +493,7 @@ import { InlineCiteComponent } from '../shared/inline-cite.component';
 
       <!-- INTERAGENCY TASKING MATRIX -->
       <section class="bj__section">
-        <h3 class="bj__section-h"><span class="bj__section-num">T</span> Interagency Tasking Matrix</h3>
+        <h3 class="bj__section-h"><span class="bj__section-num">T</span> {{ t('taskingMatrix') }}</h3>
         <div class="bj__panel bj__panel--tasking">
           <p>{{ taskingMatrix }}</p>
         </div>
@@ -480,7 +501,7 @@ import { InlineCiteComponent } from '../shared/inline-cite.component';
 
       <!-- POST-WINDOW AAR TEMPLATE -->
       <section class="bj__section">
-        <h3 class="bj__section-h"><span class="bj__section-num">AAR</span> Post-Window Assessment Template (Q2 2029)</h3>
+        <h3 class="bj__section-h"><span class="bj__section-num">AAR</span> {{ t('aarTemplate') }}</h3>
         <div class="bj__panel bj__panel--aar">
           <p>{{ aarTemplate }}</p>
         </div>
@@ -488,15 +509,15 @@ import { InlineCiteComponent } from '../shared/inline-cite.component';
 
       <!-- RED CELL CHALLENGE -->
       <section class="bj__section">
-        <h3 class="bj__section-h"><span class="bj__section-num bj__section-num--warn">&#x26A0;</span> Red Cell Challenge</h3>
+        <h3 class="bj__section-h"><span class="bj__section-num bj__section-num--warn">&#x26A0;</span> {{ t('redCell') }}</h3>
         <div class="bj__panel bj__panel--redcell">
-          <p>{{ redCell }}</p>
+          <p>{{ lang() === 'zh' ? zh.redCell : redCell }}</p>
         </div>
       </section>
 
       <!-- COUNTER-FRAMEWORK DETECTION -->
       <section class="bj__section">
-        <h3 class="bj__section-h"><span class="bj__section-num">CF</span> Counter-Framework Detection</h3>
+        <h3 class="bj__section-h"><span class="bj__section-num">CF</span> {{ t('counterDetection') }}</h3>
         <div class="bj__panel bj__panel--counter">
           <p>{{ counterDetection }}</p>
         </div>
@@ -504,7 +525,7 @@ import { InlineCiteComponent } from '../shared/inline-cite.component';
 
       <!-- OPERATIONAL COMMS TEMPLATES -->
       <section class="bj__section">
-        <h3 class="bj__section-h"><span class="bj__section-num">CT</span> Operational Communications Templates</h3>
+        <h3 class="bj__section-h"><span class="bj__section-num">CT</span> {{ t('commsTemplates') }}</h3>
         <div class="bj__panel bj__panel--comtemplates">
           <p>{{ commsTemplates }}</p>
         </div>
@@ -512,7 +533,7 @@ import { InlineCiteComponent } from '../shared/inline-cite.component';
 
       <!-- FRAMEWORK HEALTH DIAGNOSTIC -->
       <section class="bj__section">
-        <h3 class="bj__section-h"><span class="bj__section-num bj__section-num--go">&#x2713;</span> Framework Health Diagnostic</h3>
+        <h3 class="bj__section-h"><span class="bj__section-num bj__section-num--go">&#x2713;</span> {{ t('healthDiagnostic') }}</h3>
         <div class="bj__panel bj__panel--health">
           <p>{{ healthDiagnostic }}</p>
         </div>
@@ -520,7 +541,7 @@ import { InlineCiteComponent } from '../shared/inline-cite.component';
 
       <!-- DECISION JOURNAL TEMPLATE -->
       <section class="bj__section">
-        <h3 class="bj__section-h"><span class="bj__section-num">DJ</span> Decision Journal Template</h3>
+        <h3 class="bj__section-h"><span class="bj__section-num">DJ</span> {{ t('decisionJournal') }}</h3>
         <div class="bj__panel bj__panel--journal">
           <p>{{ decisionJournal }}</p>
         </div>
@@ -528,9 +549,25 @@ import { InlineCiteComponent } from '../shared/inline-cite.component';
 
       <!-- LAST WORD -->
       <section class="bj__section">
-        <h3 class="bj__section-h"><span class="bj__section-num bj__section-num--cmd">&#x25C6;</span> Last Word</h3>
+        <h3 class="bj__section-h"><span class="bj__section-num bj__section-num--cmd">&#x25C6;</span> {{ t('lastWord') }}</h3>
         <div class="bj__panel bj__panel--lastword">
-          <p>{{ lastWord }}</p>
+          <p>{{ lang() === 'zh' ? zh.lastWord : lastWord }}</p>
+        </div>
+      </section>
+
+      <!-- CHINESE ADVANTAGE -->
+      <section class="bj__section">
+        <h3 class="bj__section-h"><span class="bj__section-num bj__section-num--cmd">&#x2605;</span> {{ t('advantage') }}</h3>
+        <div class="bj__panel bj__panel--advantage">
+          <p>{{ lang() === 'zh' ? zh.advantage : advantage }}</p>
+        </div>
+      </section>
+
+      <!-- AGGRESSIVE EXPLOITATION -->
+      <section class="bj__section">
+        <h3 class="bj__section-h"><span class="bj__section-num bj__section-num--warn">&#x26A0;</span> {{ t('aggressive') }}</h3>
+        <div class="bj__panel bj__panel--aggressive">
+          <p>{{ lang() === 'zh' ? zh.aggressive : aggressive }}</p>
         </div>
       </section>
 
@@ -557,14 +594,14 @@ import { InlineCiteComponent } from '../shared/inline-cite.component';
 
       <!-- VIII. LIMITS -->
       <section class="bj__section">
-        <h3 class="bj__section-h"><span class="bj__section-num">VIII</span> Limits of the Framework</h3>
+        <h3 class="bj__section-h"><span class="bj__section-num">VIII</span> {{ t('contestable') }}</h3>
         <div class="bj__panel bj__panel--against">
-          <p>{{ contestable }}</p>
+          <p>{{ lang() === 'zh' ? zh.contestable : contestable }}</p>
         </div>
       </section>
 
       <footer class="bj__biblio">
-        <h4>Sources</h4>
+        <h4>{{ t('bibliography') }}</h4>
         <app-inline-cite [sources]="bibliography" />
       </footer>
     </div>
@@ -582,11 +619,43 @@ import { InlineCiteComponent } from '../shared/inline-cite.component';
       .bj__window-sigil { font-size:1.3rem; color:#9b1c1c; line-height:1.2; flex:none; }
       .bj__window p { margin:0; font:500 0.92rem/1.6 var(--sans); color:var(--ink-soft); }
 
+      .lang-toggle {
+        display: flex;
+        gap: 0.3rem;
+        justify-content: flex-end;
+        margin-bottom: 1rem;
+      }
+      .lang-toggle button {
+        font: 600 0.72rem/1 var(--sans);
+        letter-spacing: 0.06em;
+        padding: 0.35rem 0.8rem;
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        background: var(--surface);
+        color: var(--ink-soft);
+        cursor: pointer;
+        transition: all 0.14s ease;
+      }
+      .lang-toggle button.active {
+        background: #9b1c1c;
+        color: #f7e3a1;
+        border-color: #9b1c1c;
+      }
+      .lang-toggle button:hover:not(.active) {
+        background: var(--wash);
+        color: var(--ink);
+      }
+
       .bj__section { margin-bottom: 2.4rem; }
       .bj__section-h { display:flex; align-items:center; gap:0.7rem; font:600 1.2rem/1.15 var(--display); color:var(--ink); margin:0 0 1rem; padding-bottom:0.5rem; border-bottom:2px solid var(--line); }
       .bj__section-num { display:grid; place-items:center; width:1.8rem; height:1.8rem; border-radius:6px; background:#9b1c1c; color:#f7e3a1; font:700 0.85rem/1 var(--display); flex:none; }
       .bj__section-num--cmd { background:var(--gold-deep); color:#2a1d07; }
       .bj__section-num--warn { background:#b3121f; color:#f7e3a1; }
+      .bj__section-num--typhoon { background:linear-gradient(135deg, #006080, #0090c0); color:#e0f0ff; font-size:1rem !important; width:2.2rem; height:2.2rem; }
+      .bj__section-h--primary { font-size:1.4rem !important; border-bottom-color:rgba(0,180,220,0.5) !important; border-bottom-width:3px !important; }
+      .bj__panel--typhoon-primary { background:linear-gradient(160deg, #040e1a, #081828); border:2px solid rgba(0,180,220,0.4); box-shadow:0 0 40px rgba(0,150,200,0.08); }
+      .bj__panel--typhoon-primary p { color:#b8ccd8; font-family:var(--sans); font-size:0.85rem !important; line-height:1.65 !important; }
+      .bj__strategy-tagline { font:600 1rem/1.4 var(--display) !important; color:#00b4d8 !important; text-align:center; padding:0.5rem 0 1rem; margin:0; letter-spacing:0.02em; }
       .bj__section-num--go { background:#2e7d32; color:#e8f5e9; }
       .bj__prose p { font:400 0.98rem/1.7 var(--serif); color:var(--ink-soft); white-space:pre-line; margin:0; }
 
@@ -720,6 +789,12 @@ import { InlineCiteComponent } from '../shared/inline-cite.component';
       .bj__panel--journal p { color:#c0bca8; font-family:var(--sans); font-size:0.82rem !important; line-height:1.55 !important; }
       .bj__panel--lastword { background:linear-gradient(160deg, #4a0a0e, #320609); border:2px solid var(--gold-deep); }
       .bj__panel--lastword p { color:#e8dcc6; font-family:var(--serif); font-size:0.95rem !important; line-height:1.75 !important; }
+      .bj__panel--advantage { background:linear-gradient(160deg, #0a0e0a, #101810); border:2px solid var(--gold-deep); }
+      .bj__panel--advantage p { color:#d8e0c8; font-family:var(--serif); font-size:0.95rem !important; line-height:1.75 !important; }
+      .bj__panel--aggressive { background:linear-gradient(160deg, #1a0808, #220a0a); border:2px solid rgba(200,40,40,0.3); }
+      .bj__panel--aggressive p { color:#d8c0c0; font-family:var(--sans); font-size:0.84rem !important; line-height:1.6 !important; }
+      .bj__panel--typhoon { background:linear-gradient(160deg, #060c14, #0a101c); border:2px solid rgba(0,180,220,0.3); }
+      .bj__panel--typhoon p { color:#b8ccd8; font-family:var(--sans); font-size:0.84rem !important; line-height:1.6 !important; }
 
       /* Decision Register */
       .decisions { display:grid; gap:1rem; }
@@ -738,7 +813,7 @@ import { InlineCiteComponent } from '../shared/inline-cite.component';
       .dec__rec { font:400 0.84rem/1.5 var(--sans); color:var(--ink-soft); border-left:2px solid var(--gold-deep); padding-left:0.8rem; margin:0 0 0.4rem; }
       .dec__sig { font:400 0.78rem/1.4 var(--sans); color:var(--ink-faint); margin:0 0 0.5rem; }
 
-      /* Escalation Ladders */
+      /* {{ t('escalationLadders') }} */
       .ladder { background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:1.3rem 1.5rem; margin-bottom:1rem; }
       .ladder h4 { font:600 1rem/1.2 var(--display); color:var(--ink); margin:0 0 0.8rem; }
       .ladder__rungs { display:grid; gap:0.5rem; margin-bottom:0.8rem; }
@@ -775,6 +850,17 @@ import { InlineCiteComponent } from '../shared/inline-cite.component';
   ],
 })
 export class BeijingComponent {
+  readonly zh = ZH;
+  readonly lang = signal<'en' | 'zh'>('en');
+
+  t(key: string): string {
+    if (this.lang() === 'zh' && key in this.zh.section) {
+      return this.zh.section[key];
+    }
+    // Return the key itself for fallback or missing translations
+    return key;
+  }
+
   readonly lede = PRC_LEDE;
   readonly windowNote = PRC_WINDOW_NOTE;
   readonly appreciation = PRC_APPRECIATION;
@@ -818,6 +904,9 @@ export class BeijingComponent {
   readonly healthDiagnostic = PRC_HEALTH_DIAGNOSTIC;
   readonly decisionJournal = PRC_DECISION_JOURNAL;
   readonly lastWord = PRC_LAST_WORD;
+  readonly advantage = PRC_ADVANTAGE;
+  readonly aggressive = PRC_AGGRESSIVE;
+  readonly typhoon = PRC_TYPHOON;
   readonly risks = PRC_RISKS;
   readonly contestable = PRC_CONTESTABLE;
   readonly bibliography = PRC_BIBLIOGRAPHY;

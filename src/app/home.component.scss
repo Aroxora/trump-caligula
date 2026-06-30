@@ -173,6 +173,16 @@
 .btn--gold:hover {
   filter: brightness(1.05);
 }
+.btn--typhoon {
+  background: linear-gradient(135deg, #006080, #0090c0);
+  color: #e0f0ff;
+  border-color: rgba(0,180,220,0.5);
+  box-shadow: 0 0 30px rgba(0,150,200,0.15);
+}
+.btn--typhoon:hover {
+  filter: brightness(1.1);
+  box-shadow: 0 0 40px rgba(0,180,220,0.25);
+}
 .btn--ghost {
   background: rgba(255, 255, 255, 0.06);
   color: #f3ecdd;
@@ -208,6 +218,11 @@
 }
 .band--wash {
   background: var(--wash);
+}
+.band--primary {
+  background: linear-gradient(180deg, #040e1a, #060e18);
+  border-top: 2px solid rgba(0,180,220,0.3);
+  border-bottom: 2px solid rgba(0,180,220,0.2);
 }
 .wrap {
   max-width: 1100px;

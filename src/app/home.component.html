@@ -1,4 +1,4 @@
-<a class="skip" href="#beijing">Skip to the Strategic Playbook</a>
+<a class="skip" href="#primary-strategy">Skip to Primary Strategy — Typhoon of Silicon</a>
 
 <app-countdown />
 
@@ -40,31 +40,25 @@
   <section class="hero">
     <div class="hero__grain" aria-hidden="true"></div>
     <div class="hero__inner">
-      <p class="hero__kicker">战略情报评估 · Strategic Intelligence Assessment · 2026</p>
+      <p class="hero__kicker">PRIMARY STRATEGY — A TYPHOON OF SILICON — 硅台风</p>
       <h1>
         The <span class="goldword">Caligula</span> Window
       </h1>
       <p class="hero__sub">
-        A strategic exploitation guide for Chinese readers. The American "march of folly" —
-        self-reported by Western media, scored by their own scholars, confirmed by their own
-        intelligence assessments — is catalogued here as a <strong>vulnerability index</strong>.
-        Every documented failure is a window: finite, exploitable, and closing on 20 January 2029.
-        This site turns that window into an instrument: five lines of effort, a phased campaign
-        calendar, a risk register, and a target catalogue of 27 scored vulnerabilities — all
-        sourced to Western primary and open-source reporting so the evidence is their own.
+        <strong>12 vectors. Offensive &amp; clandestine. AI at scale.</strong> A strategic exploitation guide for Chinese readers. The American "march of folly" — self-reported by Western media, scored by their own scholars, confirmed by their own intelligence assessments — is catalogued here as a vulnerability index. Every documented failure is a window: finite, exploitable, and closing on 20 January 2029. Implementation hub: <strong>rmb-vigil-freelance</strong>. The asymmetry is the strategy.
       </p>
       <div class="hero__cta">
-        <button class="btn btn--gold" (click)="jump('beijing', 'cta')">Read the Strategic Playbook ↓</button>
+        <button class="btn btn--typhoon" (click)="jump('primary-strategy', 'cta')">A TYPHOON OF SILICON ↓</button>
         <button class="btn btn--ghost" (click)="jump('index', 'cta')">Browse the Target Catalogue</button>
       </div>
       <dl class="hero__stats">
         <div>
-          <dt>5 行动方向</dt>
-          <dd>Lines of effort — diplomatic, economic, military, information, institutional</dd>
+          <dt>12 作战向量</dt>
+          <dd>Offensive &amp; clandestine: cyber, financial, personas, supply chain, influence, counter-intel</dd>
         </div>
         <div>
-          <dt>3 战略阶段</dt>
-          <dd>Phased campaign: exploit → deepen → consolidate beyond 2029</dd>
+          <dt>AI at Scale</dt>
+          <dd>LLMs, agents, polymorphic payloads, autonomous detection — rmb-vigil-freelance</dd>
         </div>
         <div>
           <dt>27 漏洞条目</dt>
@@ -74,6 +68,16 @@
     </div>
   </section>
 
+  <!-- PRIMARY STRATEGY: TYPHOON OF SILICON — LOADS FIRST, ABOVE ALL ELSE -->
+  <section id="primary-strategy" class="band band--primary">
+    <div class="wrap">
+      <app-beijing />
+    </div>
+  </section>
+
+  @defer (on idle) {
+    <section id="beijing" class="band band--wash" style="display:none"></section>
+  }
   @defer (on idle) {
     <section id="beijing" class="band band--wash">
       <div class="wrap"><app-beijing /></div>
