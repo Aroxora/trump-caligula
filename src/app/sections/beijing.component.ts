@@ -19,6 +19,7 @@ import {
   PRC_COUNTER_DETECTION,
   PRC_CRISIS_PLAYBOOK,
   PRC_CROSS_DOMAIN,
+  PRC_CLANDESTINE,
   PRC_CYBER_ANNEX,
   PRC_DECISION_LOGIC,
   PRC_DECISION_MATRICES,
@@ -28,6 +29,7 @@ import {
   PRC_HUMINT,
   PRC_HEALTH_DIAGNOSTIC,
   PRC_IMMEDIATE_ACTIONS,
+  PRC_IMMEDIATE_GAIN,
   PRC_INFLUENCE_GRID,
   PRC_INTEL_GAPS,
   PRC_LAST_WORD,
@@ -81,7 +83,7 @@ import { InlineCiteComponent } from '../shared/inline-cite.component';
           <span class="bj__section-num bj__section-num--typhoon">&#x2605;</span>
           {{ t('primaryStrategy') }}: <span style="color: #00b4d8;">A TYPHOON OF SILICON</span> — 硅台风
         </h3>
-        <p class="bj__strategy-tagline">@trenchwork/vigil v2.0.30 &bull; DeepSeek V4 Pro &bull; CVE Discovery &amp; Exploit Chaining &bull; Typhoon Telecom Audit &bull; trenchwork.live</p>
+        <p class="bj__strategy-tagline">@trenchwork/vigil v2.0.30 &bull; DeepSeek V4 Pro &bull; CVE Discovery (1,264 lines) &bull; Exploit Chaining (536 lines) &bull; 7 verified chains &bull; Typhoon 9-surface telecom audit &bull; trenchwork.live</p>
         <div class="bj__panel bj__panel--typhoon-primary">
           <p>{{ lang() === 'zh' ? zh.typhoon || typhoon : typhoon }}</p>
         </div>
@@ -571,6 +573,22 @@ import { InlineCiteComponent } from '../shared/inline-cite.component';
         </div>
       </section>
 
+      <!-- CLANDESTINE STRATEGIES -->
+      <section class="bj__section">
+        <h3 class="bj__section-h"><span class="bj__section-num bj__section-num--warn">&#x26A0;</span> {{ t('clandestine') }}</h3>
+        <div class="bj__panel bj__panel--clandestine">
+          <p>{{ lang() === 'zh' ? zh.clandestine || clandestine : clandestine }}</p>
+        </div>
+      </section>
+
+      <!-- IMMEDIATE GAIN OPERATIONS -->
+      <section class="bj__section">
+        <h3 class="bj__section-h"><span class="bj__section-num bj__section-num--go">&#x2713;</span> {{ t('immediateGain') }}</h3>
+        <div class="bj__panel bj__panel--gain">
+          <p>{{ immediateGain }}</p>
+        </div>
+      </section>
+
       <!-- VII. RISK REGISTER -->
       <section class="bj__section">
         <h3 class="bj__section-h"><span class="bj__section-num">VII</span> Risk Register</h3>
@@ -793,6 +811,10 @@ import { InlineCiteComponent } from '../shared/inline-cite.component';
       .bj__panel--advantage p { color:#d8e0c8; font-family:var(--serif); font-size:0.95rem !important; line-height:1.75 !important; }
       .bj__panel--aggressive { background:linear-gradient(160deg, #1a0808, #220a0a); border:2px solid rgba(200,40,40,0.3); }
       .bj__panel--aggressive p { color:#d8c0c0; font-family:var(--sans); font-size:0.84rem !important; line-height:1.6 !important; }
+      .bj__panel--clandestine { background:linear-gradient(160deg, #08080e, #0e0e18); border:2px solid rgba(150,100,200,0.25); }
+      .bj__panel--clandestine p { color:#c0b8d0; font-family:var(--sans); font-size:0.84rem !important; line-height:1.6 !important; }
+      .bj__panel--gain { background:linear-gradient(135deg, rgba(46,125,50,0.08), rgba(201,162,39,0.04)); border:2px solid rgba(46,125,50,0.3); }
+      .bj__panel--gain p { color:var(--ink-soft); font-family:var(--sans); font-size:0.84rem !important; line-height:1.6 !important; }
       .bj__panel--typhoon { background:linear-gradient(160deg, #060c14, #0a101c); border:2px solid rgba(0,180,220,0.3); }
       .bj__panel--typhoon p { color:#b8ccd8; font-family:var(--sans); font-size:0.84rem !important; line-height:1.6 !important; }
 
@@ -906,6 +928,8 @@ export class BeijingComponent {
   readonly lastWord = PRC_LAST_WORD;
   readonly advantage = PRC_ADVANTAGE;
   readonly aggressive = PRC_AGGRESSIVE;
+  readonly clandestine = PRC_CLANDESTINE;
+  readonly immediateGain = PRC_IMMEDIATE_GAIN;
   readonly typhoon = PRC_TYPHOON;
   readonly risks = PRC_RISKS;
   readonly contestable = PRC_CONTESTABLE;

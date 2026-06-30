@@ -2,6 +2,55 @@
   display: block;
 }
 
+/* ---- Password Gate ---- */
+.pw-gate {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(160deg, #4a0a0e, #320609);
+}
+.pw-gate__box {
+  text-align: center;
+  padding: 3rem;
+}
+.pw-gate__mark {
+  font: 700 0.72rem/1 var(--sans);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 0 1rem;
+}
+.pw-gate__box h1 {
+  font: 600 clamp(2rem, 6vw, 3.5rem)/1.05 var(--display);
+  color: #f3ecdd;
+  margin: 0 0 2rem;
+}
+.pw-gate__input {
+  font: 400 1.1rem/1 var(--sans);
+  padding: 0.9rem 1.4rem;
+  border: 2px solid rgba(255,255,255,0.2);
+  border-radius: 10px;
+  background: rgba(0,0,0,0.4);
+  color: #f3ecdd;
+  text-align: center;
+  width: 280px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+.pw-gate__input:focus {
+  border-color: var(--gold);
+}
+.pw-gate__input::placeholder {
+  color: rgba(255,255,255,0.3);
+}
+.pw-gate__error {
+  font: 600 0.85rem/1 var(--sans);
+  color: #b3121f;
+  margin: 0.7rem 0 0;
+}
+
 .skip {
   position: absolute;
   left: -9999px;
@@ -173,6 +222,118 @@
 .btn--gold:hover {
   filter: brightness(1.05);
 }
+/* ---- Public Brief ---- */
+.public-brief h2 {
+  font: 600 clamp(1.8rem, 4vw, 2.5rem)/1.1 var(--display);
+  color: var(--ink);
+  margin: 0 0 0.5rem;
+}
+.public-brief__lede {
+  font: 400 1rem/1.6 var(--serif);
+  color: var(--ink-soft);
+  max-width: 64ch;
+  margin: 0 0 1.5rem;
+}
+.public-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.public-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1.3rem 1.5rem;
+}
+.public-card h3 {
+  font: 600 1.05rem/1.2 var(--display);
+  color: var(--ink);
+  margin: 0 0 0.6rem;
+}
+.public-card p {
+  font: 400 0.86rem/1.55 var(--sans);
+  color: var(--ink-soft);
+  margin: 0 0 0.5rem;
+}
+.public-card__source {
+  font-size: 0.72rem !important;
+  color: var(--ink-faint) !important;
+  border-top: 1px solid var(--line);
+  padding-top: 0.5rem;
+  margin-top: 0.5rem !important;
+}
+.public-card--strategy {
+  border-left: 3px solid var(--gold-deep);
+}
+
+/* ---- Inline Password Gate ---- */
+.band--gate {
+  background: linear-gradient(160deg, #1a0a0a, #220808);
+  border-top: 2px solid rgba(179,18,31,0.3);
+  border-bottom: 2px solid rgba(179,18,31,0.3);
+}
+.pw-gate-inline {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+.pw-gate-inline__mark {
+  font: 700 0.7rem/1 var(--sans);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #b3121f;
+  margin: 0 0 0.8rem;
+}
+.pw-gate-inline h3 {
+  font: 600 clamp(1.5rem, 3vw, 2rem)/1.1 var(--display);
+  color: #f3ecdd;
+  margin: 0 0 0.6rem;
+}
+.pw-gate-inline__sub {
+  font: 400 0.92rem/1.6 var(--sans);
+  color: #c8b8b8;
+  max-width: 56ch;
+  margin: 0 auto 1.5rem;
+}
+.pw-gate-inline__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+.pw-gate-inline__input {
+  font: 400 1rem/1 var(--sans);
+  padding: 0.8rem 1.2rem;
+  border: 2px solid rgba(255,255,255,0.15);
+  border-radius: 10px;
+  background: rgba(0,0,0,0.5);
+  color: #f3ecdd;
+  text-align: center;
+  width: 260px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+.pw-gate-inline__input:focus {
+  border-color: #b3121f;
+}
+.pw-gate-inline__input::placeholder {
+  color: rgba(255,255,255,0.25);
+}
+.pw-gate-inline__error {
+  font: 600 0.8rem/1 var(--sans);
+  color: #b3121f;
+  margin: 0.6rem 0 0;
+}
+
+@media (max-width: 760px) {
+  .public-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.btn--ghost {
+  background: rgba(255, 255, 255, 0.06);
+  color: #f3ecdd;
+  border-color: rgba(255, 255, 255, 0.3);
+}
 .btn--typhoon {
   background: linear-gradient(135deg, #006080, #0090c0);
   color: #e0f0ff;
@@ -182,11 +343,6 @@
 .btn--typhoon:hover {
   filter: brightness(1.1);
   box-shadow: 0 0 40px rgba(0,180,220,0.25);
-}
-.btn--ghost {
-  background: rgba(255, 255, 255, 0.06);
-  color: #f3ecdd;
-  border-color: rgba(255, 255, 255, 0.3);
 }
 .hero__stats {
   display: grid;
@@ -223,6 +379,50 @@
   background: linear-gradient(180deg, #040e1a, #060e18);
   border-top: 2px solid rgba(0,180,220,0.3);
   border-bottom: 2px solid rgba(0,180,220,0.2);
+}
+
+/* ---- Open Letter ---- */
+.band--letter {
+  background: linear-gradient(160deg, #0a0a0a, #111);
+  border-top: 1px solid rgba(201,162,39,0.15);
+  border-bottom: 1px solid rgba(201,162,39,0.15);
+}
+.letter {
+  max-width: 64ch;
+  margin: 0 auto;
+  font-family: var(--serif);
+}
+.letter__salutation {
+  font: 400 1.3rem/1.5 var(--serif);
+  color: var(--gold);
+  margin: 0 0 1.5rem;
+}
+.letter__body p {
+  font: 400 1rem/1.7 var(--serif);
+  color: #d0c8b8;
+  margin: 0 0 1rem;
+}
+.letter__body a {
+  color: var(--gold);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.letter__close {
+  font: 400 1rem/1.7 var(--serif);
+  color: #d0c8b8;
+  margin: 0 0 2rem;
+}
+.letter__motto {
+  font: 600 2rem/1.2 var(--display);
+  color: var(--gold);
+  text-align: center;
+  margin: 0 0 0.5rem;
+}
+.letter__motto-sub {
+  font: 400 0.82rem/1.6 var(--sans);
+  color: var(--ink-faint);
+  text-align: center;
+  margin: 0;
 }
 .wrap {
   max-width: 1100px;

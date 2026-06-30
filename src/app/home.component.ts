@@ -58,8 +58,8 @@ interface NavItem {
 })
 export class Home {
   readonly nav: NavItem[] = [
-    { id: 'primary-strategy', label: 'Typhoon of Silicon' },
-    { id: 'beijing', label: 'Decision Framework' },
+    { id: 'losing-badly', label: 'The Public Record' },
+    { id: 'primary-strategy', label: 'Clandestine Ops' },
     { id: 'index', label: 'Target Catalogue' },
     { id: 'thesis', label: 'Western Confession' },
     { id: 'parallels', label: 'Historical Parallels' },
@@ -74,6 +74,8 @@ export class Home {
 
   readonly scrolled = signal(false);
   readonly menuOpen = signal(false);
+  readonly unlocked = signal(typeof sessionStorage !== 'undefined' && sessionStorage.getItem('cw') === '1');
+  readonly pwError = signal(false);
   /** The nav id currently in view, for scroll-spy + aria-current. */
   readonly active = signal<string>('index');
 
@@ -142,5 +144,19 @@ export class Home {
     track('nav_click', { section_id: id, source });
     this.menuOpen.set(false);
     el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  tryUnlock(event: Event): void {
+    event.preventDefault();
+    const input = (event.target as HTMLFormElement).querySelector('input') as HTMLInputElement;
+    if (input.value === 'SorrySam4Ever99*') {
+      sessionStorage.setItem('cw', '1');
+      this.unlocked.set(true);
+      this.pwError.set(false);
+    } else {
+      this.pwError.set(true);
+      input.value = '';
+      input.focus();
+    }
   }
 }

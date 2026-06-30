@@ -85,6 +85,8 @@ export interface TranslationMap {
   aggressiveHeader: string;
   typhoon: string;
   typhoonHeader: string;
+  clandestine: string;
+  clandestineHeader: string;
   contestable: string;
   contestableHeader: string;
   bibliographyHeader: string;
@@ -136,6 +138,8 @@ export const ZH: TranslationMap = {
     aggressive: '激进利用附件',
     typhoon: '硅台风',
     primaryStrategy: '首要战略',
+    clandestine: '秘密战略',
+    immediateGain: '即时收益行动',
     contestable: '框架的局限',
     bibliography: '资料来源',
   },
@@ -377,6 +381,9 @@ export const ZH: TranslationMap = {
 
   typhoon: `硅台风（Typhoon of Silicon）是将人工智能作为力量倍增器部署在卡利古拉窗口框架的每一个领域的作战概念。`,
   typhoonHeader: '硅台风',
+
+  clandestine: `公开部分记录了西方媒体已确认的美国自我伤害。本附件描述了利用每一个脆弱性的秘密策略。`,
+  clandestineHeader: '秘密战略',
 
   contestable: `本框架是敌对党派产物，为评估目的进行了钢人化处理。其核心弱点与任何建立在对手自我报告的脆弱性之上的决策框架相同。`,
   contestableHeader: '框架的局限',
